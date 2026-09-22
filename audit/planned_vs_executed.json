@@ -1,0 +1,18 @@
+{
+  "event_track_expert_seeds": {
+    "planned": [
+      42,
+      1337,
+      2026
+    ],
+    "executed": [
+      42
+    ],
+    "not_executed": {
+      "1337": "GPU/resource limitation",
+      "2026": "GPU/resource limitation"
+    },
+    "decision_timing": "resource amendment after Seed-42 execution",
+    "interpretation": "single-initialization evidence only"
+  }
+}

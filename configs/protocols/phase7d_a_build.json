@@ -1,0 +1,16 @@
+{
+  "protocol_sha256": "e2cb594c77e135d8fc782a49d59abab9d10e940c1dce319e6e7dedeb10a79a02",
+  "crop_reference": "PRE geometry only",
+  "context_scale": 2.0,
+  "min_side_px": 32,
+  "output_size": 192,
+  "expected_train_rows": 265273,
+  "expected_val_rows": 30735,
+  "wrongpre_val_coverage": 0.9987961607288108,
+  "source_hashes": {
+    "build_manifest.py": "4337d8ec54d2fdaa5361e4c30e7544e16f0edf306f517dcff612b7fe12d7807a",
+    "dataset.py": "165a71c4ebf6adea14f20f735bc487e883c5448e5ccfaf4fe8b74e49a3a77044",
+    "crop_utils.py": "8c34139a0f96eaf8246dd228cf27c83386d6c1ca049426c25d28666576589593",
+    "damage_models.py": "9f9ee3382902f339309ddf03a203b882d42e8674de7bf8ee3d18b14863478f2d"
+  }
+}

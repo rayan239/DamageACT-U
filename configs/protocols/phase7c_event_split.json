@@ -1,0 +1,36 @@
+{
+  "protocol_id": "damageactu_phase7c_official_eventsplit_data_integrity_audit_v3_final",
+  "protocol_sha256": "40ee8d9b0eeeb9843e7e418ee5464b73295cf7577db2b371e37e7cd650fafbb6",
+  "seed": 321,
+  "validation_fraction": 0.1,
+  "train_events": [
+    "lower-puna-volcano",
+    "palu-tsunami",
+    "mexico-earthquake",
+    "socal-fire",
+    "woolsey-fire",
+    "portugal-wildfire",
+    "pinery-bushfire",
+    "midwest-flooding",
+    "moore-tornado",
+    "joplin-tornado",
+    "hurricane-harvey",
+    "hurricane-michael",
+    "hurricane-florence"
+  ],
+  "test_events": [
+    "nepal-flooding",
+    "guatemala-volcano",
+    "sunda-tsunami",
+    "santa-rosa-wildfire",
+    "hurricane-matthew",
+    "tuscaloosa-tornado"
+  ],
+  "expected_patch_counts": {
+    "total": 11034,
+    "train": 8202,
+    "val": 912,
+    "test": 1920
+  },
+  "test_policy": "held-out event performance unopened during development"
+}

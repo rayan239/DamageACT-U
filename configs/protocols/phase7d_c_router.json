@@ -1,0 +1,21 @@
+{
+  "expert_seed": 42,
+  "feature_count": 26,
+  "neural_selected_epoch": 1,
+  "static_alpha": 0.45,
+  "router_controls": [
+    "POST-only",
+    "Siamese",
+    "equal-0.5 blend",
+    "static-alpha",
+    "max-confidence",
+    "min-entropy",
+    "logistic",
+    "HGB",
+    "neural",
+    "oracle"
+  ],
+  "bootstrap_seed": 20260917,
+  "performance_bootstrap_replicates": 2000,
+  "utility_bootstrap_replicates": 1000
+}

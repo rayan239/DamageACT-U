@@ -1,0 +1,6 @@
+alpha_grid:
+  start: 0.0
+  stop: 1.0
+  step: 0.05
+exact_tie: lower_alpha
+final_alpha: 0.45

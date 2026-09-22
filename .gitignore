@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+
+# Runtime
+working/
+tmp/
+*.log
+.ipynb_checkpoints/
+.env
+
+
+# Raw xBD
+data/
+xbd/
+xbd_full/
+
+
+# Large research artifacts
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tar
+*.tar.gz

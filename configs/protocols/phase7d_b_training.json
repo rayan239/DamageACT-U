@@ -1,0 +1,22 @@
+{
+  "scientific_protocol_sha256": "ae145c5722a18c9754ed9905611e20c9b8d83598d6bb1562082c23623a768e61",
+  "execution_addendum_sha256": "42c3c266c11a99063088a7a345a60b15236f1c4c31e540cea64190fde7599635",
+  "planned_seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "executed_seeds": [
+    42
+  ],
+  "resource_amendment": "seeds 1337 and 2026 not run due GPU/resource limitation after Seed-42 execution",
+  "epochs": 8,
+  "train_batch_size": 64,
+  "eval_batch_size": 96,
+  "optimizer": "AdamW",
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "primary_metric": "4-class Macro-F1",
+  "wrong_pre_used_for_checkpoint_selection": false,
+  "event_test_used": false
+}

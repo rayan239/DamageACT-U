@@ -1,0 +1,8 @@
+# Replace TO-BE-FILLED versions only from the successful archived Kaggle environment.
+# Known core versions from the actual event-track run:
+python==3.12.13
+torch==2.10.0+cu128
+torchvision==0.25.0+cu128
+# CUDA runtime: 12.8
+# GPU: Tesla T4
+# Add exact numpy/pandas/sklearn/scipy/Pillow/PyYAML/joblib/shapely/tqdm versions from the archived environment before public release.

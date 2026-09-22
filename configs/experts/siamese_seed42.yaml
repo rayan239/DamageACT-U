@@ -1,0 +1,35 @@
+seed: 42
+backbone:
+  name: resnet18
+  pretrained: imagenet
+head:
+  input_dim: 1536
+  hidden_dim: 512
+  activation: relu
+  dropout: 0.30
+  classes: 4
+training:
+  epochs: 8
+  train_batch_size: 64
+  eval_batch_size: 96
+  num_workers: 2
+  optimizer: adamw
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  amp: true
+  scheduler: null
+  early_stopping: false
+  focal_loss: false
+  oversampling: false
+class_weights:
+  0: 0.3491195254016762
+  1: 1.2918169707179104
+  2: 1.1515690289737834
+  3: 1.20749447490663
+checkpoint:
+  metric: macro_f1
+  rule: highest_event_val
+  exact_tie: earlier_epoch
+
+model_type: siamese
+representation: "[z_pre, z_post, abs(z_post-z_pre)]"

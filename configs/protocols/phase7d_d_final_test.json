@@ -1,0 +1,19 @@
+{
+  "protocol_sha256": "faa268d83edda817e013bc0166fe9ade2ad20f3cda71b1bf08e44b092878c533",
+  "test_events": [
+    "nepal-flooding",
+    "guatemala-volcano",
+    "sunda-tsunami",
+    "santa-rosa-wildfire",
+    "hurricane-matthew",
+    "tuscaloosa-tornado"
+  ],
+  "primary_metric": "4-class Macro-F1",
+  "clean_neural_gain_requirement": 0.01,
+  "clean_ci_low_must_exceed": 0.0,
+  "wrongpre_neural_gain_floor": -0.005,
+  "wrongpre_ci_low_floor": -0.01,
+  "utility_auroc_ci_low_must_exceed": 0.5,
+  "utility_spearman_ci_low_must_exceed": 0.0,
+  "post_test_tuning_permitted": false
+}
