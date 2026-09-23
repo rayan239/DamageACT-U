@@ -1,0 +1,19 @@
+{
+  "stage": "G3_checkpoint_inference_parity",
+  "status": "INVALID_ZERO_BYTE_RUNNER_FREEZE_REVERTED",
+  "invalid_commit": "c848947",
+  "invalid_runner_path": "scripts/g3_checkpoint_parity_t4.py",
+  "invalid_runner_bytes": 0,
+  "invalid_runner_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "invalid_runner_manifest_sha256": "2d67367a14e592faa29ce0f6035a7439b896da2866609b68a2f4ada83ffbfde2",
+  "reason": "The runner file was empty. python -m py_compile did not detect this because an empty Python module is syntactically valid.",
+  "regenerated_inference_observed_before_detection": false,
+  "kaggle_inference_executed": false,
+  "selection_commit_remains_valid": "1ae5e4f",
+  "execution_protocol_commit_remains_valid": "398d913",
+  "input_bundle_commit_remains_valid": "99ededc",
+  "input_bundle_zip_sha256": "d762e0fd71763b67a247f249a99e07a0520481ec6ea0ac7911d2b3c64cad35f4",
+  "scientific_outputs_changed": false,
+  "correction_parent": "c84894713de8f996c2edbf82d7ced2a2c80e93aa",
+  "note": "The invalid runner freeze was detected and reverted before any checkpoint-parity inference was executed."
+}
