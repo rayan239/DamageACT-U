@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "full Phase7D-D statistical bootstrap reproduction from frozen expert predictions and frozen routers; no training or TEST-dependent tuning",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "sklearn": "1.6.1",
+    "torch": "2.10.0+cpu"
+  },
+  "bootstrap_protocol": {
+    "clean_performance_reps": 2000,
+    "clean_performance_seed": 20260917,
+    "wrongpre_performance_reps": 2000,
+    "wrongpre_performance_seed": 20260918,
+    "utility_reps": 1000,
+    "utility_seed": 20260917,
+    "cluster_unit": "scene_id"
+  },
+  "reproduced_headline_ci": {
+    "clean_neural_minus_post": 0.003110781260150075,
+    "clean_neural_minus_post_ci95_low": -0.0006119094519209195,
+    "clean_neural_minus_post_ci95_high": 0.007171176846942841,
+    "wrongpre_neural_minus_post": -0.0030709805253712474,
+    "wrongpre_neural_minus_post_ci95_low": -0.006597738161487725,
+    "wrongpre_neural_minus_post_ci95_high": 0.0007013046815506358,
+    "utility_auroc_ci95_low": 0.7455584705189203,
+    "utility_auroc_ci95_high": 0.79660186479569,
+    "utility_spearman_ci95_low": 0.058445288350665835,
+    "utility_spearman_ci95_high": 0.14902393695838834
+  },
+  "reproduced_decisions": {
+    "clean_effectiveness_pass": false,
+    "class_safety_pass": true,
+    "wrongpre_safety_pass": true,
+    "gate_suppression_pass": true,
+    "utility_generalization_pass": true,
+    "all_precommitted_criteria_pass": false
+  },
+  "guardrails": {
+    "expert_seed": 42,
+    "random_seed_robustness_evaluated": false,
+    "post_test_tuning_permitted": false
+  }
+}
