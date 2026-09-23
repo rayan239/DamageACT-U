@@ -13,7 +13,7 @@
     "neural_best_epoch": 1,
     "expert_seed": 42,
     "router_feature_count": 26,
-    "source_FEATURE_NAMES_constant_matches_authoritative_order": false
+    "source_FEATURE_NAMES_constant_matches_authoritative_order": true
   },
   "headline_reproduced": {
     "post_clean_macro_f1": 0.4565629212722525,

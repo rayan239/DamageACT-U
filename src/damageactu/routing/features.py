@@ -4,10 +4,13 @@ import pandas as pd
 
 
 FEATURE_NAMES = (
-    [f"post_p{k}" for k in range(4)] +
-    [f"pair_p{k}" for k in range(4)] +
-    [f"diff_p{k}" for k in range(4)] +
-    [f"absdiff_p{k}" for k in range(4)] +
+    [
+        name
+        for k in range(4)
+        for name in (
+            f"post_p{k}", f"pair_p{k}", f"diff_p{k}", f"absdiff_p{k}"
+        )
+    ] +
     ["confidence_post","confidence_pair","entropy_post","entropy_pair",
      "severity_post","severity_pair","conf_diff","entropy_diff","severity_diff","pred_disagree"]
 )
