@@ -1,0 +1,22 @@
+{
+  "stage": "G3_checkpoint_inference_parity",
+  "status": "PRE_INFERENCE_INPUT_BUNDLE_FROZEN",
+  "git_head_at_bundle_creation": "398d91348ae24bcb9f198c3999849c55fe243a55",
+  "bundle_path": "dist/DamageACTU_G3_Parity_Input_Bundle.zip",
+  "bundle_zip_sha256": "d762e0fd71763b67a247f249a99e07a0520481ec6ea0ac7911d2b3c64cad35f4",
+  "bundle_zip_bytes": 159174694,
+  "internal_sha256_manifest_sha256": "05558de53b6bdc3a977e7ca43787388805ac00eb71cd2ce996a9bfe94af953b3",
+  "file_count_inside_zip": 12,
+  "selection_commit": "1ae5e4f",
+  "execution_protocol_commit": "398d913",
+  "selector_sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03",
+  "execution_protocol_sha256": "112ade4ac863dd7bc7df03a6c2544be6b3757ca0034f864556738851b2d2409c",
+  "canonical_manifest_sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a",
+  "frozen_predictions_sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2",
+  "post_checkpoint_sha256": "df6b607973ea74e1a6aa7eb640459b65c7a4e1bdaabc7fce956d2c757374967c",
+  "siamese_checkpoint_sha256": "3d6466108cf44e994c0c7b7bb1745e549807d89601e45898911de34a455d73a5",
+  "contains_raw_xbd": false,
+  "contains_regenerated_outputs": false,
+  "contains_inference_runner": false,
+  "note": "Frozen input/evidence package created before any G3 regenerated checkpoint outputs were observed. The inference runner will be frozen separately before execution."
+}
