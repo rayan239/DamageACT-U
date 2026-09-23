@@ -1,0 +1,70 @@
+{
+  "stage": "G3_checkpoint_inference_parity",
+  "status": "PRE_INFERENCE_EXECUTION_PROTOCOL_FROZEN",
+  "selection_git_commit": "1ae5e4f",
+  "scientific_scope": "Checkpoint inference reproducibility audit only. No training, tuning, calibration, model selection, threshold selection, or scientific result changes are permitted.",
+  "canonical_environment": {
+    "python_recorded": "3.12.13",
+    "python_hard_gate": "3.12.x",
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "pillow": "historical exact version not recorded; runtime version must be reported, not claimed canonical"
+  },
+  "inference_semantics": {
+    "batch_size": 96,
+    "num_workers": 2,
+    "shuffle": false,
+    "drop_last": false,
+    "persistent_workers": false,
+    "pin_memory": true,
+    "autocast": false,
+    "model_dtype": "float32",
+    "torch_inference_mode": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "deterministic_algorithms": "True with warn_only=True",
+    "crop": {
+      "context_scale": 2.0,
+      "min_side_px": 32,
+      "output_size": 192
+    }
+  },
+  "selection": {
+    "anchors": 23,
+    "fillers": 73,
+    "total": 96,
+    "unique_scenes": 77,
+    "selector_sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03",
+    "anchor_panel_sha256": "2924bc88beeda3507c8cf2178db53c2d17eca7483c483a61ca59087a87636c43",
+    "selection_lock_sha256": "cf463ca5d680ba7ede33d498350692e2782f5d716bc527629dd07a77e210883c"
+  },
+  "canonical_inputs": {
+    "manifest_path": "manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+    "manifest_sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a",
+    "frozen_predictions_path": "predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+    "frozen_predictions_sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2",
+    "post_checkpoint_sha256": "df6b607973ea74e1a6aa7eb640459b65c7a4e1bdaabc7fce956d2c757374967c",
+    "siamese_checkpoint_sha256": "3d6466108cf44e994c0c7b7bb1745e549807d89601e45898911de34a455d73a5"
+  },
+  "predeclared_parity_rules": {
+    "categorical": "All 96 POST-only argmax predictions and all 96 Siamese argmax predictions must match the sealed saved outputs exactly.",
+    "numerical": {
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "rule": "All POST/Siamese logits and probabilities must satisfy numpy.allclose(atol=1e-5, rtol=1e-5).",
+      "report_always": [
+        "max_absolute_difference",
+        "mean_absolute_difference",
+        "median_absolute_difference"
+      ]
+    },
+    "failure_rule": "If a predeclared criterion fails, do not change the tolerance post hoc. Preserve the outputs and investigate environment, Pillow preprocessing, source identity, CUDA behavior, and image bytes."
+  },
+  "limitations": [
+    "This tests frozen-checkpoint inference parity, not training-from-scratch reproduction.",
+    "Historical Pillow version was not recorded.",
+    "Final event-track expert evidence is Seed 42 only; no random-seed robustness claim."
+  ]
+}
