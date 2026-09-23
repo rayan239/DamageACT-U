@@ -1,0 +1,17 @@
+{
+  "stage": "G3_checkpoint_inference_parity",
+  "status": "PRE_INFERENCE_RUNNER_FROZEN",
+  "git_parent_before_runner_commit": "99ededc736266fe9aa3240a2ffae8719150c187d",
+  "runner_path": "scripts/g3_checkpoint_parity_t4.py",
+  "runner_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "input_bundle_git_commit": "99ededc",
+  "input_bundle_zip_sha256": "d762e0fd71763b67a247f249a99e07a0520481ec6ea0ac7911d2b3c64cad35f4",
+  "execution_protocol_sha256": "112ade4ac863dd7bc7df03a6c2544be6b3757ca0034f864556738851b2d2409c",
+  "selector_sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03",
+  "predeclared_atol": 1e-05,
+  "predeclared_rtol": 1e-05,
+  "contains_regenerated_outputs": false,
+  "runner_has_training_code": false,
+  "runner_has_tuning_code": false,
+  "note": "Runner frozen before any regenerated G3 checkpoint inference outputs were observed."
+}
