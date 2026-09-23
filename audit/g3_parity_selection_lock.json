@@ -1,0 +1,53 @@
+{
+  "stage": "G3_checkpoint_inference_parity",
+  "status": "PRE_INFERENCE_SELECTION_FROZEN",
+  "selection_rule": {
+    "anchors": "For every observed held-out TEST event x damage-class cell, select lexicographically smallest building_id. Sunda-tsunami class 1 is absent in the sealed TEST population, therefore 23 anchors exist.",
+    "fillers": "Exclude anchors, compute SHA256(\"DamageACTU-G3-carrier-v1::\" + building_id), choose the 73 smallest hashes.",
+    "final_order": "Canonical event_test_buildings_rebuilt manifest row order.",
+    "selection_uses_model_outputs": false
+  },
+  "counts": {
+    "anchors": 23,
+    "fillers": 73,
+    "total": 96,
+    "unique_scenes": 77,
+    "heldout_events": 6
+  },
+  "canonical_inputs": {
+    "manifest": "manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+    "frozen_predictions": "predictions/heldout_events/event_test_clean_expert_predictions.csv.gz"
+  },
+  "artifacts": {
+    "anchor_panel": {
+      "path": "audit/g3_clean_parity_panel_23.csv",
+      "sha256": "2924bc88beeda3507c8cf2178db53c2d17eca7483c483a61ca59087a87636c43"
+    },
+    "selector": {
+      "path": "audit/g3_clean_parity_selector_96.csv",
+      "sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03"
+    },
+    "carrier_intermediate": {
+      "path": "audit/g3_clean_parity_carrier_96.csv",
+      "sha256": "1a92b49a09df4d81c58790d1828db727573b6f66e32464a972b6f50ade4fcad0",
+      "authoritative_for_inference": false,
+      "note": "Superseded for inference because CSV reserialization introduced harmless floating-point round-trip differences; actual inference uses canonical full manifest plus selector row indices."
+    }
+  },
+  "frozen_inference_semantics": {
+    "batch_size": 96,
+    "num_workers": 2,
+    "shuffle": false,
+    "model_dtype": "float32",
+    "autocast": false,
+    "torch_inference_mode": true,
+    "crop_context_scale": 2.0,
+    "crop_min_side_px": 32,
+    "crop_output_size": 192
+  },
+  "important_limits": [
+    "This lock contains no regenerated inference results.",
+    "No tolerance has been selected based on regenerated outputs.",
+    "Canonical expert evidence is Seed 42 only."
+  ]
+}
