@@ -1,0 +1,17 @@
+{
+  "stage": "G3_checkpoint_inference_parity",
+  "status": "PRE_INFERENCE_EXECUTION_BUNDLE_FROZEN",
+  "git_head": "b1da8d22332b3a3c920635a187ec2eff8c9fe9d1",
+  "runner_commit": "b1da8d2",
+  "canonical_replay_commit": "847da83",
+  "execution_bundle_path": "dist/DamageACTU_G3_Parity_Execution_Bundle.zip",
+  "execution_bundle_sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519",
+  "execution_bundle_bytes": 159185660,
+  "files_inside_zip": 15,
+  "hashed_payload_files": 14,
+  "runner_sha256": "cda8f058123ecbe9f63e65ded32fc8ba8161654e07a0e769980f3ecb9fdc0ea9",
+  "runner_manifest_sha256": "24f93352d9faa35b0222e5f167eb92efdb4b4943170899feba39206b4077f953",
+  "canonical_replay_lock_sha256": "78f6a5eda2aed875f7b65f08879c7ce85987766c9283e10f6ad7fc6a7547bef0",
+  "contains_raw_xbd": false,
+  "contains_regenerated_outputs": false
+}
