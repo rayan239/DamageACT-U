@@ -1,0 +1,91 @@
+{
+  "addendum_id": "damageactu_g4b_exact_canonical_population_schema_v3",
+  "authoritative_canonical_schema": {
+    "test_metrics_all_conditions.csv": {
+      "columns": [
+        "population",
+        "method",
+        "n",
+        "macro_f1",
+        "accuracy",
+        "ordinal_mae"
+      ],
+      "methods_per_population": [
+        "POST-only",
+        "Siamese",
+        "Equal 0.5 logit blend",
+        "Static alpha blend",
+        "Max-confidence selector",
+        "Min-entropy selector",
+        "Logistic soft gate",
+        "HGB hard router",
+        "Neural Temporal Utility Router",
+        "Oracle expert selector"
+      ],
+      "populations": [
+        "clean_pooled",
+        "valid_matched",
+        "wrongpre_matched"
+      ],
+      "rows": 30
+    },
+    "test_metrics_clean.csv": {
+      "columns": [
+        "population",
+        "method",
+        "n",
+        "macro_f1",
+        "accuracy",
+        "ordinal_mae"
+      ],
+      "methods": [
+        "POST-only",
+        "Siamese",
+        "Equal 0.5 logit blend",
+        "Static alpha blend",
+        "Max-confidence selector",
+        "Min-entropy selector",
+        "Logistic soft gate",
+        "HGB hard router",
+        "Neural Temporal Utility Router",
+        "Oracle expert selector"
+      ],
+      "populations": [
+        "clean_pooled"
+      ],
+      "rows": 10
+    }
+  },
+  "changes_to_feature_schema": false,
+  "changes_to_metric_formulas": false,
+  "changes_to_models": false,
+  "changes_to_pass_criteria": false,
+  "changes_to_predictions": false,
+  "changes_to_static_alpha": false,
+  "changes_to_tolerances": false,
+  "historical_source_rule": {
+    "metric_rows_clean_population": "clean_pooled",
+    "metric_rows_valid_population": "valid_matched",
+    "metric_rows_wrongpre_population": "wrongpre_matched"
+  },
+  "locked_date": "2026-09-24",
+  "post_test_tuning": false,
+  "prohibitions": [
+    "Do not modify canonical result CSVs.",
+    "Do not change router checkpoints or saved expert predictions.",
+    "Do not refit/retrain any model.",
+    "Do not change alpha=0.45.",
+    "Do not weaken numerical tolerances.",
+    "Do not relabel canonical populations beyond the exact frozen historical labels.",
+    "Do not turn the failed clean-effectiveness criterion into a pass."
+  ],
+  "reason": "The v2 wrapper correctly discovered that canonical metric tables use the 'population' field but used the wrapper-internal clean label 'clean'. Direct inspection of the frozen canonical CSVs and original Phase7D-D source establishes the historical clean population label as exactly 'clean_pooled'.",
+  "repair_scope": "Implementation-only exact schema alignment. Regenerated metric rows use the same historical 'population' field and exact population labels emitted by the frozen Phase7D-D source. Generic condition/population aliasing is removed.",
+  "required_v2_runtime_fix_commit": "404bc4e",
+  "scientific_changes": false,
+  "scientific_protocol_sha256": "3e99481439c22091e45f3f6c48c88ea7b6bef3736207de53812fdf42755e2e66",
+  "stage": "G4B_deterministic_router_intervention_parity",
+  "v1_runner_sha256": "4b8da51de968dd52e8a3e528d0761ce395403d102d29a9d9d158040c94b9ad88",
+  "v2_runner_sha256": "c14b56c299462d69350b781573f756a7fe8767fddb87edd865d4171d3dda8e25",
+  "v2_runtime_fix_sha256": "0c66d95faadf85c990f2e771ac8c9697a7fb6e97edac7482639ad5a001eaf4c1"
+}
