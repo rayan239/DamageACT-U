@@ -1,0 +1,41 @@
+{
+  "expected_final_disposition_counts": {
+    "EXTERNAL_CANONICAL_ASSET": 11,
+    "EXTERNAL_PROVENANCE_ASSET": 1,
+    "GENERATED_EXCLUDE": 1,
+    "GIT_CANONICAL": 46,
+    "GIT_HISTORICAL_PROVENANCE": 5,
+    "LOCAL_PROVENANCE_ONLY": 30,
+    "REVIEW_REQUIRED": 0
+  },
+  "gitignore_policy": [
+    "Replace the exact unanchored 'data/' rule with '/data/' so only root raw data stays ignored.",
+    "Explicitly keep expert checkpoints, large building manifests, frozen prediction CSVs, dist/, the G3 carrier, and generated transitional report out of Git.",
+    "Explicitly allow the small final neural router checkpoint."
+  ],
+  "locked_date": "2026-09-24",
+  "next_gate": "Commit the approved Git release tree, package external assets, then run G6 final clean-clone/reproduction audit.",
+  "protocol_id": "damageactu_g5c_finalize_release_tree_v1",
+  "required_g5b_commit": "98b88bd",
+  "resolution_reason": "Both YAMLs are small repository configuration files that expose the frozen crop and four-class label conventions. They were hidden only because the unanchored .gitignore pattern 'data/' also matched nested configs/data and vendor/.../data.",
+  "resolved_review_items": {
+    "configs/data/crop.yaml": {
+      "bytes": 111,
+      "final_disposition": "GIT_CANONICAL",
+      "sha256": "44e2cce1e36214635639cc0b9e2e981a6b1be94e813c78699c5503d86580077f"
+    },
+    "configs/data/labels.yaml": {
+      "bytes": 116,
+      "final_disposition": "GIT_CANONICAL",
+      "sha256": "13f8b6a7890128e6f0002c5a2c37d15436b60d8a3d5d289803199dd1e835c969"
+    }
+  },
+  "safety": [
+    "No scientific file contents are modified.",
+    "No external/local-provenance file is deleted or moved.",
+    "No model is run, fit, retrained, or tuned.",
+    "The script only writes release/audit metadata and performs the narrow .gitignore repair.",
+    "Staging is handled by a separate allowlist script after inspection."
+  ],
+  "stage": "G5C_finalize_release_tree_and_external_assets"
+}
