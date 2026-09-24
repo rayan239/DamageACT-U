@@ -1,0 +1,128 @@
+{
+  "protocol_id": "damageactu_phase7d_c_s1_single_seed_router_control_audit_v1",
+  "locked_date": "2026-09-22",
+  "expert_seed": 42,
+  "resource_amendment": {
+    "planned_expert_seeds": [
+      42,
+      1337,
+      2026
+    ],
+    "completed_expert_seeds": [
+      42
+    ],
+    "reason": "GPU/resource limitation after Seed-42 results were observed",
+    "interpretation": "single-initialization event-track evidence; no random-seed robustness claim"
+  },
+  "data_scope": {
+    "allowed": "Seed-42 Phase7D-B event-validation expert outputs only",
+    "forbidden": [
+      "event_test",
+      "event_test_buildings_SEALED",
+      "Phase5",
+      "original TEST",
+      "stress TEST"
+    ],
+    "heldout_event_test_used": false
+  },
+  "outer_split": {
+    "method": "StratifiedGroupKFold first fold",
+    "n_splits": 2,
+    "shuffle": true,
+    "random_state": 20260922,
+    "groups": "scene_id",
+    "stratify": "true_label",
+    "role_train": "router_select",
+    "role_eval": "router_diag"
+  },
+  "inner_neural_split": {
+    "method": "StratifiedGroupKFold first fold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "groups": "scene_id",
+    "population": "donor-eligible router_select"
+  },
+  "features": "26 output-only features from accepted Phase3B",
+  "alpha_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "logistic": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "max_iter": 2000,
+    "random_state": 42
+  },
+  "hgb": {
+    "max_iter": 100,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "neural": {
+    "architecture": "26->32->16->1, ReLU, dropout0.10",
+    "batch_size": 256,
+    "max_epochs": 100,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "lambda_utility": 0.5,
+    "lambda_wrong_gate": 0.5,
+    "lambda_wrong_kl": 0.5,
+    "lambda_sparsity": 0.01,
+    "epoch_selection": "require wrong-PRE Macro-F1 >= matched POST Macro-F1 - 0.01; then maximize clean Macro-F1; exact tie earlier epoch",
+    "no_safe_epoch_policy": "NO_SAFE_NEURAL_EPOCH; do not relax threshold"
+  },
+  "controls": [
+    "POST-only",
+    "Siamese",
+    "Equal 0.5 logit blend",
+    "Static alpha blend",
+    "Max-confidence selector",
+    "Min-entropy selector",
+    "Logistic soft gate",
+    "HGB hard router",
+    "Neural safe router",
+    "Oracle expert selector"
+  ],
+  "diagnostic_gate": {
+    "neural_clean_gain_min": 0.01,
+    "neural_clean_bootstrap_low_gt": 0.0,
+    "neural_wrong_gain_min": -0.005,
+    "neural_wrong_bootstrap_low_min": -0.01,
+    "require_wrong_gate_mean_lt_valid": true,
+    "worst_class_delta_min": -0.02
+  },
+  "utility_terminology": {
+    "binary_target": "q=1 iff Siamese correct and POST wrong among correctness-discordant cases",
+    "continuous_target": "deltaCE = log p_Siamese(y) - log p_POST(y)",
+    "name_temporal_utility_router_only_if": "scene-bootstrap AUROC lower95 > 0.5 AND Spearman lower95 > 0"
+  },
+  "bootstrap": {
+    "performance_scene_replicates": 2000,
+    "utility_scene_replicates": 1000,
+    "seed": 20260917
+  },
+  "canonical_sha256_excluding_this_field": "0570650469f9d8624a4c01f84d902e1fefbf0fcbe584ea56984a3e8a75f1e268"
+}

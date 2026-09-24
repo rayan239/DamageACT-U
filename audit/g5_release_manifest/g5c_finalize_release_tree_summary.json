@@ -1,0 +1,26 @@
+{
+  "external_asset_count": 12,
+  "files_deleted": false,
+  "files_moved": false,
+  "final_disposition_counts": {
+    "EXTERNAL_CANONICAL_ASSET": 11,
+    "EXTERNAL_PROVENANCE_ASSET": 1,
+    "GENERATED_EXCLUDE": 1,
+    "GIT_CANONICAL": 46,
+    "GIT_HISTORICAL_PROVENANCE": 5,
+    "LOCAL_PROVENANCE_ONLY": 30
+  },
+  "gitignore_nested_data_rule_fixed": true,
+  "head_before_g5c": "820000b606f6d19eac06bd494deaa0572680acf5",
+  "next_gate": "Stage allowlisted Git release files, package external assets, commit G5C, then run G6 final release audit.",
+  "protocol_sha256": "802b8392795b93bcec3152af06eae500aaf66a953c6443dd57baea694e38d79f",
+  "resolved_review_items": {
+    "configs/data/crop.yaml": "44e2cce1e36214635639cc0b9e2e981a6b1be94e813c78699c5503d86580077f",
+    "configs/data/labels.yaml": "13f8b6a7890128e6f0002c5a2c37d15436b60d8a3d5d289803199dd1e835c969"
+  },
+  "review_required_count": 0,
+  "scientific_file_contents_modified": false,
+  "scientific_models_run": false,
+  "stage": "G5C_finalize_release_tree_and_external_assets",
+  "status": "PASS"
+}

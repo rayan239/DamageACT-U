@@ -1,0 +1,211 @@
+===== CELL 7 =====
+# ---------- exact source imports, frozen models, clean inference ----------
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, Dataset
+from sklearn.metrics import f1_score, accuracy_score, roc_auc_score, average_precision_score
+from scipy.stats import spearmanr
+import joblib
+
+if not torch.cuda.is_available(): raise RuntimeError("Enable one Kaggle GPU for final sealed inference.")
+DEVICE=torch.device("cuda:0")
+torch.backends.cudnn.benchmark=False
+torch.backends.cudnn.deterministic=True
+try: torch.use_deterministic_algorithms(True,warn_only=True)
+except Exception: pass
+
+for p in [PROJECT_ROOT,PROJECT_ROOT/"src/data"]:
+    if str(p) not in sys.path: sys.path.insert(0,str(p))
+from src.data.crop_utils import CropConfig, crop_pair, compute_pre_reference_crop_box
+from src.data.dataset import PairedXBDDataset, to_model_tensor
+from src.models.damage_models import DamageACTClassifier
+
+CROP=CropConfig(context_scale=2.0,min_side_px=32,output_size=192)
+
+post_model=DamageACTClassifier("post_only",pretrained=False).to(DEVICE)
+pair_model=DamageACTClassifier("siamese",pretrained=False).to(DEVICE)
+post_model.load_state_dict(torch.load(POST_CKPT,map_location="cpu",weights_only=True),strict=True)
+pair_model.load_state_dict(torch.load(PAIR_CKPT,map_location="cpu",weights_only=True),strict=True)
+post_model.eval(); pair_model.eval()
+for m in [post_model,pair_model]:
+    for p in m.parameters(): p.requires_grad_(False)
+
+test_ds=PairedXBDDataset(
+    manifest_path=TEST_MANIFEST,dataset_root=STAGE,crop_config=CROP,
+    training=False,augment_geometry=False,return_metadata=True
+)
+test_loader=DataLoader(test_ds,batch_size=EVAL_BS,shuffle=False,num_workers=NUM_WORKERS,
+                       pin_memory=True,drop_last=False,persistent_workers=False)
+
+@torch.inference_mode()
+def infer_clean(loader):
+    rows=[]
+    sev_axis=np.arange(4,dtype=np.float32)
+    for batch in loader:
+        pre=batch["pre"].to(DEVICE,non_blocking=True)
+        post=batch["post"].to(DEVICE,non_blocking=True)
+        lp=post_model(pre,post); lt=pair_model(pre,post)
+        pp=torch.softmax(lp,1).cpu().numpy(); pt=torch.softmax(lt,1).cpu().numpy()
+        lpn=lp.cpu().numpy(); ltn=lt.cpu().numpy()
+        y=batch["label"].cpu().numpy().astype(int)
+        for i,bid in enumerate(batch["building_id"]):
+            rec={"building_id":str(bid),"scene_id":str(batch["scene_id"][i]),
+                 "disaster":str(batch["disaster"][i]),"true_label":int(y[i]),
+                 "pred_post":int(pp[i].argmax()),"pred_pair":int(pt[i].argmax()),
+                 "confidence_post":float(pp[i].max()),"confidence_pair":float(pt[i].max()),
+                 "entropy_post":float(-(pp[i]*np.log(np.clip(pp[i],1e-12,1))).sum()),
+                 "entropy_pair":float(-(pt[i]*np.log(np.clip(pt[i],1e-12,1))).sum()),
+                 "severity_post":float(pp[i]@sev_axis),"severity_pair":float(pt[i]@sev_axis)}
+            for k in range(4):
+                rec[f"p{k}_post"]=float(pp[i,k]); rec[f"p{k}_pair"]=float(pt[i,k])
+                rec[f"logit{k}_post"]=float(lpn[i,k]); rec[f"logit{k}_pair"]=float(ltn[i,k])
+            rows.append(rec)
+    return pd.DataFrame(rows)
+
+clean=infer_clean(test_loader)
+if len(clean)!=len(test_df) or not clean.building_id.is_unique:
+    raise RuntimeError("Clean TEST inference cardinality/identity failure.")
+clean.to_csv(TABLE/"event_test_clean_expert_predictions.csv.gz",index=False,
+             compression={"method":"gzip","compresslevel":6,"mtime":0})
+print("Clean expert inference complete:",len(clean),"buildings")
+
+
+===== CELL 8 =====
+# ---------- frozen routers + clean method roster ----------
+logistic=joblib.load(LOGISTIC_PATH)
+hgb=joblib.load(HGB_PATH)
+
+class UtilityRouter(nn.Module):
+    def __init__(self,n):
+        super().__init__()
+        self.net=nn.Sequential(nn.Linear(n,32),nn.ReLU(),nn.Dropout(0.10),
+                               nn.Linear(32,16),nn.ReLU(),nn.Linear(16,1))
+    def forward(self,x): return self.net(x).squeeze(1)
+
+nb=torch.load(NEURAL_PATH,map_location="cpu",weights_only=False)
+if int(nb.get("best_epoch",-1))!=1 or int(nb.get("expert_seed",-1))!=42:
+    raise RuntimeError("Frozen neural router provenance mismatch.")
+neural=UtilityRouter(len(nb["feature_names"]))
+neural.load_state_dict(nb["state_dict"],strict=True); neural.eval()
+nmean=np.asarray(nb["mean"],np.float32); nstd=np.asarray(nb["std"],np.float32)
+FEATURE_NAMES=list(nb["feature_names"])
+
+def logits(df,branch):
+    return df[[f"logit{k}_{branch}" for k in range(4)]].to_numpy(np.float32)
+
+def build_features(df):
+    x=pd.DataFrame(index=df.index)
+    for k in range(4):
+        p=df[f"p{k}_post"].astype(float); q=df[f"p{k}_pair"].astype(float)
+        x[f"post_p{k}"]=p; x[f"pair_p{k}"]=q
+        x[f"diff_p{k}"]=q-p; x[f"absdiff_p{k}"]=(q-p).abs()
+    for c in ["confidence_post","confidence_pair","entropy_post","entropy_pair","severity_post","severity_pair"]:
+        x[c]=df[c].astype(float)
+    x["conf_diff"]=df.confidence_pair.astype(float)-df.confidence_post.astype(float)
+    x["entropy_diff"]=df.entropy_pair.astype(float)-df.entropy_post.astype(float)
+    x["severity_diff"]=df.severity_pair.astype(float)-df.severity_post.astype(float)
+    x["pred_disagree"]=(df.pred_pair.to_numpy(int)!=df.pred_post.to_numpy(int)).astype(float)
+    if list(x.columns)!=FEATURE_NAMES:
+        raise RuntimeError("Final router feature names/order do not match frozen neural bundle.")
+    return x
+
+def prob_class1(model,X):
+    pr=model.predict_proba(X)
+    cls=np.asarray(model.classes_)
+    pos=np.where(cls==1)[0]
+    if len(pos)!=1: raise RuntimeError("Router classifier has no unique class 1 probability.")
+    return pr[:,pos[0]]
+
+def route_all(df):
+    X=build_features(df)
+    lp=logits(df,"post"); lt=logits(df,"pair")
+    ulog=prob_class1(logistic,X)
+    uhgb=prob_class1(hgb,X)
+    zn=(X.to_numpy(np.float32)-nmean)/nstd
+    with torch.inference_mode(): uneu=torch.sigmoid(neural(torch.tensor(zn))).numpy()
+    pred={
+        "POST-only":df.pred_post.to_numpy(int),
+        "Siamese":df.pred_pair.to_numpy(int),
+        "Equal 0.5 logit blend":(lp+0.5*(lt-lp)).argmax(1),
+        "Static alpha blend":(lp+ALPHA*(lt-lp)).argmax(1),
+        "Max-confidence selector":np.where(df.confidence_pair.to_numpy(float)>df.confidence_post.to_numpy(float),
+                                           df.pred_pair.to_numpy(int),df.pred_post.to_numpy(int)),
+        "Min-entropy selector":np.where(df.entropy_pair.to_numpy(float)<df.entropy_post.to_numpy(float),
+                                        df.pred_pair.to_numpy(int),df.pred_post.to_numpy(int)),
+        "Logistic soft gate":(lp+ulog[:,None]*(lt-lp)).argmax(1),
+        "HGB hard router":np.where(uhgb>=0.5,df.pred_pair.to_numpy(int),df.pred_post.to_numpy(int)),
+        "Neural Temporal Utility Router":(lp+uneu[:,None]*(lt-lp)).argmax(1),
+    }
+    y=df.true_label.to_numpy(int)
+    pred["Oracle expert selector"]=np.where(
+        (df.pred_pair.to_numpy(int)==y)&(df.pred_post.to_numpy(int)!=y),
+        df.pred_pair.to_numpy(int),df.pred_post.to_numpy(int))
+    return pred,{"logistic":ulog,"hgb":uhgb,"neural":uneu}
+
+Pclean,Gclean=route_all(clean)
+print("PASS: all frozen clean TEST methods evaluated.")
+
+
+===== CELL 11 =====
+# ---------- wrong-PRE Siamese inference + frozen methods ----------
+class WrongPreDataset(Dataset):
+    def __init__(self,df,donors):
+        self.df=df
+        self.d=donors.reset_index(drop=True)
+    def __len__(self): return len(self.d)
+    def __getitem__(self,i):
+        m=self.d.iloc[i]; target=self.df.loc[int(m.target_idx)]; donor=self.df.loc[int(m.donor_idx)]
+        donor_pre,_,_=crop_pair(donor,STAGE,CROP)
+        _,target_post,_=crop_pair(target,STAGE,CROP)
+        return {
+            "pre":to_model_tensor(donor_pre),"post":to_model_tensor(target_post),
+            "label":torch.tensor(int(target.label_id),dtype=torch.long),
+            "building_id":str(target.building_id),"scene_id":str(target.scene_id),"disaster":str(target.disaster)
+        }
+
+wrong_ds=WrongPreDataset(td,donor_df)
+wrong_loader=DataLoader(wrong_ds,batch_size=EVAL_BS,shuffle=False,num_workers=NUM_WORKERS,
+                        pin_memory=True,drop_last=False,persistent_workers=False)
+
+@torch.inference_mode()
+def infer_wrong(loader):
+    rows=[]; axis=np.arange(4,dtype=np.float32)
+    for batch in loader:
+        pre=batch["pre"].to(DEVICE,non_blocking=True); post=batch["post"].to(DEVICE,non_blocking=True)
+        lt=pair_model(pre,post); pt=torch.softmax(lt,1).cpu().numpy(); ltn=lt.cpu().numpy()
+        y=batch["label"].cpu().numpy().astype(int)
+        for i,bid in enumerate(batch["building_id"]):
+            rec={"building_id":str(bid),"scene_id":str(batch["scene_id"][i]),"disaster":str(batch["disaster"][i]),
+                 "true_label":int(y[i]),"pred_pair":int(pt[i].argmax()),"confidence_pair":float(pt[i].max()),
+                 "entropy_pair":float(-(pt[i]*np.log(np.clip(pt[i],1e-12,1))).sum()),
+                 "severity_pair":float(pt[i]@axis)}
+            for k in range(4):
+                rec[f"p{k}_pair"]=float(pt[i,k]); rec[f"logit{k}_pair"]=float(ltn[i,k])
+            rows.append(rec)
+    return pd.DataFrame(rows)
+
+wrong_pair=infer_wrong(wrong_loader)
+wrong_pair.to_csv(TABLE/"event_test_wrongpre_siamese_predictions.csv.gz",index=False,
+                  compression={"method":"gzip","compresslevel":6,"mtime":0})
+ids=wrong_pair.building_id.astype(str).tolist()
+matched=clean.set_index(clean.building_id.astype(str)).loc[ids].reset_index(drop=True)
+if matched.building_id.astype(str).tolist()!=ids: raise RuntimeError("Wrong-PRE clean-match ordering failure.")
+wrong_frame=matched.copy()
+for c in ["pred_pair","confidence_pair","entropy_pair","severity_pair",
+          *[f"p{k}_pair" for k in range(4)],*[f"logit{k}_pair" for k in range(4)]]:
+    wrong_frame[c]=wrong_pair[c].to_numpy()
+
+Pvalid,Gvalid=route_all(matched)
+Pwrong,Gwrong=route_all(wrong_frame)
+wr_mr,wr_cr=metric_rows(wrong_frame,Pwrong,"wrongpre_matched")
+va_mr,_=metric_rows(matched,Pvalid,"valid_matched")
+metrics2=pd.concat([metrics,pd.DataFrame(va_mr),pd.DataFrame(wr_mr)],ignore_index=True)
+metrics2.to_csv(TABLE/"test_metrics_all_conditions.csv",index=False)
+pd.concat([perclass,pd.DataFrame(wr_cr)],ignore_index=True).to_csv(TABLE/"test_per_class_f1_all_conditions.csv",index=False)
+
+boot_wrong=paired_scene_boot(wrong_frame,Pwrong,2000,20260918)
+boot_wrong["condition"]="wrongpre"
+pd.concat([boot_clean,boot_wrong],ignore_index=True).to_csv(TABLE/"test_scene_bootstrap_all.csv",index=False)
+
+print("\nWRONG-PRE MATCHED TEST")
+print(pd.DataFrame(wr_mr).sort_values("macro_f1",ascending=False).to_string(index=False,float_format=lambda x:f"{x:.6f}"))

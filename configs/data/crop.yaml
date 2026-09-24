@@ -1,0 +1,6 @@
+crop:
+  reference: pre
+  context_scale: 2.0
+  min_side_px: 32
+  output_size: 192
+normalization: imagenet

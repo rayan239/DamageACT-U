@@ -1,0 +1,52 @@
+{
+  "run_id": "phase7c_eventsplit_data_integrity_audit_v3_final",
+  "status": "PROCEED_PHASE7D_EVENT_TRACK_BUILD",
+  "next_action": "Freeze the verified unique patch-role manifest and proceed to Phase 7D development using event-train/event-val only. Do not inspect event-TEST performance until all 3-seed expert/router decisions are frozen.",
+  "protocol_sha256": "40ee8d9b0eeeb9843e7e418ee5464b73295cf7577db2b371e37e7cd650fafbb6",
+  "official_repo_commit": "fada4e791766f810dc815a4e82d52f2bb27116c6",
+  "official_source_hashes": {
+    "base.yaml_sha256": "33fea45860bd83d04eb784048f72744272f4523007e33bd4e9978804f757c451",
+    "datasets.py_sha256": "e1b6e62ec2347bc32b5632148d2dda0e35500aec30d20c000eb545e2dc12c649",
+    "requirements.txt_sha256": "c2c8b2102be18dd5ef331b9474e541a447db568b89899038033e84e0c0207dcc",
+    "README.md_sha256": "965396706f6c9643314fe0408e34e5e3650233e09a6d8e207042fd83d9b2981a",
+    "commit_sha": "fada4e791766f810dc815a4e82d52f2bb27116c6"
+  },
+  "official_metadata_raw_sha256": "7c1c15c71fed65101b0fc59786bd4eb29341e3b29979603fb29165a2dfe3750d",
+  "official_metadata_canonical_sha256": "1a172b93168b0d04f9799404abbe49cd1afbf27fb088bf48534ce24b3a881ea6",
+  "assignment_release_origin_verified": true,
+  "assignment_release_verified": true,
+  "assignment_comparison": {
+    "unique_role_match": {
+      "train": true,
+      "val": true,
+      "test": true
+    },
+    "cross_role_overlap_n": 0,
+    "unique_roles_exhaustive": true,
+    "train_release_mode": "UNIQUE_BASE_TRAIN",
+    "release_counts": {
+      "train": 8202,
+      "val": 912,
+      "test": 1920
+    },
+    "release_unique_counts": {
+      "train": 8202,
+      "val": 912,
+      "test": 1920
+    },
+    "reconstructed_unique_counts": {
+      "train": 8202,
+      "val": 912,
+      "test": 1920
+    }
+  },
+  "expected_patches": 11034,
+  "complete_local_patches": 11034,
+  "local_failure_records": 0,
+  "phase7d_manifest_sha256": "7a396d0c61c6a78151a58b2c62dd016786ab1c4f9dd85f05eed5bde430ee4f05",
+  "model_training_performed": false,
+  "runtime_minutes": 3.8227691849072776,
+  "protocol_errors": [],
+  "data_errors": [],
+  "warnings": []
+}

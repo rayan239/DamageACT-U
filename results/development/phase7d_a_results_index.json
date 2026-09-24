@@ -1,0 +1,40 @@
+{
+  "run_id": "damageactu_phase7d_a_eventtrack_building_manifest_audit_v2_final_reviewed",
+  "status": "PROCEED_PHASE7D_B_TRAINING_PROTOCOL_LOCK",
+  "protocol_sha256": "e2cb594c77e135d8fc782a49d59abab9d10e940c1dce319e6e7dedeb10a79a02",
+  "phase7c_patch_manifest_sha256": "7a396d0c61c6a78151a58b2c62dd016786ab1c4f9dd85f05eed5bde430ee4f05",
+  "patch_counts": {
+    "train": 8202,
+    "test": 1920,
+    "val": 912
+  },
+  "development_train_buildings": 265273,
+  "development_val_buildings": 30735,
+  "event_test_manifest_sealed": true,
+  "event_test_performance_opened": false,
+  "wrongpre_val_coverage": 0.9987961607288108,
+  "wrongpre_overlap_definition": "PRE-referenced crop-box IoU",
+  "class_weights": {
+    "0": 0.3491195254016762,
+    "1": 1.2918169707179104,
+    "2": 1.1515690289737834,
+    "3": 1.20749447490663
+  },
+  "canonical_train_manifest_parity": {
+    "available": false
+  },
+  "output_hashes": {
+    "event_train_manifest_sha256": "c82b2743f857a11ed7b390a06b4b2b24e6bebdbd7e925585221c66ba5a60e9d4",
+    "event_val_manifest_sha256": "44adcd20edcff627ef36ae9fbb7d259f0ca404ee86f343cea2313c6d3fefc35c",
+    "event_test_manifest_SEALED_sha256": "05546b6876cd3201eaa7a77ec31e96ce8ca18fb0ffa5e4cc3a9581a00ee0fcad",
+    "event_val_wrongpre_donor_map_sha256": "4bfb7d73e5cec58a70977ce719cb32f33e15b6e8f06edf917392f218801905a6",
+    "source_hashes": {
+      "build_manifest.py": "4337d8ec54d2fdaa5361e4c30e7544e16f0edf306f517dcff612b7fe12d7807a",
+      "dataset.py": "165a71c4ebf6adea14f20f735bc487e883c5448e5ccfaf4fe8b74e49a3a77044",
+      "crop_utils.py": "8c34139a0f96eaf8246dd228cf27c83386d6c1ca049426c25d28666576589593",
+      "damage_models.py": "9f9ee3382902f339309ddf03a203b882d42e8674de7bf8ee3d18b14863478f2d",
+      "smoke_test_dataset.py": "9fafa50116391528387f777fc04caf23f1d42689d832d09458fb9e0ddc2cf9ac"
+    }
+  },
+  "runtime_minutes": 28.027964210510255
+}

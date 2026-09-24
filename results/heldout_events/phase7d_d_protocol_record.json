@@ -1,0 +1,30 @@
+{
+  "protocol_sha256": "faa268d83edda817e013bc0166fe9ade2ad20f3cda71b1bf08e44b092878c533",
+  "execution_revision": "v3 artifact-identity + canonical pair_key parser fix",
+  "primary_endpoint": "pooled 4-class Macro-F1; Neural Temporal Utility Router minus POST-only",
+  "clean_replication_rule": {
+    "gain_min": 0.01,
+    "paired_scene_bootstrap_low95_gt": 0.0
+  },
+  "wrongpre_rule": {
+    "gain_min": -0.005,
+    "paired_scene_bootstrap_low95_min": -0.01,
+    "minimum_coverage": 0.95
+  },
+  "class_safety_rule": {
+    "worst_neural_minus_post_f1_min": -0.02
+  },
+  "utility_rule": {
+    "auroc_bootstrap_low95_gt": 0.5,
+    "spearman_bootstrap_low95_gt": 0.0
+  },
+  "gate_suppression_rule": "mean wrong-PRE gate < mean valid-PRE gate",
+  "bootstrap": {
+    "performance_reps": 2000,
+    "utility_reps": 1000,
+    "seed": 20260917
+  },
+  "no_post_test_tuning": true,
+  "expert_seed": 42,
+  "random_seed_robustness_evaluated": false
+}

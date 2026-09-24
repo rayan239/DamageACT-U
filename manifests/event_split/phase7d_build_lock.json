@@ -1,0 +1,51 @@
+{
+  "status": "FROZEN_FOR_PHASE7D_BUILD",
+  "phase7c_protocol_sha256": "40ee8d9b0eeeb9843e7e418ee5464b73295cf7577db2b371e37e7cd650fafbb6",
+  "official_repo_commit": "fada4e791766f810dc815a4e82d52f2bb27116c6",
+  "official_metadata_canonical_sha256": "1a172b93168b0d04f9799404abbe49cd1afbf27fb088bf48534ce24b3a881ea6",
+  "official_assignment_release_hashes": {
+    "train": {
+      "path": "train_samples_event_split.txt",
+      "sha256": "b7772fa5f9937ac176445d583c230f165110242fa1cb0b2fb0515aab4de691fa"
+    },
+    "val": {
+      "path": "val_samples_event_split.txt",
+      "sha256": "51e1c105d177f45ecd3f2aff4bb37ae9233cb67f33df611e2ee6475c3071a945"
+    },
+    "test": {
+      "path": "test_samples_event_split.txt",
+      "sha256": "40dd9dee75da2da0d2494bd6793a46586bff43800efcc9f620b81e8d60321cc3"
+    }
+  },
+  "phase7d_unique_patch_manifest_sha256": "7a396d0c61c6a78151a58b2c62dd016786ab1c4f9dd85f05eed5bde430ee4f05",
+  "phase7d_design": {
+    "task": "Fresh event-held-out DamageACT-U experiment; Phase1-6 artifacts remain immutable.",
+    "base_patch_assignment": "Use the unique author-verified Phase7C train/val/test patch roles; do not inherit Hafner training oversampling unless separately justified and prospectively locked for our building-level task.",
+    "experts": [
+      "POST-only",
+      "Siamese"
+    ],
+    "initialization": "fresh ImageNet initialization for every expert seed",
+    "router_controls": [
+      "equal-0.5 blend",
+      "static-alpha",
+      "logistic soft gate",
+      "HGB utility router"
+    ],
+    "primary_router": "neural temporal-utility router",
+    "seeds": [
+      42,
+      1337,
+      2026
+    ],
+    "primary_metric": "4-class Macro-F1",
+    "secondary_metrics": [
+      "accuracy",
+      "ordinal MAE",
+      "per-class F1"
+    ],
+    "primary_robustness_intervention": "same-event hard wrong-PRE correspondence",
+    "test_policy": "Event TEST is opened exactly once after all expert, router, hyperparameter, and operating-point decisions are frozen on event-train/event-val only."
+  },
+  "test_policy": "No event-TEST model performance may be opened during Phase7D development/model selection."
+}

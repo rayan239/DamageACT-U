@@ -1,0 +1,81 @@
+population,method,class_id,f1
+clean_pooled,POST-only,0,0.8355883027995362
+clean_pooled,POST-only,1,0.16153715354531542
+clean_pooled,POST-only,2,0.10156378600823045
+clean_pooled,POST-only,3,0.727562442735928
+clean_pooled,Siamese,0,0.827861295834204
+clean_pooled,Siamese,1,0.20111776130643308
+clean_pooled,Siamese,2,0.11455108359133127
+clean_pooled,Siamese,3,0.627885936400496
+clean_pooled,Equal 0.5 logit blend,0,0.8477605651112841
+clean_pooled,Equal 0.5 logit blend,1,0.16987951807228915
+clean_pooled,Equal 0.5 logit blend,2,0.09668300037693177
+clean_pooled,Equal 0.5 logit blend,3,0.7240250991261501
+clean_pooled,Static alpha blend,0,0.8474245478715634
+clean_pooled,Static alpha blend,1,0.16816220880069024
+clean_pooled,Static alpha blend,2,0.09821512890735669
+clean_pooled,Static alpha blend,3,0.7270683104597968
+clean_pooled,Max-confidence selector,0,0.8472960007488358
+clean_pooled,Max-confidence selector,1,0.16730136749177774
+clean_pooled,Max-confidence selector,2,0.09078590785907859
+clean_pooled,Max-confidence selector,3,0.7158702423459697
+clean_pooled,Min-entropy selector,0,0.8468046488480342
+clean_pooled,Min-entropy selector,1,0.1682808716707022
+clean_pooled,Min-entropy selector,2,0.08616388409134523
+clean_pooled,Min-entropy selector,3,0.7147573331309528
+clean_pooled,Logistic soft gate,0,0.8484756877427156
+clean_pooled,Logistic soft gate,1,0.15876923076923077
+clean_pooled,Logistic soft gate,2,0.09539537594715368
+clean_pooled,Logistic soft gate,3,0.7281023321113798
+clean_pooled,HGB hard router,0,0.8440246121847648
+clean_pooled,HGB hard router,1,0.1462782593155214
+clean_pooled,HGB hard router,2,0.09036261392282335
+clean_pooled,HGB hard router,3,0.7299434121282659
+clean_pooled,Neural Temporal Utility Router,0,0.8471441229101396
+clean_pooled,Neural Temporal Utility Router,1,0.15549008398927047
+clean_pooled,Neural Temporal Utility Router,2,0.09710060323020042
+clean_pooled,Neural Temporal Utility Router,3,0.73896
+clean_pooled,Oracle expert selector,0,0.8690676579230373
+clean_pooled,Oracle expert selector,1,0.25471698113207547
+clean_pooled,Oracle expert selector,2,0.21359590986555577
+clean_pooled,Oracle expert selector,3,0.7897691334598356
+wrongpre_matched,POST-only,0,0.8356992716717401
+wrongpre_matched,POST-only,1,0.16138500148879154
+wrongpre_matched,POST-only,2,0.10067667932001981
+wrongpre_matched,POST-only,3,0.7274830474670921
+wrongpre_matched,Siamese,0,0.7946411285638689
+wrongpre_matched,Siamese,1,0.20747852829764094
+wrongpre_matched,Siamese,2,0.12235224411198341
+wrongpre_matched,Siamese,3,0.5366087815897219
+wrongpre_matched,Equal 0.5 logit blend,0,0.842278892593955
+wrongpre_matched,Equal 0.5 logit blend,1,0.17202380952380952
+wrongpre_matched,Equal 0.5 logit blend,2,0.10107841345275087
+wrongpre_matched,Equal 0.5 logit blend,3,0.6873411286222674
+wrongpre_matched,Static alpha blend,0,0.842768262679788
+wrongpre_matched,Static alpha blend,1,0.16859221223791185
+wrongpre_matched,Static alpha blend,2,0.1000549752611325
+wrongpre_matched,Static alpha blend,3,0.6955017301038062
+wrongpre_matched,Max-confidence selector,0,0.8409039655315664
+wrongpre_matched,Max-confidence selector,1,0.16903463965317422
+wrongpre_matched,Max-confidence selector,2,0.09662836692409117
+wrongpre_matched,Max-confidence selector,3,0.6760072543650653
+wrongpre_matched,Min-entropy selector,0,0.8409791197895949
+wrongpre_matched,Min-entropy selector,1,0.16973125884016974
+wrongpre_matched,Min-entropy selector,2,0.09345444329993445
+wrongpre_matched,Min-entropy selector,3,0.6762308212594781
+wrongpre_matched,Logistic soft gate,0,0.843335922238697
+wrongpre_matched,Logistic soft gate,1,0.15961949644368809
+wrongpre_matched,Logistic soft gate,2,0.09848058525604952
+wrongpre_matched,Logistic soft gate,3,0.6963670703255194
+wrongpre_matched,HGB hard router,0,0.8379594371345885
+wrongpre_matched,HGB hard router,1,0.14907329214631762
+wrongpre_matched,HGB hard router,2,0.0927536231884058
+wrongpre_matched,HGB hard router,3,0.6905351647526833
+wrongpre_matched,Neural Temporal Utility Router,0,0.8438778133545236
+wrongpre_matched,Neural Temporal Utility Router,1,0.15783037819896933
+wrongpre_matched,Neural Temporal Utility Router,2,0.09547216183004065
+wrongpre_matched,Neural Temporal Utility Router,3,0.7157797244626249
+wrongpre_matched,Oracle expert selector,0,0.866210190708126
+wrongpre_matched,Oracle expert selector,1,0.2711582449573716
+wrongpre_matched,Oracle expert selector,2,0.21944773535040554
+wrongpre_matched,Oracle expert selector,3,0.7865371052425358

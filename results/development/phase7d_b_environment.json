@@ -1,0 +1,12 @@
+{
+  "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+  "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+  "torch": "2.10.0+cu128",
+  "torchvision": "0.25.0+cu128",
+  "cuda": "12.8",
+  "gpu": "Tesla T4",
+  "seed": 42,
+  "resnet18_weights_url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+  "resnet18_weight_file_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "batch64_joint_preflight": "PASS"
+}

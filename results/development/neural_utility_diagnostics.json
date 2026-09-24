@@ -1,0 +1,27 @@
+{
+  "auroc": 0.6593907667527299,
+  "auprc": 0.7152701434299656,
+  "spearman_gate_deltaCE": 0.263807152916379,
+  "auroc_bootstrap": {
+    "mean": 0.6609149393828655,
+    "ci95_low": 0.5618876815837175,
+    "ci95_high": 0.7504652311622652,
+    "valid_reps": 1000
+  },
+  "auprc_bootstrap": {
+    "mean": 0.7142054257522231,
+    "ci95_low": 0.5804090546543242,
+    "ci95_high": 0.829480437434325,
+    "valid_reps": 1000
+  },
+  "spearman_bootstrap": {
+    "mean": 0.2636178131686144,
+    "ci95_low": 0.175225233194272,
+    "ci95_high": 0.3527148934477131,
+    "valid_reps": 1000
+  },
+  "valid_gate_mean_matched": 0.325026273727417,
+  "wrong_gate_mean_matched": 0.31036755442619324,
+  "n_correctness_discordant": 1007,
+  "terminology": "Temporal Utility Router"
+}

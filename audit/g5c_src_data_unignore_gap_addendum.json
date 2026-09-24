@@ -1,0 +1,56 @@
+{
+  "addendum_id": "damageactu_g5c_src_data_unignore_gap_addendum_v1",
+  "cause": "The original unanchored .gitignore rule 'data/' hid src/damageactu/data/. After G5C narrowed it to '/data/', six Python source files became visible. G5B also did not scan top-level src in its ignored-gap allowlist.",
+  "criteria_changed": false,
+  "files": [
+    {
+      "bytes": 0,
+      "final_disposition": "GIT_RELEASE_SOURCE",
+      "path": "src/damageactu/data/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 545,
+      "final_disposition": "GIT_RELEASE_SOURCE",
+      "path": "src/damageactu/data/crops.py",
+      "sha256": "adcf252455d13e578e40c319d702dad6f88c0ab6e7e34d0908dc5988abf4147b"
+    },
+    {
+      "bytes": 318,
+      "final_disposition": "GIT_RELEASE_SOURCE",
+      "path": "src/damageactu/data/dataset.py",
+      "sha256": "d1891978349e51a56a91e131d8a26ef146950ff357cee7ac8b63c63c182fcf29"
+    },
+    {
+      "bytes": 2348,
+      "final_disposition": "GIT_RELEASE_SOURCE",
+      "path": "src/damageactu/data/event_split.py",
+      "sha256": "3560dfd3ae36d69025d95ad07055f3a4dca1dd3421d859cfe792b5b07e7903ad"
+    },
+    {
+      "bytes": 1231,
+      "final_disposition": "GIT_RELEASE_SOURCE",
+      "path": "src/damageactu/data/manifests.py",
+      "sha256": "16045953a348176bab2908894c7c24473874798457dc4b3563be33eeda315b33"
+    },
+    {
+      "bytes": 989,
+      "final_disposition": "GIT_RELEASE_SOURCE",
+      "path": "src/damageactu/data/xbd.py",
+      "sha256": "8dc9a389503282b10a04a59b8228dabaede50ebc52bff796cbf855d5f48716a4"
+    }
+  ],
+  "files_deleted": false,
+  "files_moved": false,
+  "g5c_protocol_sha256": "802b8392795b93bcec3152af06eae500aaf66a953c6443dd57baea694e38d79f",
+  "generated_pycache_disposition": "GENERATED_EXCLUDE",
+  "generated_pycache_files_seen": 8,
+  "locked_date": "2026-09-24",
+  "models_run_or_retrained": false,
+  "python_syntax_check": "PASS",
+  "required_g5c_protocol_commit": "820000b",
+  "scientific_files_modified": false,
+  "scientific_interpretation": "These are clean release-package source files, not substitutes for the frozen Phase7D implementation evidence under vendor/frozen_phase7d_source/.",
+  "stage": "G5C_finalize_release_tree_and_external_assets",
+  "tolerances_changed": false
+}

@@ -1,0 +1,14 @@
+check,passed,category,detail
+pinned_official_source_semantics,True,protocol,{'commit': 'fada4e791766f810dc815a4e82d52f2bb27116c6'}
+authoritative_metadata_downloaded,True,protocol,"{'origin': 'direct-google-drive', 'sha': '1a172b93168b0d04f9799404abbe49cd1afbf27fb088bf48534ce24b3a881ea6'}"
+attached_metadata_not_mismatched,True,protocol,attached=0
+official_assignment_release_directly_downloaded,True,protocol,None
+official_assignment_matches_independent_reconstruction,True,protocol,"{'unique_role_match': {'train': True, 'val': True, 'test': True}, 'cross_role_overlap_n': 0, 'unique_roles_exhaustive': True, 'train_release_mode': 'UNIQUE_BASE_TRAIN', 'release_counts': {'train': 8202, 'val': 912, 'test': 1920}, 'release_unique_counts': {'train': 8202, 'val': 912, 'test': 1920}, 'reconstructed_unique_counts': {'train': 8202, 'val': 912, 'test': 1920}}"
+metadata_internal_consistency,True,protocol,official metadata subset/event/patch fields
+global_event_patch_keys_unique,True,protocol,"(event,patch_id) unique across train/tier3/test/hold"
+event_sets_disjoint,True,protocol,set()
+event_counts_locked,True,protocol,train=13 test=6
+no_event_leakage_trainval_vs_test,True,protocol,set()
+reconstruction_exhaustive,True,protocol,11034/11034
+all_official_patches_present_and_valid_locally,True,data,complete=11034/11034
+no_local_file_failures,True,data,failures=0

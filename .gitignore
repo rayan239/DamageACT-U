@@ -23,7 +23,7 @@ tmp/
 
 
 # Raw xBD
-data/
+/data/
 xbd/
 xbd_full/
 
@@ -36,3 +36,22 @@ xbd_full/
 *.tar
 *.tar.gz
 .venv312/
+
+# --- DamageACT-U release asset policy (G5C) ---
+# External canonical assets: retained locally / published separately, not ordinary Git.
+/checkpoints/experts/
+/manifests/buildings/
+/predictions/development/*.csv.gz
+/predictions/heldout_events/*.csv.gz
+/DamageACTU_G3_Parity_Execution_Bundle.bin
+
+# Local execution/distribution provenance; hashes are frozen in audit manifests.
+/dist/
+
+# Transitional generated report; canonical v2 reproduction outputs are separately tracked.
+/results/reproduction_report.json
+
+# Small frozen router checkpoint is intentionally versioned.
+!/checkpoints/routers/
+!/checkpoints/routers/final_neural_safe_router.pt
+# --- end DamageACT-U G5C release asset policy ---

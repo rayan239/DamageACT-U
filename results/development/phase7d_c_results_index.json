@@ -1,0 +1,19 @@
+{
+  "status": "PHASE7D_C_S1_COMPLETE_FINAL_MODELS_FROZEN",
+  "scientific_protocol_sha256": "0570650469f9d8624a4c01f84d902e1fefbf0fcbe584ea56984a3e8a75f1e268",
+  "execution_amendment_sha256": "deb6dfac9f0f42af5ae0f279bbcd23c5224b6f8159c8f98e68e17f3f34890a4f",
+  "expert_seed": 42,
+  "expert_seed_replication_complete": false,
+  "random_seed_robustness_claim_allowed": false,
+  "event_test_used": false,
+  "router_diag_opened_once": true,
+  "router_diag_used_for_hyperparameter_change": false,
+  "neural_status": "SAFE_EPOCH_SELECTED",
+  "neural_best_epoch": 1,
+  "diagnostic_status": "NEURAL_DIAGNOSTIC_GATE_PASS",
+  "neural_terminology": "Temporal Utility Router",
+  "static_alpha": 0.45,
+  "final_refit_clean_n": 30735,
+  "final_refit_wrongpre_n": 30698,
+  "next_phase": "Phase7D-D-S1 one-time sealed unseen-event evaluation"
+}

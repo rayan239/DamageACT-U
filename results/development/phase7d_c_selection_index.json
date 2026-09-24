@@ -1,0 +1,27 @@
+{
+  "status": "PHASE7D_C_S1_SELECTION_FROZEN",
+  "protocol_sha256": "0570650469f9d8624a4c01f84d902e1fefbf0fcbe584ea56984a3e8a75f1e268",
+  "expert_seed": 42,
+  "expert_seed_replication_complete": false,
+  "random_seed_robustness_claim_allowed": false,
+  "phase7d_b_protocol_sha256": "ae145c5722a18c9754ed9905611e20c9b8d83598d6bb1562082c23623a768e61",
+  "phase7d_b_execution_addendum_sha256": "42c3c266c11a99063088a7a345a60b15236f1c4c31e540cea64190fde7599635",
+  "event_test_used": false,
+  "router_diag_evaluated": false,
+  "clean_n": 30735,
+  "wrongpre_n": 30698,
+  "router_select_n": 17056,
+  "router_diag_n": 13679,
+  "router_select_wrongpre_n": 17039,
+  "router_diag_wrongpre_n": 13659,
+  "outer_split_sha256": "6f4c3050a91d2d772c4ea6d59ccf8e338b47deb661ecc98824fd540ce5feddf1",
+  "static_alpha": 0.45,
+  "neural_status": "SAFE_EPOCH_SELECTED",
+  "neural_best_epoch": 1,
+  "source_sha256": {
+    "results_index": "4086d9a4c59c1f43027fbd6782553bc63e1939530b846fd4c91c0a26d7a0d301",
+    "post_predictions": "0c6b97125acb8970c4db63c58267e85fb3ba40aee9991b0caf9e69607251b710",
+    "siamese_predictions": "28e56267dfc426f8d8671a5f9584537762a9e4c36236f959c736889f366b95f0",
+    "wrongpre_predictions": "d13cdc5d9b06c9b136df477a737c8600ddd70f773a22b0b96d0888f1cb47c07f"
+  }
+}

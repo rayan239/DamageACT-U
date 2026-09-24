@@ -1,0 +1,17 @@
+check,passed,detail
+frozen_patch_manifest_verified,True,7a396d0c61c6a78151a58b2c62dd016786ab1c4f9dd85f05eed5bde430ee4f05
+patch_role_counts_locked,True,"{'train': 8202, 'test': 1920, 'val': 912}"
+patch_build_audit_exactly_covers_frozen_keys,True,audit_rows=11034
+canonical_manifest_builder_source_hashed,True,4337d8ec54d2fdaa5361e4c30e7544e16f0edf306f517dcff612b7fe12d7807a
+local_event_metadata_matches_frozen_event,True,mismatches=0
+all_usable_prepost_dimensions_match,True,usable_rows=411357
+building_ids_globally_unique,True,411357
+no_cross_role_building_overlap,True,pairwise intersections empty
+development_event_sets_locked,True,train=13 val=13 expected=13
+heldout_event_set_locked,True,6
+no_heldout_event_leakage,True,set()
+all_four_classes_in_train,True,"{0: 212466, 1: 15518, 2: 19528, 3: 17761}"
+all_four_classes_in_val,True,"{0: 24133, 1: 1694, 2: 2254, 3: 2654}"
+train_crop_augmentation_dataloader_smoke_pass,True,"{'rows_checked': 32, 'labels_seen': [0, 1, 2, 3], 'dataloader_batch': 8, 'augmentation_path': True}"
+val_deterministic_crop_smoke_pass,True,"{'rows_checked': 32, 'labels_seen': [0, 1, 2, 3], 'augmentation_path': False}"
+wrongpre_val_crop_iou_coverage_ge_095,True,"{'val_buildings': 30735, 'donor_eligible': 30698, 'coverage': 0.9987961607288108, 'preferred_crop_nonoverlap_fraction': 0.9980128998631833, 'min_required_coverage': 0.95, 'overlap_definition': 'PRE-referenced crop-box IoU', 'label_used_for_selection': False, 'cross_scene_fallback': False}"

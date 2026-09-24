@@ -1,0 +1,81 @@
+{
+  "run_id": "damageactu_phase7d_b_v7_seed_42",
+  "status": "PHASE7D_B_SEED_COMPLETE",
+  "seed": 42,
+  "scientific_protocol_sha256": "ae145c5722a18c9754ed9905611e20c9b8d83598d6bb1562082c23623a768e61",
+  "execution_addendum_sha256": "42c3c266c11a99063088a7a345a60b15236f1c4c31e540cea64190fde7599635",
+  "event_test_used": false,
+  "router_trained": false,
+  "epochs_completed": 8,
+  "post": {
+    "model_type": "post_only",
+    "seed": 42,
+    "epochs_run": 8,
+    "best_epoch": 8,
+    "best_val_macro_f1": 0.7500685242859261,
+    "best_metrics": {
+      "loss": 0.3632876980337762,
+      "accuracy": 0.9011875711729299,
+      "macro_f1": 0.7501237835331461,
+      "weighted_f1": 0.9024058317164212,
+      "ordinal_mae": 0.14768179599804782,
+      "per_class_f1": {
+        "0": 0.9553664106290222,
+        "1": 0.4800659884520209,
+        "2": 0.7183065829262619,
+        "3": 0.8467561521252797
+      },
+      "n": 30735
+    },
+    "checkpoint_sha256": "df6b607973ea74e1a6aa7eb640459b65c7a4e1bdaabc7fce956d2c757374967c",
+    "initial_full_state_sha256": "87088268955090ae4c5ea2cde82bc5725a8807da7e4f35cacb31152519edcd8e"
+  },
+  "siamese": {
+    "model_type": "siamese",
+    "seed": 42,
+    "epochs_run": 8,
+    "best_epoch": 8,
+    "best_val_macro_f1": 0.744912365916041,
+    "best_metrics": {
+      "loss": 0.37356083864057976,
+      "accuracy": 0.9017406865137465,
+      "macro_f1": 0.7450202504915007,
+      "weighted_f1": 0.9019165203482865,
+      "ordinal_mae": 0.14966650398568407,
+      "per_class_f1": {
+        "0": 0.9575933609958506,
+        "1": 0.5031619466593347,
+        "2": 0.6846076458752515,
+        "3": 0.8347180484355665
+      },
+      "n": 30735
+    },
+    "checkpoint_sha256": "3d6466108cf44e994c0c7b7bb1745e549807d89601e45898911de34a455d73a5",
+    "initial_full_state_sha256": "87088268955090ae4c5ea2cde82bc5725a8807da7e4f35cacb31152519edcd8e"
+  },
+  "wrongpre_siamese": {
+    "loss": 0.44236093115686975,
+    "accuracy": 0.8651052185810151,
+    "macro_f1": 0.6962767816629181,
+    "weighted_f1": 0.8708391816532427,
+    "ordinal_mae": 0.24043911655482442,
+    "per_class_f1": {
+      "0": 0.9350400408928267,
+      "1": 0.46859525671097213,
+      "2": 0.6550625153223829,
+      "3": 0.7264093137254902
+    },
+    "n": 30698
+  },
+  "complementarity": {
+    "n": 30735,
+    "both_correct": 26752,
+    "post_only_correct": 946,
+    "siamese_only_correct": 963,
+    "both_wrong": 2074,
+    "discordant_correctness": 1909,
+    "oracle_macro_f1": 0.8180841362263033
+  },
+  "resnet18_weight_file_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "runtime_minutes_this_segment": 456.1970041513443
+}
