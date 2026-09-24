@@ -1,0 +1,541 @@
+{
+  "environment": {
+    "joblib": "1.6.0",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "python": "3.12.10",
+    "scikit_learn": "1.6.1",
+    "torch": "2.10.0+cpu"
+  },
+  "expert_inference_performed": false,
+  "feature_schema": {
+    "count": 26,
+    "names": [
+      "post_p0",
+      "pair_p0",
+      "diff_p0",
+      "absdiff_p0",
+      "post_p1",
+      "pair_p1",
+      "diff_p1",
+      "absdiff_p1",
+      "post_p2",
+      "pair_p2",
+      "diff_p2",
+      "absdiff_p2",
+      "post_p3",
+      "pair_p3",
+      "diff_p3",
+      "absdiff_p3",
+      "confidence_post",
+      "confidence_pair",
+      "entropy_post",
+      "entropy_pair",
+      "severity_post",
+      "severity_pair",
+      "conf_diff",
+      "entropy_diff",
+      "severity_diff",
+      "pred_disagree"
+    ]
+  },
+  "g3_closeout_commit_required": "8be7211",
+  "head": "3ccb0b221c66a4bfe55c8651b4df12aec881b64b",
+  "heldout_results_index": {
+    "all_precommitted_criteria_pass": false,
+    "class_safety_pass": true,
+    "clean_effectiveness_pass": false,
+    "expert_seed": 42,
+    "gate_suppression_pass": true,
+    "interpretation_guardrail": "No method, parameter, threshold, split, or claim may be retuned from this TEST result.",
+    "phase7c_manifest_expected_raw_sha256": "7a396d0c61c6a78151a58b2c62dd016786ab1c4f9dd85f05eed5bde430ee4f05",
+    "phase7c_manifest_identity_mode": "SEMANTIC_KAGGLE_DECOMPRESSED_VERIFIED",
+    "post_test_tuning_permitted": false,
+    "primary_clean_bootstrap_ci95_low": -0.0006119094519209195,
+    "primary_clean_neural_minus_post": 0.003110781260150075,
+    "protocol_sha256": "faa268d83edda817e013bc0166fe9ade2ad20f3cda71b1bf08e44b092878c533",
+    "random_seed_robustness_evaluated": false,
+    "status": "PHASE7D_D_S1B_SEALED_TEST_COMPLETE_NO_RETUNING",
+    "test_building_count": 115349,
+    "test_events": [
+      "guatemala-volcano",
+      "hurricane-matthew",
+      "nepal-flooding",
+      "santa-rosa-wildfire",
+      "sunda-tsunami",
+      "tuscaloosa-tornado"
+    ],
+    "test_opened": true,
+    "test_patch_count": 1920,
+    "utility_auroc": 0.77283834848973,
+    "utility_auroc_bootstrap_ci95_low": 0.7455584705189203,
+    "utility_generalization_pass": true,
+    "utility_spearman": 0.10360709395401074,
+    "utility_spearman_bootstrap_ci95_low": 0.058445288060467795,
+    "valid_gate_mean_matched": 0.17521321773529053,
+    "worst_clean_class_f1_delta_neural_minus_post": -0.006047069556045004,
+    "wrong_gate_mean_matched": 0.165126234292984,
+    "wrongpre_bootstrap_ci95_low": -0.006597738161487725,
+    "wrongpre_coverage": 0.9993064525916999,
+    "wrongpre_inferential": true,
+    "wrongpre_neural_minus_post": -0.0030709805253712474,
+    "wrongpre_safety_pass": true
+  },
+  "input_hashes": {
+    "checkpoints/routers/final_hgb_hard_router.joblib": {
+      "bytes": 238182,
+      "sha256": "72d84b25dea3053028c7905797c14d305da8c6f0b48cf1fd6742391a03d65028"
+    },
+    "checkpoints/routers/final_logistic_soft_gate.joblib": {
+      "bytes": 2753,
+      "sha256": "8d0115705294bb2877341dc752854e7912c4cc83261ee9ed492731a862aa3372"
+    },
+    "checkpoints/routers/final_neural_safe_router.pt": {
+      "bytes": 10209,
+      "sha256": "ab94161da3331fd02cad8b4632375a3321159f5633f86fc212ec86b682d31a4b"
+    },
+    "checkpoints/routers/final_static_alpha.json": {
+      "bytes": 19,
+      "sha256": "2778cb68dd385953343cd1268e8b4f22060d21cb1e963325c0308114c7853b60"
+    },
+    "manifests/wrong_pre/event_val_hard_wrongpre_donor_map.csv.gz": {
+      "bytes": 1224756,
+      "sha256": "4bfb7d73e5cec58a70977ce719cb32f33e15b6e8f06edf917392f218801905a6"
+    },
+    "manifests/wrong_pre/test_hard_wrongpre_donor_map.csv.gz": {
+      "bytes": 5198039,
+      "sha256": "c3b446b209ae42535ccdf1df35be4e4dd257cd2e0be4c6da2078e87000c67017"
+    },
+    "predictions/development/event_val_post_only_predictions.csv.gz": {
+      "bytes": 3243477,
+      "sha256": "e7c4081f0f754c5f867fcc94be2a6c62b96a409937fd098e3bd5222c43fdfe50"
+    },
+    "predictions/development/event_val_siamese_predictions.csv.gz": {
+      "bytes": 3249333,
+      "sha256": "a261bd855d81e71110459ca145060fea910b803f472675917f3c578d5c3b3fed"
+    },
+    "predictions/development/event_val_siamese_wrongpre_predictions.csv.gz": {
+      "bytes": 3249120,
+      "sha256": "64938aaba097aa18f21f31a5813cb82301ea5ef862194b5509ff8840a566d17d"
+    },
+    "predictions/heldout_events/event_test_clean_expert_predictions.csv.gz": {
+      "bytes": 25722220,
+      "sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2"
+    },
+    "predictions/heldout_events/event_test_wrongpre_siamese_predictions.csv.gz": {
+      "bytes": 14677035,
+      "sha256": "5b85ea8ea298e3e840ea23b24731ba5b330a352fbb9993fd272a5a64bc027231"
+    },
+    "results/development/phase7d_c_results_index.json": {
+      "bytes": 828,
+      "sha256": "b14b6f44b8a4a759ab3be6a03ab19ea8685e4ee97e3e5545258d3c3c166adace"
+    },
+    "results/heldout_events/results_index.json": {
+      "bytes": 1711,
+      "sha256": "c9b0537a75f60f1d0f4f9a6b93141bece0a6cf3447c88fd603ec6f6fdcd23146"
+    },
+    "results/heldout_events/test_neural_utility.json": {
+      "bytes": 744,
+      "sha256": "073f7a945fd898c8bbe318f060fa0ebfbf5e12199662c9d20a9b4d2db2235901"
+    },
+    "src/damageactu/routing/features.py": {
+      "bytes": 1465,
+      "sha256": "f142b6d12ee175b02e00b314b30af7e50a59e829fbe55cdb0c581f29bf95a7a0"
+    }
+  },
+  "next_gate": "G4B deterministic router/intervention parity runner",
+  "phase7d_c_results_index": {
+    "diagnostic_status": "NEURAL_DIAGNOSTIC_GATE_PASS",
+    "event_test_used": false,
+    "execution_amendment_sha256": "deb6dfac9f0f42af5ae0f279bbcd23c5224b6f8159c8f98e68e17f3f34890a4f",
+    "expert_seed": 42,
+    "expert_seed_replication_complete": false,
+    "final_refit_clean_n": 30735,
+    "final_refit_wrongpre_n": 30698,
+    "neural_best_epoch": 1,
+    "neural_status": "SAFE_EPOCH_SELECTED",
+    "neural_terminology": "Temporal Utility Router",
+    "next_phase": "Phase7D-D-S1 one-time sealed unseen-event evaluation",
+    "random_seed_robustness_claim_allowed": false,
+    "router_diag_opened_once": true,
+    "router_diag_used_for_hyperparameter_change": false,
+    "scientific_protocol_sha256": "0570650469f9d8624a4c01f84d902e1fefbf0fcbe584ea56984a3e8a75f1e268",
+    "static_alpha": 0.45,
+    "status": "PHASE7D_C_S1_COMPLETE_FINAL_MODELS_FROZEN"
+  },
+  "protocol_sha256": "4bd56f1a95fc0d7e0ac7259dac3c700a35a3faba2a48630b376010bd31e24f11",
+  "raw_xbd_loaded": false,
+  "router_artifacts": {
+    "hgb": {
+      "classes_": [
+        0,
+        1
+      ],
+      "feature_names_in_": [
+        "post_p0",
+        "pair_p0",
+        "diff_p0",
+        "absdiff_p0",
+        "post_p1",
+        "pair_p1",
+        "diff_p1",
+        "absdiff_p1",
+        "post_p2",
+        "pair_p2",
+        "diff_p2",
+        "absdiff_p2",
+        "post_p3",
+        "pair_p3",
+        "diff_p3",
+        "absdiff_p3",
+        "confidence_post",
+        "confidence_pair",
+        "entropy_post",
+        "entropy_pair",
+        "severity_post",
+        "severity_pair",
+        "conf_diff",
+        "entropy_diff",
+        "severity_diff",
+        "pred_disagree"
+      ],
+      "n_features_in_": 26,
+      "n_iter_": 100,
+      "params": {
+        "categorical_features": "from_dtype",
+        "class_weight": null,
+        "early_stopping": "auto",
+        "interaction_cst": null,
+        "l2_regularization": 1.0,
+        "learning_rate": 0.05,
+        "loss": "log_loss",
+        "max_bins": 255,
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_iter": 100,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "monotonic_cst": null,
+        "n_iter_no_change": 10,
+        "random_state": 42,
+        "scoring": "loss",
+        "tol": 1e-07,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "python_type": "sklearn.ensemble._hist_gradient_boosting.gradient_boosting.HistGradientBoostingClassifier"
+    },
+    "logistic": {
+      "classes_": [
+        0,
+        1
+      ],
+      "feature_names_in_": [
+        "post_p0",
+        "pair_p0",
+        "diff_p0",
+        "absdiff_p0",
+        "post_p1",
+        "pair_p1",
+        "diff_p1",
+        "absdiff_p1",
+        "post_p2",
+        "pair_p2",
+        "diff_p2",
+        "absdiff_p2",
+        "post_p3",
+        "pair_p3",
+        "diff_p3",
+        "absdiff_p3",
+        "confidence_post",
+        "confidence_pair",
+        "entropy_post",
+        "entropy_pair",
+        "severity_post",
+        "severity_pair",
+        "conf_diff",
+        "entropy_diff",
+        "severity_diff",
+        "pred_disagree"
+      ],
+      "n_features_in_": 26,
+      "params": {
+        "memory": null,
+        "steps": "[('scale', StandardScaler()), ('lr', LogisticRegression(class_weight='balanced', max_iter=2000, random_state=42))]",
+        "transform_input": null,
+        "verbose": false
+      },
+      "python_type": "sklearn.pipeline.Pipeline"
+    },
+    "neural": {
+      "best_epoch": 1,
+      "feature_names": [
+        "post_p0",
+        "pair_p0",
+        "diff_p0",
+        "absdiff_p0",
+        "post_p1",
+        "pair_p1",
+        "diff_p1",
+        "absdiff_p1",
+        "post_p2",
+        "pair_p2",
+        "diff_p2",
+        "absdiff_p2",
+        "post_p3",
+        "pair_p3",
+        "diff_p3",
+        "absdiff_p3",
+        "confidence_post",
+        "confidence_pair",
+        "entropy_post",
+        "entropy_pair",
+        "severity_post",
+        "severity_pair",
+        "conf_diff",
+        "entropy_diff",
+        "severity_diff",
+        "pred_disagree"
+      ],
+      "keys": [
+        "best_epoch",
+        "diagnostic_status",
+        "expert_seed",
+        "feature_names",
+        "mean",
+        "protocol_sha256",
+        "state_dict",
+        "std"
+      ]
+    },
+    "static_alpha_hits_0_45": [
+      [
+        "alpha",
+        0.45
+      ]
+    ],
+    "static_alpha_numeric_values": [
+      [
+        "alpha",
+        0.45
+      ]
+    ]
+  },
+  "router_fitting_performed": false,
+  "scientific_mutation_performed": false,
+  "stage": "G4A_router_intervention_preflight",
+  "status": "PASS",
+  "tables": {
+    "manifests/wrong_pre/event_val_hard_wrongpre_donor_map.csv.gz": {
+      "column_count": 7,
+      "columns": [
+        "target_building_id",
+        "donor_building_id",
+        "scene_id",
+        "event",
+        "crop_iou",
+        "abs_log_footprint_bbox_area_diff",
+        "preferred_crop_nonoverlap"
+      ],
+      "rows": 30698,
+      "scene_id_nunique": 502,
+      "target_building_id_nunique": 30698,
+      "target_building_id_unique": true
+    },
+    "manifests/wrong_pre/test_hard_wrongpre_donor_map.csv.gz": {
+      "column_count": 9,
+      "columns": [
+        "target_idx",
+        "donor_idx",
+        "target_building_id",
+        "donor_building_id",
+        "scene_id",
+        "disaster",
+        "crop_iou",
+        "log_area_diff",
+        "preferred_iou_le_0_01"
+      ],
+      "disaster_nunique": 6,
+      "rows": 115269,
+      "scene_id_nunique": 1619,
+      "target_building_id_nunique": 115269,
+      "target_building_id_unique": true
+    },
+    "predictions/development/event_val_post_only_predictions.csv.gz": {
+      "building_id_nunique": 30735,
+      "building_id_unique": true,
+      "column_count": 16,
+      "columns": [
+        "building_id",
+        "scene_id",
+        "disaster",
+        "true_label",
+        "pred_label",
+        "confidence",
+        "entropy",
+        "expected_severity",
+        "p0",
+        "logit0",
+        "p1",
+        "logit1",
+        "p2",
+        "logit2",
+        "p3",
+        "logit3"
+      ],
+      "disaster_nunique": 13,
+      "rows": 30735,
+      "scene_id_nunique": 539,
+      "true_label_nunique": 4
+    },
+    "predictions/development/event_val_siamese_predictions.csv.gz": {
+      "building_id_nunique": 30735,
+      "building_id_unique": true,
+      "column_count": 16,
+      "columns": [
+        "building_id",
+        "scene_id",
+        "disaster",
+        "true_label",
+        "pred_label",
+        "confidence",
+        "entropy",
+        "expected_severity",
+        "p0",
+        "logit0",
+        "p1",
+        "logit1",
+        "p2",
+        "logit2",
+        "p3",
+        "logit3"
+      ],
+      "disaster_nunique": 13,
+      "rows": 30735,
+      "scene_id_nunique": 539,
+      "true_label_nunique": 4
+    },
+    "predictions/development/event_val_siamese_wrongpre_predictions.csv.gz": {
+      "building_id_nunique": 30698,
+      "building_id_unique": true,
+      "column_count": 16,
+      "columns": [
+        "building_id",
+        "scene_id",
+        "disaster",
+        "true_label",
+        "pred_label",
+        "confidence",
+        "entropy",
+        "expected_severity",
+        "p0",
+        "logit0",
+        "p1",
+        "logit1",
+        "p2",
+        "logit2",
+        "p3",
+        "logit3"
+      ],
+      "disaster_nunique": 13,
+      "rows": 30698,
+      "scene_id_nunique": 502,
+      "true_label_nunique": 4
+    },
+    "predictions/heldout_events/event_test_clean_expert_predictions.csv.gz": {
+      "building_id_nunique": 115349,
+      "building_id_unique": true,
+      "column_count": 28,
+      "columns": [
+        "building_id",
+        "scene_id",
+        "disaster",
+        "true_label",
+        "pred_post",
+        "pred_pair",
+        "confidence_post",
+        "confidence_pair",
+        "entropy_post",
+        "entropy_pair",
+        "severity_post",
+        "severity_pair",
+        "p0_post",
+        "p0_pair",
+        "logit0_post",
+        "logit0_pair",
+        "p1_post",
+        "p1_pair",
+        "logit1_post",
+        "logit1_pair",
+        "p2_post",
+        "p2_pair",
+        "logit2_post",
+        "logit2_pair",
+        "p3_post",
+        "p3_pair",
+        "logit3_post",
+        "logit3_pair"
+      ],
+      "disaster_nunique": 6,
+      "rows": 115349,
+      "scene_id_nunique": 1699,
+      "true_label_nunique": 4
+    },
+    "predictions/heldout_events/event_test_wrongpre_siamese_predictions.csv.gz": {
+      "building_id_nunique": 115269,
+      "building_id_unique": true,
+      "column_count": 16,
+      "columns": [
+        "building_id",
+        "scene_id",
+        "disaster",
+        "true_label",
+        "pred_pair",
+        "confidence_pair",
+        "entropy_pair",
+        "severity_pair",
+        "p0_pair",
+        "logit0_pair",
+        "p1_pair",
+        "logit1_pair",
+        "p2_pair",
+        "logit2_pair",
+        "p3_pair",
+        "logit3_pair"
+      ],
+      "disaster_nunique": 6,
+      "rows": 115269,
+      "scene_id_nunique": 1619,
+      "true_label_nunique": 4
+    }
+  },
+  "test_neural_utility": {
+    "auprc": 0.7196353859871121,
+    "auprc_bootstrap": {
+      "ci95_high": 0.7626229220146328,
+      "ci95_low": 0.6765716286292709,
+      "mean": 0.7198523053335188,
+      "valid_reps": 1000
+    },
+    "auroc": 0.77283834848973,
+    "auroc_bootstrap": {
+      "ci95_high": 0.79660186479569,
+      "ci95_low": 0.7455584705189203,
+      "mean": 0.7727103187915206,
+      "valid_reps": 1000
+    },
+    "n_clean_test": 115349,
+    "n_correctness_discordant": 14340,
+    "spearman_bootstrap": {
+      "ci95_high": 0.14902393795250468,
+      "ci95_low": 0.058445288060467795,
+      "mean": 0.10344963234339567,
+      "valid_reps": 1000
+    },
+    "spearman_gate_deltaCE": 0.10360709395401074,
+    "valid_gate_mean_matched": 0.17521321773529053,
+    "wrong_gate_mean_matched": 0.165126234292984
+  },
+  "training_performed": false
+}
