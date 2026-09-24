@@ -1,0 +1,69 @@
+{
+  "locked_date": "2026-09-24",
+  "next_gate": "If G6A has zero technical blockers, resolve only any human metadata blockers (e.g. citation authors/DOI if present), freeze the G6 report, perform a fresh-clone reproduction, and create annotated tag paper-v1.0.0.",
+  "prohibitions": [
+    "No model training or refitting.",
+    "No threshold/tolerance changes.",
+    "No post-test tuning.",
+    "No deletion of provenance.",
+    "No release tag creation by the preflight script.",
+    "No GitHub/Zenodo upload by the preflight script."
+  ],
+  "protocol_id": "damageactu_g6a_release_readiness_v1",
+  "purpose": "Audit the finalized G5 repository and external-asset package as a prospective GitHub/Zenodo paper release before creating the paper-v1.0.0 tag.",
+  "release_checks": [
+    "Git working tree clean before preflight execution.",
+    "Every G5C Git-inclusion path is tracked.",
+    "Every external asset is absent from ordinary Git tracking and has a frozen SHA256.",
+    "No tracked file exceeds 100 MiB.",
+    "No tracked file lives under dist/.",
+    "Required release-facing documents exist.",
+    "Release-facing documents are scanned for obvious placeholder metadata.",
+    "External asset package verifies byte-for-byte.",
+    "pytest passes.",
+    "canonical evidence audit passes.",
+    "deterministic core reproduction passes.",
+    "full scene-bootstrap reproduction passes.",
+    "scientific conclusions remain unchanged, including clean-effectiveness FAIL.",
+    "paper-v1.0.0 tag must not exist before final G6 closeout."
+  ],
+  "required_g5_commit": "8ef6e7f",
+  "scientific_invariants": {
+    "all_precommitted_criteria_pass": false,
+    "class_safety": true,
+    "clean_effectiveness": false,
+    "clean_gain": 0.00311078126,
+    "clean_gain_ci95": [
+      -0.000611909452,
+      0.007171176847
+    ],
+    "final_evidence_single_initialization": true,
+    "final_seed": 42,
+    "g3_scope": "checkpoint-to-saved-expert-prediction parity on deterministic selected Kaggle T4 replay",
+    "g4_scope": "saved expert predictions plus frozen router artifacts to route/intervention/statistic parity",
+    "gate_deltace_spearman_local": 0.103607093389,
+    "gate_suppression": true,
+    "neural_clean_macro_f1": 0.459673702532,
+    "post_clean_macro_f1": 0.456562921272,
+    "training_from_scratch_reproduction_established": false,
+    "utility_auprc": 0.719635385987,
+    "utility_auroc": 0.77283834849,
+    "utility_auroc_ci95": [
+      0.745558470519,
+      0.796601864796
+    ],
+    "utility_generalization": true,
+    "utility_spearman_ci95": [
+      0.058445288351,
+      0.149023936958
+    ],
+    "wrongpre_gain_ci95": [
+      -0.006597738161,
+      0.000701304682
+    ],
+    "wrongpre_gain_vs_post": -0.003070980525,
+    "wrongpre_neural_macro_f1": 0.453240019462,
+    "wrongpre_safety": true
+  },
+  "stage": "G6A_final_release_readiness_preflight"
+}
