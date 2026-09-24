@@ -1,0 +1,278 @@
+{
+  "count": 30,
+  "dispositions": [
+    "LOCAL_PROVENANCE_ONLY"
+  ],
+  "files": [
+    {
+      "bytes": 159185660,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 151.811275,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 159185660,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 151.811275,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle.zip",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 1693,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.001615,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/SHA256SUMS.json",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "9692e3ad17c2d96e60f571e62038cf538e93e0984c7b840128726ec7ca790550",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3077,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.002934,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_canonical_batch_replay_lock.json",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "78f6a5eda2aed875f7b65f08879c7ce85987766c9283e10f6ad7fc6a7547bef0",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 5095,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.004859,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_clean_parity_panel_23.csv",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "2924bc88beeda3507c8cf2178db53c2d17eca7483c483a61ca59087a87636c43",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 12259,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.011691,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_clean_parity_selector_96.csv",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3165,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.003018,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_parity_execution_protocol.json",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "112ade4ac863dd7bc7df03a6c2544be6b3757ca0034f864556738851b2d2409c",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1331,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.001269,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_parity_runner_manifest.json",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "24f93352d9faa35b0222e5f167eb92efdb4b4943170899feba39206b4077f953",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 2219,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.002116,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_parity_selection_lock.json",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "cf463ca5d680ba7ede33d498350692e2782f5d716bc527629dd07a77e210883c",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 47940695,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 45.71981,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/checkpoints/experts/post_seed42_best_state_dict.pt",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "df6b607973ea74e1a6aa7eb640459b65c7a4e1bdaabc7fce956d2c757374967c",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 47940695,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 45.71981,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/checkpoints/experts/siamese_seed42_best_state_dict.pt",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "3d6466108cf44e994c0c7b7bb1745e549807d89601e45898911de34a455d73a5",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 44578997,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 42.513844,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 25722220,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 24.530621,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 31668,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.030201,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/scripts/g3_checkpoint_parity_t4.py",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "cda8f058123ecbe9f63e65ded32fc8ba8161654e07a0e769980f3ecb9fdc0ea9",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 7726,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.007368,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/vendor/frozen_phase7d_source/src/data/crop_utils.py",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "8c34139a0f96eaf8246dd228cf27c83386d6c1ca049426c25d28666576589593",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 5317,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.005071,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/vendor/frozen_phase7d_source/src/data/dataset.py",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "165a71c4ebf6adea14f20f735bc487e883c5448e5ccfaf4fe8b74e49a3a77044",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 3166,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.003019,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/vendor/frozen_phase7d_source/src/models/damage_models.py",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "9f9ee3382902f339309ddf03a203b882d42e8674de7bf8ee3d18b14863478f2d",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 159174694,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 151.800817,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle.zip",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "d762e0fd71763b67a247f249a99e07a0520481ec6ea0ac7911d2b3c64cad35f4",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 1357,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.001294,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/SHA256SUMS.json",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "05558de53b6bdc3a977e7ca43787388805ac00eb71cd2ce996a9bfe94af953b3",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 5095,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.004859,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_clean_parity_panel_23.csv",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "2924bc88beeda3507c8cf2178db53c2d17eca7483c483a61ca59087a87636c43",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 12259,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.011691,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_clean_parity_selector_96.csv",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3165,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.003018,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_parity_execution_protocol.json",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "112ade4ac863dd7bc7df03a6c2544be6b3757ca0034f864556738851b2d2409c",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 2219,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.002116,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_parity_selection_lock.json",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "cf463ca5d680ba7ede33d498350692e2782f5d716bc527629dd07a77e210883c",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 47940695,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 45.71981,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/checkpoints/experts/post_seed42_best_state_dict.pt",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "df6b607973ea74e1a6aa7eb640459b65c7a4e1bdaabc7fce956d2c757374967c",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 47940695,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 45.71981,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/checkpoints/experts/siamese_seed42_best_state_dict.pt",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "3d6466108cf44e994c0c7b7bb1745e549807d89601e45898911de34a455d73a5",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 44578997,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 42.513844,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 25722220,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 24.530621,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 7726,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.007368,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/vendor/frozen_phase7d_source/src/data/crop_utils.py",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "8c34139a0f96eaf8246dd228cf27c83386d6c1ca049426c25d28666576589593",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 5317,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.005071,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/vendor/frozen_phase7d_source/src/data/dataset.py",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "165a71c4ebf6adea14f20f735bc487e883c5448e5ccfaf4fe8b74e49a3a77044",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 3166,
+      "final_disposition": "LOCAL_PROVENANCE_ONLY",
+      "mib": 0.003019,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/vendor/frozen_phase7d_source/src/models/damage_models.py",
+      "reason": "Distribution/extracted bundle material; hashes retained, redundant with canonical paths or external carrier.",
+      "sha256": "9f9ee3382902f339309ddf03a203b882d42e8674de7bf8ee3d18b14863478f2d",
+      "source_inventory": "G5A_UNTRACKED"
+    }
+  ]
+}

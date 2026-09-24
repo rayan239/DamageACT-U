@@ -1,0 +1,62 @@
+{
+  "disposition_counts": {
+    "EXTERNAL_CANONICAL_ASSET": 11,
+    "EXTERNAL_PROVENANCE_ASSET": 1,
+    "GENERATED_EXCLUDE": 1,
+    "GIT_CANONICAL": 44,
+    "GIT_HISTORICAL_PROVENANCE": 5,
+    "LOCAL_PROVENANCE_ONLY": 30,
+    "REVIEW_REQUIRED": 2
+  },
+  "duplicate_hash_group_count": 12,
+  "external_asset_count": 12,
+  "files_deleted": false,
+  "files_moved": false,
+  "g5a_untracked_rows": 76,
+  "generated_exclude_count": 1,
+  "git_inclusion_count": 49,
+  "git_lfs_modified": false,
+  "gitignore_modified": false,
+  "head": "3f035f09ce72553ac52003e84919db182be692a9",
+  "ignored_all_file_count": 31790,
+  "ignored_top_level_counts": {
+    ".pytest_cache": 4,
+    ".venv312": 31675,
+    "checkpoints": 3,
+    "configs": 2,
+    "dist": 10,
+    "scripts": 20,
+    "src": 57,
+    "tests": 15,
+    "vendor": 4
+  },
+  "local_provenance_only_count": 30,
+  "next_gate": "G5C apply frozen release disposition and build final reproducibility/documentation layer",
+  "protocol_sha256": "03fd80ad7189a8ab7882347e26f4ed45aad0948073159036dfab0cc708017bb2",
+  "release_relevant_ignored_rows_added": 18,
+  "review_required_count": 2,
+  "review_required_files": [
+    {
+      "bytes": 111,
+      "final_disposition": "REVIEW_REQUIRED",
+      "mib": 0.000106,
+      "path": "configs/data/crop.yaml",
+      "reason": "No predeclared safe disposition rule.",
+      "sha256": "44e2cce1e36214635639cc0b9e2e981a6b1be94e813c78699c5503d86580077f",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 116,
+      "final_disposition": "REVIEW_REQUIRED",
+      "mib": 0.000111,
+      "path": "configs/data/labels.yaml",
+      "reason": "No predeclared safe disposition rule.",
+      "sha256": "13f8b6a7890128e6f0002c5a2c37d15436b60d8a3d5d289803199dd1e835c969",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    }
+  ],
+  "scientific_files_modified": false,
+  "stage": "G5B_release_manifest_and_ignored_gap_audit",
+  "status": "PASS_WITH_REVIEW_REQUIRED",
+  "total_release_relevant_rows": 94
+}

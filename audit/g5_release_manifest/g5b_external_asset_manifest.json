@@ -1,0 +1,117 @@
+{
+  "count": 12,
+  "dispositions": [
+    "EXTERNAL_CANONICAL_ASSET",
+    "EXTERNAL_PROVENANCE_ASSET"
+  ],
+  "files": [
+    {
+      "bytes": 159185660,
+      "final_disposition": "EXTERNAL_PROVENANCE_ASSET",
+      "mib": 151.811275,
+      "path": "DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "reason": "Keep one canonical copy of the exact G3 execution carrier as a release provenance asset.",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 47940695,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 45.71981,
+      "path": "checkpoints/experts/post_seed42_best_state_dict.pt",
+      "reason": "Expert checkpoint; publish as verified release/Zenodo asset.",
+      "sha256": "df6b607973ea74e1a6aa7eb640459b65c7a4e1bdaabc7fce956d2c757374967c",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 47940695,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 45.71981,
+      "path": "checkpoints/experts/siamese_seed42_best_state_dict.pt",
+      "reason": "Expert checkpoint; publish as verified release/Zenodo asset.",
+      "sha256": "3d6466108cf44e994c0c7b7bb1745e549807d89601e45898911de34a455d73a5",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 44765683,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 42.691882,
+      "path": "manifests/buildings/event_test_buildings_SEALED.csv.gz",
+      "reason": "Large canonical building manifest; publish externally with SHA256.",
+      "sha256": "05546b6876cd3201eaa7a77ec31e96ce8ca18fb0ffa5e4cc3a9581a00ee0fcad",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 44578997,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 42.513844,
+      "path": "manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+      "reason": "Large canonical building manifest; publish externally with SHA256.",
+      "sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 117156478,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 111.729124,
+      "path": "manifests/buildings/event_train_buildings.csv.gz",
+      "reason": "Large canonical building manifest; publish externally with SHA256.",
+      "sha256": "c82b2743f857a11ed7b390a06b4b2b24e6bebdbd7e925585221c66ba5a60e9d4",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 13872701,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 13.230039,
+      "path": "manifests/buildings/event_val_buildings.csv.gz",
+      "reason": "Large canonical building manifest; publish externally with SHA256.",
+      "sha256": "44adcd20edcff627ef36ae9fbb7d259f0ca404ee86f343cea2313c6d3fefc35c",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3243477,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 3.093221,
+      "path": "predictions/development/event_val_post_only_predictions.csv.gz",
+      "reason": "Frozen prediction table; publish externally with SHA256.",
+      "sha256": "e7c4081f0f754c5f867fcc94be2a6c62b96a409937fd098e3bd5222c43fdfe50",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3249333,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 3.098805,
+      "path": "predictions/development/event_val_siamese_predictions.csv.gz",
+      "reason": "Frozen prediction table; publish externally with SHA256.",
+      "sha256": "a261bd855d81e71110459ca145060fea910b803f472675917f3c578d5c3b3fed",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3249120,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 3.098602,
+      "path": "predictions/development/event_val_siamese_wrongpre_predictions.csv.gz",
+      "reason": "Frozen prediction table; publish externally with SHA256.",
+      "sha256": "64938aaba097aa18f21f31a5813cb82301ea5ef862194b5509ff8840a566d17d",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 25722220,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 24.530621,
+      "path": "predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+      "reason": "Frozen prediction table; publish externally with SHA256.",
+      "sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 14677035,
+      "final_disposition": "EXTERNAL_CANONICAL_ASSET",
+      "mib": 13.997111,
+      "path": "predictions/heldout_events/event_test_wrongpre_siamese_predictions.csv.gz",
+      "reason": "Frozen prediction table; publish externally with SHA256.",
+      "sha256": "5b85ea8ea298e3e840ea23b24731ba5b330a352fbb9993fd272a5a64bc027231",
+      "source_inventory": "G5A_UNTRACKED"
+    }
+  ]
+}

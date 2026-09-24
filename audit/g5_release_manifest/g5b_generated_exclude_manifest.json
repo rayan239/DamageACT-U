@@ -1,0 +1,17 @@
+{
+  "count": 1,
+  "dispositions": [
+    "GENERATED_EXCLUDE"
+  ],
+  "files": [
+    {
+      "bytes": 307,
+      "final_disposition": "GENERATED_EXCLUDE",
+      "mib": 0.000293,
+      "path": "results/reproduction_report.json",
+      "reason": "Recreatable/transitional report; final release uses frozen v2 reproduction reports.",
+      "sha256": "12983165ac411d6544fd75edbc526cfa35941fd382f1b48b183e37a6b31a1a11",
+      "source_inventory": "G5A_UNTRACKED"
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "count": 49,
+  "dispositions": [
+    "GIT_CANONICAL",
+    "GIT_HISTORICAL_PROVENANCE"
+  ],
+  "files": [
+    {
+      "bytes": 154118,
+      "final_disposition": "GIT_HISTORICAL_PROVENANCE",
+      "mib": 0.146978,
+      "path": "audit/g3_clean_parity_carrier_96.csv",
+      "reason": "Small diagnostic/provenance artifact; retain but not primary reproduction path.",
+      "sha256": "1a92b49a09df4d81c58790d1828db727573b6f66e32464a972b6f50ade4fcad0",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 10924,
+      "final_disposition": "GIT_HISTORICAL_PROVENANCE",
+      "mib": 0.010418,
+      "path": "audit/phase7dd_inference_extract.txt",
+      "reason": "Small diagnostic/provenance artifact; retain but not primary reproduction path.",
+      "sha256": "5f1d856d6bbe5fdb80afceaee60ef7423d0283f575bee4c41b1c907e9787f58c",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 8616,
+      "final_disposition": "GIT_HISTORICAL_PROVENANCE",
+      "mib": 0.008217,
+      "path": "audit/phase7dd_source_resolver_extract.txt",
+      "reason": "Small diagnostic/provenance artifact; retain but not primary reproduction path.",
+      "sha256": "6cbca422b52ae76c82fcdfd4fb392feb77d28fb91746a56096b090828fed6841",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 39560,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.037727,
+      "path": "audit/restoration_report_v2.json",
+      "reason": "Canonical restoration/verification tooling or audit evidence.",
+      "sha256": "3db0e7dccd5443ba46fc97bdb4d1d0239c8925c8a7539b14ed3dd169431fc222",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 238182,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.227148,
+      "path": "checkpoints/routers/final_hgb_hard_router.joblib",
+      "reason": "Small frozen router artifact required for deterministic G4 reproduction.",
+      "sha256": "72d84b25dea3053028c7905797c14d305da8c6f0b48cf1fd6742391a03d65028",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 2753,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.002625,
+      "path": "checkpoints/routers/final_logistic_soft_gate.joblib",
+      "reason": "Small frozen router artifact required for deterministic G4 reproduction.",
+      "sha256": "8d0115705294bb2877341dc752854e7912c4cc83261ee9ed492731a862aa3372",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 10209,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.009736,
+      "path": "checkpoints/routers/final_neural_safe_router.pt",
+      "reason": "Small frozen router artifact required for deterministic G4 reproduction.",
+      "sha256": "ab94161da3331fd02cad8b4632375a3321159f5633f86fc212ec86b682d31a4b",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 19,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 1.8e-05,
+      "path": "checkpoints/routers/final_static_alpha.json",
+      "reason": "Small frozen router artifact required for deterministic G4 reproduction.",
+      "sha256": "2778cb68dd385953343cd1268e8b4f22060d21cb1e963325c0308114c7853b60",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 2151,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.002051,
+      "path": "manifests/event_split/phase7d_build_lock.json",
+      "reason": "Small frozen canonical manifest.",
+      "sha256": "1b3106fed81d4e98a0a0ca0ce55e77161aa5fa9b789316c6e5b567e8fa5a8ef4",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 64293,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.061315,
+      "path": "manifests/event_split/phase7d_frozen_unique_patch_roles.csv.gz",
+      "reason": "Small frozen canonical manifest.",
+      "sha256": "7a396d0c61c6a78151a58b2c62dd016786ab1c4f9dd85f05eed5bde430ee4f05",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 414894,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.395674,
+      "path": "manifests/router/inner_neural_split_assignments.csv.gz",
+      "reason": "Small frozen canonical manifest.",
+      "sha256": "9887ce0cdff5d9c6fcab3b05089b9412af9d8c9722e7b826ea2edf23dbf31188",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 752929,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.718049,
+      "path": "manifests/router/outer_split_assignments.csv.gz",
+      "reason": "Small frozen canonical manifest.",
+      "sha256": "6f4c3050a91d2d772c4ea6d59ccf8e338b47deb661ecc98824fd540ce5feddf1",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1224756,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 1.168018,
+      "path": "manifests/wrong_pre/event_val_hard_wrongpre_donor_map.csv.gz",
+      "reason": "Small frozen canonical manifest.",
+      "sha256": "4bfb7d73e5cec58a70977ce719cb32f33e15b6e8f06edf917392f218801905a6",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 5198039,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 4.957236,
+      "path": "manifests/wrong_pre/test_hard_wrongpre_donor_map.csv.gz",
+      "reason": "Small frozen canonical manifest.",
+      "sha256": "c3b446b209ae42535ccdf1df35be4e4dd257cd2e0be4c6da2078e87000c67017",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 12504,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.011925,
+      "path": "results/development/neural_epoch_selection_history.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "a819635542e25cbdc13f0dcdf795d3a9608d8f75b85ada352816cd818be63ad0",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 757,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.000722,
+      "path": "results/development/neural_utility_diagnostics.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "12792cb751e5fe5d912252405b78b2107c10155d60592e168ec87803531c6b6b",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1364,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.001301,
+      "path": "results/development/phase7c_integrity_checks.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "ef543cbb0e26c44def2843917262eaa4c9626ff4e419623a60a6d741ec3542a2",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 2131,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.002032,
+      "path": "results/development/phase7c_results_index.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "f3b3a4e56132247693ddd741d5289b2dec07b20378a6277ec245b7dc789182a6",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1481,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.001412,
+      "path": "results/development/phase7d_a_integrity_checks.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "5d65f7e70dd26d41f82f56ff016e75a1e73949e29b1759e1453ebafffc71dec5",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1878,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.001791,
+      "path": "results/development/phase7d_a_results_index.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "9bf205355896f363f02f29850c84d9db7ce51df6e92b8448ecc380de369cd574",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 460,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.000439,
+      "path": "results/development/phase7d_b_environment.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "eb5c1e87367ff9de2e80945ea877607806bb69ebc703beddcc64823a23052ec1",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 2647,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.002524,
+      "path": "results/development/phase7d_b_results_index.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "4086d9a4c59c1f43027fbd6782553bc63e1939530b846fd4c91c0a26d7a0d301",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1285,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.001225,
+      "path": "results/development/phase7d_b_training_history.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "c4f2e7cf5ec16fa36b6176f1b77cdef9fed1f5f8f285126a144d032670f6f51a",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 331,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.000316,
+      "path": "results/development/phase7d_b_wrongpre_metrics.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "d66d0e4b630703a54d73086d14953a56286afc0b945ac08e479c1baf284343fe",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 828,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.00079,
+      "path": "results/development/phase7d_c_results_index.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "b14b6f44b8a4a759ab3be6a03ab19ea8685e4ee97e3e5545258d3c3c166adace",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1271,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.001212,
+      "path": "results/development/phase7d_c_selection_index.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "3138d5251b0dc21c9f01559665f3bf62ce27dfa1e3b4f0b6bf959594e523717e",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3360,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.003204,
+      "path": "results/development/phase7d_c_selection_protocol.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "f7308dc61dc32df3c16e77c441b98e72eadf14a110c520bb9070c5a07b7e54d6",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 2904,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.002769,
+      "path": "results/development/router_diag_metrics.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "2f76a53f331d8f96b07711295f1607659cdc81aec7a7207e879607089874f9b2",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 4180,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.003986,
+      "path": "results/development/router_diag_per_class_f1.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "40abc12060400fe83205ee02a56908ff549b5b6c5182fab2adbdfadec7c1436e",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1656,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.001579,
+      "path": "results/development/router_diag_scene_bootstrap.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "2ec39b351448fb0083506e00b310a11eb0b3b6177b438b93b687a34c081c49b3",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 656,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.000626,
+      "path": "results/development/static_alpha_selection.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "563858b3481efbc4139c0b7195b650d5b606bbff0d776b8995a93220a1897dcc",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 937,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.000894,
+      "path": "results/heldout_events/phase7d_d_protocol_record.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "1fffb11cbbb09dd7c2790d0fd46fda153a402f06afff2d0907e154300268985c",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1711,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.001632,
+      "path": "results/heldout_events/results_index.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "c9b0537a75f60f1d0f4f9a6b93141bece0a6cf3447c88fd603ec6f6fdcd23146",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 842,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.000803,
+      "path": "results/heldout_events/test_event_macro_summary.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "3ed8b2a05f9cd882759c5562784547cb7332fdf0d9d1e44c7c48a410a914b006",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3781,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.003606,
+      "path": "results/heldout_events/test_leave_one_event_out.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "a41b9ca215451704a57c2496553148bb86265cb1dedd709d314f9a07b3ff231a",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 3000,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.002861,
+      "path": "results/heldout_events/test_metrics_all_conditions.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "cf9ee06bc1c7fa0f166daa6fad1c340e75f835cf680eb92e52beb45bae11cc0c",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1014,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.000967,
+      "path": "results/heldout_events/test_metrics_clean.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "cb8a0bb58acc76375b948ff9c6d44ecc333153f01ba7a503e7da1fc82215bcfc",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 744,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.00071,
+      "path": "results/heldout_events/test_neural_utility.json",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "073f7a945fd898c8bbe318f060fa0ebfbf5e12199662c9d20a9b4d2db2235901",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 4471,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.004264,
+      "path": "results/heldout_events/test_per_class_f1_all_conditions.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "34b1930d007cea21c10336dd5f95e391130b3e3f66cfeee24cd0c30d306c27bc",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 6066,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.005785,
+      "path": "results/heldout_events/test_per_event_metrics.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "74309091addcfc9ac0858e578e908d0c653cd988b7006f24fdd88af70f09150b",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 1633,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.001557,
+      "path": "results/heldout_events/test_scene_bootstrap_all.csv",
+      "reason": "Frozen canonical result evidence.",
+      "sha256": "7330b9341fb6707bab08ec633b8ac060dec71d8346441a45ecd880330e3f4504",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 24011,
+      "final_disposition": "GIT_HISTORICAL_PROVENANCE",
+      "mib": 0.022899,
+      "path": "scripts/g3_checkpoint_parity_t4.synthetic96.pre_replay.py",
+      "reason": "Small diagnostic/provenance artifact; retain but not primary reproduction path.",
+      "sha256": "6358fea71cf4d28c1cb70a02ac4b416d0f49d1e9f5b1c3f41a9abdf8998b89c1",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 21866,
+      "final_disposition": "GIT_HISTORICAL_PROVENANCE",
+      "mib": 0.020853,
+      "path": "scripts/patch_g3_runner_for_canonical_replay.py",
+      "reason": "Small diagnostic/provenance artifact; retain but not primary reproduction path.",
+      "sha256": "9196ab8b4f358601dded3a62eadcd0e4c2ac1d09fa41a9275fccf1b228a87f6e",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 17099,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.016307,
+      "path": "scripts/restore_canonical_artifacts_v2.py",
+      "reason": "Canonical restoration/verification tooling or audit evidence.",
+      "sha256": "65a830aeecd3c890ee419063ac399735079e6508ceddb4a188e3d11e3916f6eb",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 7939,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.007571,
+      "path": "scripts/verify_restored_evidence_v2.py",
+      "reason": "Canonical restoration/verification tooling or audit evidence.",
+      "sha256": "da27af2698145afafeeaa0efa5d0e7e4eb810ac57f82af0504460bd3798aafb8",
+      "source_inventory": "G5A_UNTRACKED"
+    },
+    {
+      "bytes": 22615,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.021567,
+      "path": "vendor/frozen_phase7d_source/src/data/build_manifest.py",
+      "reason": "Frozen historical source required for implementation fidelity.",
+      "sha256": "4337d8ec54d2fdaa5361e4c30e7544e16f0edf306f517dcff612b7fe12d7807a",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 7726,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.007368,
+      "path": "vendor/frozen_phase7d_source/src/data/crop_utils.py",
+      "reason": "Frozen historical source required for implementation fidelity.",
+      "sha256": "8c34139a0f96eaf8246dd228cf27c83386d6c1ca049426c25d28666576589593",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 5317,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.005071,
+      "path": "vendor/frozen_phase7d_source/src/data/dataset.py",
+      "reason": "Frozen historical source required for implementation fidelity.",
+      "sha256": "165a71c4ebf6adea14f20f735bc487e883c5448e5ccfaf4fe8b74e49a3a77044",
+      "source_inventory": "IGNORED_GAP_SCAN"
+    },
+    {
+      "bytes": 3166,
+      "final_disposition": "GIT_CANONICAL",
+      "mib": 0.003019,
+      "path": "vendor/frozen_phase7d_source/src/models/damage_models.py",
+      "reason": "Frozen historical source required for implementation fidelity.",
+      "sha256": "9f9ee3382902f339309ddf03a203b882d42e8674de7bf8ee3d18b14863478f2d",
+      "source_inventory": "G5A_UNTRACKED"
+    }
+  ]
+}
