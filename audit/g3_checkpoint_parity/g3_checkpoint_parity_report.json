@@ -1,0 +1,189 @@
+{
+  "stage": "G3_checkpoint_inference_parity",
+  "status": "PASS",
+  "frozen_commits": {
+    "selection": "1ae5e4f",
+    "execution_protocol": "398d913",
+    "input_bundle": "99ededc",
+    "canonical_batch_replay_design": "847da83"
+  },
+  "environment": {
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "pillow": "11.3.0"
+  },
+  "counts": {
+    "manifest_rows": 115349,
+    "selector_rows": 96,
+    "anchors": 23,
+    "selected_scenes": 180
+  },
+  "predeclared_parity_rule": {
+    "atol": 1e-05,
+    "rtol": 1e-05,
+    "exact_argmax_required": true
+  },
+  "categorical": {
+    "post_matches": 96,
+    "post_total": 96,
+    "siamese_matches": 96,
+    "siamese_total": 96,
+    "anchor_post_matches": 23,
+    "anchor_siamese_matches": 23,
+    "all_predictions_match": true
+  },
+  "numerical": {
+    "post_logits": {
+      "max_absolute_difference": 8.881784197001252e-16,
+      "mean_absolute_difference": 5.2916124625186404e-17,
+      "median_absolute_difference": 0.0,
+      "allclose": true
+    },
+    "post_probabilities": {
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "mean_absolute_difference": 3.751752445361632e-17,
+      "median_absolute_difference": 3.469446951953614e-17,
+      "allclose": true
+    },
+    "siamese_logits": {
+      "max_absolute_difference": 8.881784197001252e-16,
+      "mean_absolute_difference": 5.2010364060255804e-17,
+      "median_absolute_difference": 0.0,
+      "allclose": true
+    },
+    "siamese_probabilities": {
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "mean_absolute_difference": 3.70500913069075e-17,
+      "median_absolute_difference": 3.122502256758253e-17,
+      "allclose": true
+    }
+  },
+  "anchor_numerical": {
+    "post_logits": {
+      "max_absolute_difference": 4.440892098500626e-16,
+      "mean_absolute_difference": 3.5175289613421015e-17,
+      "median_absolute_difference": 0.0,
+      "allclose": true
+    },
+    "post_probabilities": {
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "mean_absolute_difference": 3.760620051700197e-17,
+      "median_absolute_difference": 3.7730235602495554e-17,
+      "allclose": true
+    },
+    "siamese_logits": {
+      "max_absolute_difference": 4.440892098500626e-16,
+      "mean_absolute_difference": 3.5297851598136773e-17,
+      "median_absolute_difference": 0.0,
+      "allclose": true
+    },
+    "siamese_probabilities": {
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "mean_absolute_difference": 3.586484808752491e-17,
+      "median_absolute_difference": 2.7755575615628914e-17,
+      "allclose": true
+    }
+  },
+  "strict_parity_pass": true,
+  "runner_sha256": "cda8f058123ecbe9f63e65ded32fc8ba8161654e07a0e769980f3ecb9fdc0ea9",
+  "limitations": [
+    "Checkpoint inference parity only; not training-from-scratch reproduction.",
+    "Historical Pillow version was not recorded.",
+    "Event-track expert evidence remains single-initialization Seed 42."
+  ],
+  "replay_context": {
+    "original_batches_replayed": 78,
+    "canonical_replay_rows": 7445,
+    "canonical_replay_scenes": 180,
+    "selected_batch_ids_sha256": "129c4f7d58e61097a93d57ccdeeb480cdd1e639312d72a0d1270ab5dcb310b9b",
+    "canonical_replay_row_indices_sha256": "22d9894b540e9d3f8f239f94749fba82fe1c56ec553e6029bf784194e9c14196",
+    "observed_batch_sizes": [
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      96,
+      53
+    ],
+    "full_96_sample_batches": 77,
+    "partial_batches": 1,
+    "final_original_batch_size": 53,
+    "targets_in_final_partial_batch": 1
+  }
+}

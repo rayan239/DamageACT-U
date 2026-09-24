@@ -1,0 +1,58 @@
+{
+  "environment": {
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128"
+  },
+  "executed_notebook": {
+    "repository_path": "notebooks/historical/execution_fixes/DamageACTU_G3_T4_Parity_FINAL_DEVIL_AUDITED_EXECUTED.ipynb",
+    "sha256": "d0b270bb545008979f71bac10cdd470b20d220964f7e0285b3e41830215c3205"
+  },
+  "frozen_runner_sha256": "cda8f058123ecbe9f63e65ded32fc8ba8161654e07a0e769980f3ecb9fdc0ea9",
+  "limitations": [
+    "Checkpoint inference parity only; not training-from-scratch reproduction.",
+    "Historical Pillow version was not recorded.",
+    "Event-track expert evidence remains single-initialization Seed 42."
+  ],
+  "next_gate": "G4 router/intervention parity: validate wrong-PRE construction, 26-feature routing schema, and frozen router behavior without retraining.",
+  "parity": {
+    "anchors_post": "23/23",
+    "anchors_siamese": "23/23",
+    "atol": 1e-05,
+    "exact_argmax_required": true,
+    "post": "96/96",
+    "rtol": 1e-05,
+    "siamese": "96/96",
+    "strict_parity_pass": true
+  },
+  "payloads": {
+    "g3_checkpoint_parity_report.json": "b043a27728f6b4aa018ec317056aa0a2a4df8b3ef6643073c1d4e3ed36238be8",
+    "g3_environment.json": "680183efa30b8c76b44af4893bf638ab0b4a7c7ff09294686ddfbd9c16a2d598",
+    "g3_regenerated_vs_frozen_96.csv": "13f649ae137dde9cf32decfe4933366f7ba667c6390bedd5e48306f7c6d8ef9b"
+  },
+  "prohibitions": [
+    "Do not alter frozen G3 tolerances.",
+    "Do not replace or regenerate canonical Phase7C/7D evidence in this closeout.",
+    "Do not infer training-from-scratch reproducibility from checkpoint parity.",
+    "Do not claim random-seed robustness; final event-track evidence is Seed 42 only.",
+    "Do not tune against held-out TEST after this point."
+  ],
+  "replay": {
+    "canonical_rows": 7445,
+    "canonical_scenes": 180,
+    "final_partial_batch_size": 53,
+    "full_batches": 77,
+    "historical_batches": 78
+  },
+  "scientific_scope": "Checkpoint-inference parity only. No training-from-scratch reproduction is claimed by G3.",
+  "source_result_zip": {
+    "bytes": 28469,
+    "sha256": "9a83b451cb810ac9b0d4a8f750b5d22b7d7a75950706ca7598146270ad72a312"
+  },
+  "stage": "G3_checkpoint_inference_parity_closeout",
+  "status": "FROZEN_SUCCESSFUL_EVIDENCE"
+}
