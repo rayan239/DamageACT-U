@@ -1,0 +1,28 @@
+{
+  "stage": "G3_checkpoint_inference_parity",
+  "status": "PRE_INFERENCE_RUNNER_FROZEN_VALIDATED",
+  "git_parent_before_runner_commit": "847da838d5eface6803de998ce9e862167ec39bf",
+  "runner_path": "scripts/g3_checkpoint_parity_t4.py",
+  "runner_bytes": 31668,
+  "runner_lines": 1525,
+  "runner_sha256": "cda8f058123ecbe9f63e65ded32fc8ba8161654e07a0e769980f3ecb9fdc0ea9",
+  "canonical_batch_replay_commit": "847da83",
+  "canonical_batch_replay_lock_sha256": "78f6a5eda2aed875f7b65f08879c7ce85987766c9283e10f6ad7fc6a7547bef0",
+  "input_bundle_git_commit": "99ededc",
+  "input_bundle_zip_sha256": "d762e0fd71763b67a247f249a99e07a0520481ec6ea0ac7911d2b3c64cad35f4",
+  "execution_protocol_sha256": "112ade4ac863dd7bc7df03a6c2544be6b3757ca0034f864556738851b2d2409c",
+  "selector_sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03",
+  "predeclared_atol": 1e-05,
+  "predeclared_rtol": 1e-05,
+  "contains_regenerated_outputs": false,
+  "runner_has_training_code": false,
+  "runner_has_tuning_code": false,
+  "replay": {
+    "original_batches": 78,
+    "canonical_rows": 7445,
+    "replay_scenes": 180,
+    "full_batches": 77,
+    "final_partial_batch_size": 53
+  },
+  "note": "Canonical-batch replay runner frozen before any regenerated G3 checkpoint inference outputs were observed."
+}
