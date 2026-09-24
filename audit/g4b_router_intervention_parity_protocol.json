@@ -1,0 +1,80 @@
+{
+  "comparison_tolerances": {
+    "canonical_metric_absolute": 1e-10,
+    "headline_stat_absolute": 1e-09,
+    "utility_spearman_absolute": 1e-08
+  },
+  "frozen_expected": {
+    "all_precommitted_criteria_pass": false,
+    "expert_seed": 42,
+    "feature_count": 26,
+    "gate_deltaCE_spearman": 0.103607093389,
+    "neural_best_epoch": 1,
+    "neural_clean_gain_vs_post": 0.00311078126,
+    "neural_clean_macro_f1": 0.459673702532,
+    "neural_wrongpre_gain_vs_post": -0.003070980525,
+    "neural_wrongpre_macro_f1": 0.453240019462,
+    "post_clean_macro_f1": 0.456562921272,
+    "static_alpha": 0.45,
+    "test_clean_buildings": 115349,
+    "test_wrongpre_matched_buildings": 115269,
+    "utility_auprc": 0.719635385987,
+    "utility_auroc": 0.77283834849,
+    "valid_gate_mean_matched": 0.175213195858,
+    "wrong_gate_mean_matched": 0.165126243399
+  },
+  "locked_date": "2026-09-24",
+  "next_gate_if_pass": "G5 paper-artifact parity: deterministic tables/figures/claim-to-evidence generation from the already-frozen canonical result artifacts.",
+  "pass_conditions": [
+    "G4A inventory identity is unchanged and all frozen input hashes still match it.",
+    "Wrong-PRE target identities match the frozen donor map and remain same-scene/non-self.",
+    "The exact 26-feature order matches the frozen neural checkpoint.",
+    "Frozen logistic, HGB, neural, and alpha=0.45 routing can be evaluated without fitting.",
+    "All 10 clean method Macro-F1/accuracy values reproduce canonical test_metrics_clean.csv.",
+    "All 10 valid-matched and wrong-PRE-matched method Macro-F1/accuracy values reproduce canonical test_metrics_all_conditions.csv.",
+    "Frozen headline POST/neural/wrong-PRE/gate/utility statistics reproduce within the locked tolerances.",
+    "The genuine precommitted conclusion remains ALL_PRECOMMITTED_CRITERIA_PASS=False."
+  ],
+  "prohibitions": [
+    "Do not load raw xBD.",
+    "Do not run expert checkpoints.",
+    "Do not call fit/fit_transform/partial_fit on any router.",
+    "Do not retrain or refit neural/logistic/HGB routers.",
+    "Do not tune static alpha.",
+    "Do not alter saved TEST prediction tables.",
+    "Do not change criteria after observing parity results.",
+    "Do not turn the failed clean-effectiveness criterion into a pass."
+  ],
+  "protocol_id": "damageactu_g4b_deterministic_router_intervention_parity_v1",
+  "purpose": "Recompute the frozen Phase7D-D routing/intervention layer from saved expert prediction tables and frozen router artifacts only, then compare against the canonical saved TEST metrics and frozen headline utility statistics.",
+  "required_canonical_files": [
+    "audit/g4_router_intervention_inventory.json",
+    "checkpoints/routers/final_neural_safe_router.pt",
+    "checkpoints/routers/final_logistic_soft_gate.joblib",
+    "checkpoints/routers/final_hgb_hard_router.joblib",
+    "checkpoints/routers/final_static_alpha.json",
+    "manifests/wrong_pre/test_hard_wrongpre_donor_map.csv.gz",
+    "predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+    "predictions/heldout_events/event_test_wrongpre_siamese_predictions.csv.gz",
+    "results/heldout_events/test_metrics_clean.csv",
+    "results/heldout_events/test_metrics_all_conditions.csv",
+    "results/heldout_events/test_neural_utility.json",
+    "results/heldout_events/results_index.json"
+  ],
+  "required_g4a_inventory_commit": "9ca56cf",
+  "required_g4a_inventory_sha256": "3543d47ffa26c1f1d043877b4b17870b7ed06031c5d41ef493ef44f2fa3f2d76",
+  "route_roster": [
+    "POST-only",
+    "Siamese",
+    "Equal 0.5 logit blend",
+    "Static alpha blend",
+    "Max-confidence selector",
+    "Min-entropy selector",
+    "Logistic soft gate",
+    "HGB hard router",
+    "Neural Temporal Utility Router",
+    "Oracle expert selector"
+  ],
+  "scientific_scope": "Deterministic CPU parity only. No xBD image loading, expert inference, expert training, router fitting/refitting, hyperparameter search, threshold selection, bootstrap reselection, or post-TEST tuning.",
+  "stage": "G4B_deterministic_router_intervention_parity"
+}
