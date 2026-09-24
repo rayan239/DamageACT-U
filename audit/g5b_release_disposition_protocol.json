@@ -1,0 +1,47 @@
+{
+  "g5a_frozen_inputs": {
+    "audit/g5_repository_inventory/g5a_duplicate_hash_groups.json": "e840b49c5de18060e23a5a88c2616bf7f84362b3b46a08bc9c5f6d452ffdcafa",
+    "audit/g5_repository_inventory/g5a_repository_inventory_summary.json": "d9152f74cb49b05f72cc6c6531671cf83c0ce877662e5d7869ee6036586a0538",
+    "audit/g5_repository_inventory/g5a_tracked_inventory.csv": "7186e37a34b676a21b7187cb3592ccc4cdcc7a946729580281bb0ab2d82876bc",
+    "audit/g5_repository_inventory/g5a_untracked_inventory.csv": "5a6900d0cf5a964bf07852ad01347b310d6d7e7327fc1d4e2b0805021e25f1df"
+  },
+  "locked_date": "2026-09-24",
+  "next_gate": "G5C apply the frozen disposition manifest: commit Git-canonical items, move only approved external/provenance assets out of the Git working tree, generate asset fetch/verification metadata, then build final documentation and paper artifacts.",
+  "prohibitions": [
+    "No deletion or movement.",
+    "No git add of scientific artifacts.",
+    "No .gitignore edits.",
+    "No Git LFS mutation.",
+    "No scientific recomputation.",
+    "No checksum rewriting.",
+    "No history rewrite."
+  ],
+  "protocol_id": "damageactu_g5b_release_disposition_manifest_v1",
+  "purpose": "Turn the frozen G5A inventory into an explicit release disposition manifest and close the G5A blind spot caused by --exclude-standard by scanning ignored paths for release-relevant scientific artifacts before any cleanup.",
+  "release_policy": {
+    "external_release_asset": [
+      "expert checkpoints",
+      "building-level large manifests",
+      "saved prediction tables",
+      "one canonical G3 execution carrier copy"
+    ],
+    "generated_exclude": [
+      "recreatable transient reports/caches"
+    ],
+    "git_canonical": [
+      "small canonical manifests",
+      "router checkpoints",
+      "development and held-out result tables",
+      "frozen Phase7D source",
+      "restoration/verification tooling and audit metadata"
+    ],
+    "historical_provenance_git": [
+      "small G3/Phase7D diagnostic extracts and pre-replay/patch scripts"
+    ],
+    "local_provenance_only": [
+      "dist/ extracted bundle duplicates and redundant carrier copies"
+    ]
+  },
+  "required_g5a_commit": "6bb5180",
+  "stage": "G5B_release_manifest_and_ignored_gap_audit"
+}
