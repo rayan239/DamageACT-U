@@ -1,0 +1,252 @@
+{
+  "duplicate_sha256_group_count": 8,
+  "files_deleted": false,
+  "files_ge_100_mib": [
+    {
+      "bytes": 159185660,
+      "path": "DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519"
+    },
+    {
+      "bytes": 159185660,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519"
+    },
+    {
+      "bytes": 117156478,
+      "path": "manifests/buildings/event_train_buildings.csv.gz",
+      "sha256": "c82b2743f857a11ed7b390a06b4b2b24e6bebdbd7e925585221c66ba5a60e9d4"
+    }
+  ],
+  "files_ge_50_mib": [
+    {
+      "bytes": 159185660,
+      "path": "DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519"
+    },
+    {
+      "bytes": 159185660,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519"
+    },
+    {
+      "bytes": 117156478,
+      "path": "manifests/buildings/event_train_buildings.csv.gz",
+      "sha256": "c82b2743f857a11ed7b390a06b4b2b24e6bebdbd7e925585221c66ba5a60e9d4"
+    }
+  ],
+  "files_moved": false,
+  "git_lfs_modified": false,
+  "gitignore_modified": false,
+  "head": "378d7aa2cff9fadaeb3b59044cb24f58d262ab94",
+  "largest_untracked_files": [
+    {
+      "mib": 151.811275,
+      "path": "DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 151.811275,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 111.729124,
+      "path": "manifests/buildings/event_train_buildings.csv.gz",
+      "sha256": "c82b2743f857a11ed7b390a06b4b2b24e6bebdbd7e925585221c66ba5a60e9d4",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 42.691882,
+      "path": "manifests/buildings/event_test_buildings_SEALED.csv.gz",
+      "sha256": "05546b6876cd3201eaa7a77ec31e96ce8ca18fb0ffa5e4cc3a9581a00ee0fcad",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 42.513844,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+      "sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 42.513844,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+      "sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 42.513844,
+      "path": "manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+      "sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 24.530621,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+      "sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 24.530621,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+      "sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 24.530621,
+      "path": "predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+      "sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2",
+      "suggested_disposition": "RELEASE_LFS_OR_EXTERNAL_CANDIDATE"
+    },
+    {
+      "mib": 13.997111,
+      "path": "predictions/heldout_events/event_test_wrongpre_siamese_predictions.csv.gz",
+      "sha256": "5b85ea8ea298e3e840ea23b24731ba5b330a352fbb9993fd272a5a64bc027231",
+      "suggested_disposition": "RELEASE_LFS_OR_EXTERNAL_CANDIDATE"
+    },
+    {
+      "mib": 13.230039,
+      "path": "manifests/buildings/event_val_buildings.csv.gz",
+      "sha256": "44adcd20edcff627ef36ae9fbb7d259f0ca404ee86f343cea2313c6d3fefc35c",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 4.957236,
+      "path": "manifests/wrong_pre/test_hard_wrongpre_donor_map.csv.gz",
+      "sha256": "c3b446b209ae42535ccdf1df35be4e4dd257cd2e0be4c6da2078e87000c67017",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 3.098805,
+      "path": "predictions/development/event_val_siamese_predictions.csv.gz",
+      "sha256": "a261bd855d81e71110459ca145060fea910b803f472675917f3c578d5c3b3fed",
+      "suggested_disposition": "RELEASE_LFS_OR_EXTERNAL_CANDIDATE"
+    },
+    {
+      "mib": 3.098602,
+      "path": "predictions/development/event_val_siamese_wrongpre_predictions.csv.gz",
+      "sha256": "64938aaba097aa18f21f31a5813cb82301ea5ef862194b5509ff8840a566d17d",
+      "suggested_disposition": "RELEASE_LFS_OR_EXTERNAL_CANDIDATE"
+    },
+    {
+      "mib": 3.093221,
+      "path": "predictions/development/event_val_post_only_predictions.csv.gz",
+      "sha256": "e7c4081f0f754c5f867fcc94be2a6c62b96a409937fd098e3bd5222c43fdfe50",
+      "suggested_disposition": "RELEASE_LFS_OR_EXTERNAL_CANDIDATE"
+    },
+    {
+      "mib": 1.168018,
+      "path": "manifests/wrong_pre/event_val_hard_wrongpre_donor_map.csv.gz",
+      "sha256": "4bfb7d73e5cec58a70977ce719cb32f33e15b6e8f06edf917392f218801905a6",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 0.718049,
+      "path": "manifests/router/outer_split_assignments.csv.gz",
+      "sha256": "6f4c3050a91d2d772c4ea6d59ccf8e338b47deb661ecc98824fd540ce5feddf1",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 0.395674,
+      "path": "manifests/router/inner_neural_split_assignments.csv.gz",
+      "sha256": "9887ce0cdff5d9c6fcab3b05089b9412af9d8c9722e7b826ea2edf23dbf31188",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 0.227148,
+      "path": "checkpoints/routers/final_hgb_hard_router.joblib",
+      "sha256": "72d84b25dea3053028c7905797c14d305da8c6f0b48cf1fd6742391a03d65028",
+      "suggested_disposition": "RELEASE_LFS_OR_EXTERNAL_CANDIDATE"
+    },
+    {
+      "mib": 0.146978,
+      "path": "audit/g3_clean_parity_carrier_96.csv",
+      "sha256": "1a92b49a09df4d81c58790d1828db727573b6f66e32464a972b6f50ade4fcad0",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 0.061315,
+      "path": "manifests/event_split/phase7d_frozen_unique_patch_roles.csv.gz",
+      "sha256": "7a396d0c61c6a78151a58b2c62dd016786ab1c4f9dd85f05eed5bde430ee4f05",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 0.037727,
+      "path": "audit/restoration_report_v2.json",
+      "sha256": "3db0e7dccd5443ba46fc97bdb4d1d0239c8925c8a7539b14ed3dd169431fc222",
+      "suggested_disposition": "REVIEW_MANUALLY"
+    },
+    {
+      "mib": 0.030201,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/scripts/g3_checkpoint_parity_t4.py",
+      "sha256": "cda8f058123ecbe9f63e65ded32fc8ba8161654e07a0e769980f3ecb9fdc0ea9",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 0.022899,
+      "path": "scripts/g3_checkpoint_parity_t4.synthetic96.pre_replay.py",
+      "sha256": "6358fea71cf4d28c1cb70a02ac4b416d0f49d1e9f5b1c3f41a9abdf8998b89c1",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 0.020853,
+      "path": "scripts/patch_g3_runner_for_canonical_replay.py",
+      "sha256": "9196ab8b4f358601dded3a62eadcd0e4c2ac1d09fa41a9275fccf1b228a87f6e",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 0.016307,
+      "path": "scripts/restore_canonical_artifacts_v2.py",
+      "sha256": "65a830aeecd3c890ee419063ac399735079e6508ceddb4a188e3d11e3916f6eb",
+      "suggested_disposition": "REVIEW_MANUALLY"
+    },
+    {
+      "mib": 0.011925,
+      "path": "results/development/neural_epoch_selection_history.csv",
+      "sha256": "a819635542e25cbdc13f0dcdf795d3a9608d8f75b85ada352816cd818be63ad0",
+      "suggested_disposition": "CANONICAL_VERSION_CANDIDATE"
+    },
+    {
+      "mib": 0.011691,
+      "path": "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_clean_parity_selector_96.csv",
+      "sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    },
+    {
+      "mib": 0.011691,
+      "path": "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_clean_parity_selector_96.csv",
+      "sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03",
+      "suggested_disposition": "HISTORICAL_PROVENANCE_CANDIDATE"
+    }
+  ],
+  "next_gate": "G5A manual disposition review and release inclusion/exclusion manifest",
+  "protocol_sha256": "c6da54d84c361a86a4944326f0a193c8dbcf37a6eb77204de742eb8f15a22f31",
+  "required_g4_success_commit": "1f60787",
+  "scientific_files_modified": false,
+  "stage": "G5A_repository_inventory_and_classification",
+  "status": "PASS",
+  "suggested_disposition_counts": {
+    "CANONICAL_VERSION_CANDIDATE": 38,
+    "GENERATED_OR_TEMP_CANDIDATE": 1,
+    "HISTORICAL_PROVENANCE_CANDIDATE": 26,
+    "RELEASE_LFS_OR_EXTERNAL_CANDIDATE": 8,
+    "REVIEW_MANUALLY": 3
+  },
+  "tracked_file_count": 135,
+  "untracked_file_count": 76,
+  "untracked_top_level_counts": {
+    "DamageACTU_G3_Parity_Execution_Bundle.bin": 1,
+    "audit": 4,
+    "checkpoints": 3,
+    "dist": 20,
+    "manifests": 10,
+    "predictions": 5,
+    "results": 28,
+    "scripts": 4,
+    "vendor": 1
+  },
+  "untracked_total_bytes": 737829246,
+  "untracked_total_mib": 703.6488018035889
+}

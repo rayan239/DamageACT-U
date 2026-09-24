@@ -1,0 +1,69 @@
+[
+  {
+    "count": 3,
+    "paths": [
+      "dist/DamageACTU_G3_Parity_Execution_Bundle/manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+      "dist/DamageACTU_G3_Parity_Input_Bundle/manifests/buildings/event_test_buildings_rebuilt.csv.gz",
+      "manifests/buildings/event_test_buildings_rebuilt.csv.gz"
+    ],
+    "sha256": "1dda199c0faa444e955ecf7b131872dc5c5a713482914e821cd916aea4b37a2a"
+  },
+  {
+    "count": 3,
+    "paths": [
+      "dist/DamageACTU_G3_Parity_Execution_Bundle/vendor/frozen_phase7d_source/src/models/damage_models.py",
+      "dist/DamageACTU_G3_Parity_Input_Bundle/vendor/frozen_phase7d_source/src/models/damage_models.py",
+      "vendor/frozen_phase7d_source/src/models/damage_models.py"
+    ],
+    "sha256": "9f9ee3382902f339309ddf03a203b882d42e8674de7bf8ee3d18b14863478f2d"
+  },
+  {
+    "count": 3,
+    "paths": [
+      "dist/DamageACTU_G3_Parity_Execution_Bundle/predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+      "dist/DamageACTU_G3_Parity_Input_Bundle/predictions/heldout_events/event_test_clean_expert_predictions.csv.gz",
+      "predictions/heldout_events/event_test_clean_expert_predictions.csv.gz"
+    ],
+    "sha256": "f0657fc72629acb8730464897c44040cde65942966a81f47c956f3c5b1bb09f2"
+  },
+  {
+    "count": 2,
+    "paths": [
+      "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_parity_execution_protocol.json",
+      "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_parity_execution_protocol.json"
+    ],
+    "sha256": "112ade4ac863dd7bc7df03a6c2544be6b3757ca0034f864556738851b2d2409c"
+  },
+  {
+    "count": 2,
+    "paths": [
+      "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_clean_parity_selector_96.csv",
+      "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_clean_parity_selector_96.csv"
+    ],
+    "sha256": "131ede6d2c4bf3efbd0e62a219994bc8228457aeaeb6022e5068d1586ee97f03"
+  },
+  {
+    "count": 2,
+    "paths": [
+      "DamageACTU_G3_Parity_Execution_Bundle.bin",
+      "dist/DamageACTU_G3_Parity_Execution_Bundle.bin"
+    ],
+    "sha256": "289c5753051af703fa58baf37785d47269d058a1cf31217a2a299acfb15ea519"
+  },
+  {
+    "count": 2,
+    "paths": [
+      "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_clean_parity_panel_23.csv",
+      "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_clean_parity_panel_23.csv"
+    ],
+    "sha256": "2924bc88beeda3507c8cf2178db53c2d17eca7483c483a61ca59087a87636c43"
+  },
+  {
+    "count": 2,
+    "paths": [
+      "dist/DamageACTU_G3_Parity_Execution_Bundle/audit/g3_parity_selection_lock.json",
+      "dist/DamageACTU_G3_Parity_Input_Bundle/audit/g3_parity_selection_lock.json"
+    ],
+    "sha256": "cf463ca5d680ba7ede33d498350692e2782f5d716bc527629dd07a77e210883c"
+  }
+]
