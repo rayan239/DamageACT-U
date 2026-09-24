@@ -1,0 +1,22 @@
+{
+  "locked_date": "2026-09-24",
+  "next_gate": "Manual disposition review and release inclusion/exclusion manifest.",
+  "prohibitions": [
+    "No git add of discovered evidence.",
+    "No git clean, deletion, movement, .gitignore edit, Git LFS change, or history rewrite."
+  ],
+  "protocol_id": "damageactu_g5a_repository_inventory_v1",
+  "purpose": "Create a read-only recursive inventory of the post-G4 repository before cleanup or release packaging.",
+  "required_g4_success_commit": "1f60787",
+  "requirements": [
+    "Require G4 success commit 1f60787 to be an ancestor of HEAD.",
+    "Require no tracked unstaged or staged changes at inventory start.",
+    "Allow existing untracked restored evidence.",
+    "Inventory every untracked file recursively.",
+    "Record path, bytes, SHA256, extension, top-level group, and non-binding disposition suggestion.",
+    "Flag files >=50 MiB and >=100 MiB.",
+    "Record duplicate SHA256 groups among untracked files."
+  ],
+  "scientific_scope": "Repository/release engineering only; no model execution or scientific-result modification.",
+  "stage": "G5A_repository_inventory_and_classification"
+}
