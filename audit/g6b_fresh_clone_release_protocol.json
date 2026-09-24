@@ -1,0 +1,43 @@
+{
+  "fresh_clone_requirements": [
+    "Source repository clean before cloning.",
+    "G6A PASS report present with exact SHA256.",
+    "paper-v1.0.0 absent before the audit.",
+    "Clone uses --no-hardlinks to avoid sharing Git object files with the source repository.",
+    "Fresh clone initially contains none of the 12 external assets.",
+    "Install and SHA256-verify all 12 external assets.",
+    "Run the public scripts/reproduce_release.py entry point.",
+    "Run git fsck --full in the fresh clone.",
+    "Fresh clone must remain Git-clean after reproduction.",
+    "Candidate commit in the attestation must exactly equal source HEAD."
+  ],
+  "locked_date": "2026-09-24",
+  "prohibitions": [
+    "Do not delete or overwrite an existing fresh-clone directory.",
+    "Do not modify the source repository during fresh-clone audit.",
+    "Do not train/refit/tune models.",
+    "Do not create or push a tag unless the fresh-clone attestation is PASS.",
+    "Do not push to GitHub or upload to Zenodo automatically."
+  ],
+  "protocol_id": "damageactu_g6b_fresh_clone_final_release_v1",
+  "purpose": "Prove the exact candidate release commit reproduces successfully from a fresh Git clone when the separately distributed frozen external assets are installed, then permit creation of the annotated paper-v1.0.0 tag on that exact tested commit.",
+  "release_tag": "paper-v1.0.0",
+  "required_g6a_protocol_commit": "7697509",
+  "required_g6a_report_sha256": "bc68b15417a4b520276d2322f3cb2991b55e6cab10c8729ed6c2e8d82312c6d7",
+  "required_g6a_status": "PASS",
+  "scientific_guardrails": [
+    "Final event-track evidence remains single-initialization, Seed 42.",
+    "G3 is checkpoint-inference parity, not training-from-scratch reproduction.",
+    "Clean effectiveness remains FAIL.",
+    "ALL_PRECOMMITTED_CRITERIA_PASS remains false.",
+    "No thresholds, models, training, or TEST decisions are changed."
+  ],
+  "stage": "G6B_fresh_clone_and_final_tag",
+  "tag_requirements": [
+    "Fresh-clone attestation status PASS.",
+    "Attested candidate commit exactly equals current HEAD.",
+    "Current working tree clean.",
+    "paper-v1.0.0 still absent.",
+    "Create an annotated local tag only; do not push automatically."
+  ]
+}
