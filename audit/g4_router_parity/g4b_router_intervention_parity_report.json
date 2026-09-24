@@ -1,0 +1,307 @@
+{
+  "all_precommitted_criteria_pass": false,
+  "canonical_metric_comparisons": [
+    {
+      "accuracy": 0.7164431421165333,
+      "canonical_method": "POST-only",
+      "macro_f1": 0.4565629212722525,
+      "population": "clean_pooled",
+      "regenerated_method": "POST-only"
+    },
+    {
+      "accuracy": 0.6935040615870098,
+      "canonical_method": "Siamese",
+      "macro_f1": 0.4428540192831161,
+      "population": "clean_pooled",
+      "regenerated_method": "Siamese"
+    },
+    {
+      "accuracy": 0.7309902990056264,
+      "canonical_method": "Equal 0.5 logit blend",
+      "macro_f1": 0.45958704567166375,
+      "population": "clean_pooled",
+      "regenerated_method": "Equal 0.5 logit blend"
+    },
+    {
+      "accuracy": 0.7313284033671726,
+      "canonical_method": "Static alpha blend",
+      "macro_f1": 0.4602175490098518,
+      "population": "clean_pooled",
+      "regenerated_method": "Static alpha blend"
+    },
+    {
+      "accuracy": 0.7303054209399301,
+      "canonical_method": "Max-confidence selector",
+      "macro_f1": 0.4553133796114155,
+      "population": "clean_pooled",
+      "regenerated_method": "Max-confidence selector"
+    },
+    {
+      "accuracy": 0.72933445456831,
+      "canonical_method": "Min-entropy selector",
+      "macro_f1": 0.45400168443525857,
+      "population": "clean_pooled",
+      "regenerated_method": "Min-entropy selector"
+    },
+    {
+      "accuracy": 0.7334784003329028,
+      "canonical_method": "Logistic soft gate",
+      "macro_f1": 0.45768565664262,
+      "population": "clean_pooled",
+      "regenerated_method": "Logistic soft gate"
+    },
+    {
+      "accuracy": 0.7303140902825339,
+      "canonical_method": "HGB hard router",
+      "macro_f1": 0.4526522243878438,
+      "population": "clean_pooled",
+      "regenerated_method": "HGB hard router"
+    },
+    {
+      "accuracy": 0.7338251740370527,
+      "canonical_method": "Neural Temporal Utility Router",
+      "macro_f1": 0.4596737025324026,
+      "population": "clean_pooled",
+      "regenerated_method": "Neural Temporal Utility Router"
+    },
+    {
+      "accuracy": 0.7671327883206617,
+      "canonical_method": "Oracle expert selector",
+      "macro_f1": 0.5317874205951261,
+      "population": "clean_pooled",
+      "regenerated_method": "Oracle expert selector"
+    },
+    {
+      "accuracy": 0.7165326323642957,
+      "canonical_method": "POST-only",
+      "macro_f1": 0.4563109999869109,
+      "population": "valid_matched",
+      "regenerated_method": "POST-only"
+    },
+    {
+      "accuracy": 0.69361233289089,
+      "canonical_method": "Siamese",
+      "macro_f1": 0.4427179634737013,
+      "population": "valid_matched",
+      "regenerated_method": "Siamese"
+    },
+    {
+      "accuracy": 0.7310898853985026,
+      "canonical_method": "Equal 0.5 logit blend",
+      "macro_f1": 0.4594060086332617,
+      "population": "valid_matched",
+      "regenerated_method": "Equal 0.5 logit blend"
+    },
+    {
+      "accuracy": 0.7314368997735731,
+      "canonical_method": "Static alpha blend",
+      "macro_f1": 0.46005106972179366,
+      "population": "valid_matched",
+      "regenerated_method": "Static alpha blend"
+    },
+    {
+      "accuracy": 0.730421882726492,
+      "canonical_method": "Max-confidence selector",
+      "macro_f1": 0.4551439233052627,
+      "population": "valid_matched",
+      "regenerated_method": "Max-confidence selector"
+    },
+    {
+      "accuracy": 0.7294589178356713,
+      "canonical_method": "Min-entropy selector",
+      "macro_f1": 0.4538511736406813,
+      "population": "valid_matched",
+      "regenerated_method": "Min-entropy selector"
+    },
+    {
+      "accuracy": 0.7335883888990101,
+      "canonical_method": "Logistic soft gate",
+      "macro_f1": 0.4575111563098604,
+      "population": "valid_matched",
+      "regenerated_method": "Logistic soft gate"
+    },
+    {
+      "accuracy": 0.7304305580858687,
+      "canonical_method": "HGB hard router",
+      "macro_f1": 0.4524927105238439,
+      "population": "valid_matched",
+      "regenerated_method": "HGB hard router"
+    },
+    {
+      "accuracy": 0.7339440786334573,
+      "canonical_method": "Neural Temporal Utility Router",
+      "macro_f1": 0.45952381830661404,
+      "population": "valid_matched",
+      "regenerated_method": "Neural Temporal Utility Router"
+    },
+    {
+      "accuracy": 0.7672054064839636,
+      "canonical_method": "Oracle expert selector",
+      "macro_f1": 0.5314899474849785,
+      "population": "valid_matched",
+      "regenerated_method": "Oracle expert selector"
+    },
+    {
+      "accuracy": 0.7165326323642957,
+      "canonical_method": "POST-only",
+      "macro_f1": 0.4563109999869109,
+      "population": "wrongpre_matched",
+      "regenerated_method": "POST-only"
+    },
+    {
+      "accuracy": 0.647719681787818,
+      "canonical_method": "Siamese",
+      "macro_f1": 0.41527017064080374,
+      "population": "wrongpre_matched",
+      "regenerated_method": "Siamese"
+    },
+    {
+      "accuracy": 0.7202109847400429,
+      "canonical_method": "Equal 0.5 logit blend",
+      "macro_f1": 0.45068056104819576,
+      "population": "wrongpre_matched",
+      "regenerated_method": "Equal 0.5 logit blend"
+    },
+    {
+      "accuracy": 0.7219113551778883,
+      "canonical_method": "Static alpha blend",
+      "macro_f1": 0.4517292950706597,
+      "population": "wrongpre_matched",
+      "regenerated_method": "Static alpha blend"
+    },
+    {
+      "accuracy": 0.7186147186147186,
+      "canonical_method": "Max-confidence selector",
+      "macro_f1": 0.44564355661847427,
+      "population": "wrongpre_matched",
+      "regenerated_method": "Max-confidence selector"
+    },
+    {
+      "accuracy": 0.718345782474039,
+      "canonical_method": "Min-entropy selector",
+      "macro_f1": 0.4450989107972943,
+      "population": "wrongpre_matched",
+      "regenerated_method": "Min-entropy selector"
+    },
+    {
+      "accuracy": 0.723707154568878,
+      "canonical_method": "Logistic soft gate",
+      "macro_f1": 0.4494507685659885,
+      "population": "wrongpre_matched",
+      "regenerated_method": "Logistic soft gate"
+    },
+    {
+      "accuracy": 0.7191178894585708,
+      "canonical_method": "HGB hard router",
+      "macro_f1": 0.44258037930549876,
+      "population": "wrongpre_matched",
+      "regenerated_method": "HGB hard router"
+    },
+    {
+      "accuracy": 0.7269951157726708,
+      "canonical_method": "Neural Temporal Utility Router",
+      "macro_f1": 0.45324001946153963,
+      "population": "wrongpre_matched",
+      "regenerated_method": "Neural Temporal Utility Router"
+    },
+    {
+      "accuracy": 0.7645420711552976,
+      "canonical_method": "Oracle expert selector",
+      "macro_f1": 0.5358383190646098,
+      "population": "wrongpre_matched",
+      "regenerated_method": "Oracle expert selector"
+    }
+  ],
+  "canonical_metric_schema": {
+    "grouping_column": "population",
+    "test_metrics_all_conditions_populations": [
+      "clean_pooled",
+      "valid_matched",
+      "wrongpre_matched"
+    ],
+    "test_metrics_clean_populations": [
+      "clean_pooled"
+    ]
+  },
+  "counts": {
+    "clean_test": 115349,
+    "correctness_discordant": 14340,
+    "wrongpre_matched": 115269
+  },
+  "environment": {
+    "joblib": "1.6.0",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "python": "3.12.10",
+    "scikit_learn": "1.6.1",
+    "scipy": "1.18.1",
+    "torch": "2.10.0+cpu"
+  },
+  "exact_schema_v3_sha256": "29ef640fb951b558f6e573b7cbd8bfb52ee68a0e61579dc8db47dcf51dcc415e",
+  "expert_inference_performed": false,
+  "g4a_inventory_sha256": "3543d47ffa26c1f1d043877b4b17870b7ed06031c5d41ef493ef44f2fa3f2d76",
+  "gate_aggregation_fix_v5_sha256": "b783d36704512086fa34b28584f2f59f4a15c216ad771a2c7cb2c7e89edbb298",
+  "head": "e701a9e432791220ea1605a25297245377a92d11",
+  "headline_reproduced": {
+    "gate_deltaCE_spearman": 0.10360709338864671,
+    "neural_clean_gain_vs_post": 0.003110781260150075,
+    "neural_clean_macro_f1": 0.4596737025324026,
+    "neural_wrongpre_gain_vs_post": -0.0030709805253712474,
+    "neural_wrongpre_macro_f1": 0.45324001946153963,
+    "post_clean_macro_f1": 0.4565629212722525,
+    "post_valid_matched_macro_f1": 0.4563109999869109,
+    "post_wrongpre_matched_macro_f1": 0.4563109999869109,
+    "utility_auprc": 0.7196353859871119,
+    "utility_auroc": 0.77283834848973,
+    "valid_gate_mean_float64_absdiff_vs_frozen": 3.577693696854567e-14,
+    "valid_gate_mean_matched": 0.17521319585796422,
+    "valid_gate_mean_native_float32": 0.17521318793296814,
+    "wrong_gate_mean_float64_absdiff_vs_frozen": 9.556244684461035e-14,
+    "wrong_gate_mean_matched": 0.16512624339890444,
+    "wrong_gate_mean_native_float32": 0.1651262491941452
+  },
+  "next_gate": "G5 deterministic paper-artifact parity",
+  "post_test_tuning_performed": false,
+  "protocol_sha256": "3e99481439c22091e45f3f6c48c88ea7b6bef3736207de53812fdf42755e2e66",
+  "raw_xbd_loaded": false,
+  "router_fitting_performed": false,
+  "router_freeze": {
+    "alpha": 0.45,
+    "expert_seed": 42,
+    "feature_count": 26,
+    "feature_names": [
+      "post_p0",
+      "pair_p0",
+      "diff_p0",
+      "absdiff_p0",
+      "post_p1",
+      "pair_p1",
+      "diff_p1",
+      "absdiff_p1",
+      "post_p2",
+      "pair_p2",
+      "diff_p2",
+      "absdiff_p2",
+      "post_p3",
+      "pair_p3",
+      "diff_p3",
+      "absdiff_p3",
+      "confidence_post",
+      "confidence_pair",
+      "entropy_post",
+      "entropy_pair",
+      "severity_post",
+      "severity_pair",
+      "conf_diff",
+      "entropy_diff",
+      "severity_diff",
+      "pred_disagree"
+    ],
+    "neural_best_epoch": 1
+  },
+  "runtime_fix_sha256": "0c66d95faadf85c990f2e771ac8c9697a7fb6e97edac7482639ad5a001eaf4c1",
+  "stage": "G4B_deterministic_router_intervention_parity",
+  "status": "PASS",
+  "training_performed": false,
+  "wrongpre_baseline_fix_v4_sha256": "8f87d36b0d08112cd1ebd70b263b443c1c9dcd28debb9a22f56fe842c230b87e"
+}
