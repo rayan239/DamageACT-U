@@ -1,0 +1,34 @@
+{
+  "addendum_id": "damageactu_g4b_runtime_schema_fix_v2",
+  "allowed_grouping_columns": [
+    "condition",
+    "population"
+  ],
+  "changes_to_models": false,
+  "changes_to_pass_criteria": false,
+  "changes_to_predictions": false,
+  "changes_to_router_features": false,
+  "changes_to_static_alpha": false,
+  "changes_to_tolerances": false,
+  "failure_observed": "The v1 parity wrapper stopped after router reconstruction because it assumed the canonical test_metrics_all_conditions.csv grouping field was named 'condition'. The canonical frozen table does not use that column name.",
+  "locked_date": "2026-09-24",
+  "post_test_tuning": false,
+  "prohibitions": [
+    "Do not edit canonical result CSVs.",
+    "Do not change router checkpoints or saved expert predictions.",
+    "Do not refit or retrain any model.",
+    "Do not change alpha=0.45.",
+    "Do not weaken numerical tolerances.",
+    "Do not convert the failed clean-effectiveness criterion into a pass."
+  ],
+  "repair_scope": "Implementation-only schema resolution. The v2 wrapper accepts exactly one of the two historically used grouping-field names: 'condition' or 'population'. It refuses ambiguity, requires the requested frozen population labels to exist, and changes no model, artifact, prediction, metric formula, tolerance, or pass criterion.",
+  "required_grouping_labels_for_all_conditions_table": [
+    "valid_matched",
+    "wrongpre_matched"
+  ],
+  "required_original_protocol_commit": "9d86349",
+  "scientific_changes": false,
+  "scientific_protocol_sha256": "3e99481439c22091e45f3f6c48c88ea7b6bef3736207de53812fdf42755e2e66",
+  "stage": "G4B_deterministic_router_intervention_parity",
+  "superseded_runner_sha256": "4b8da51de968dd52e8a3e528d0761ce395403d102d29a9d9d158040c94b9ad88"
+}
