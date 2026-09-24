@@ -1,0 +1,39 @@
+{
+  "addendum_id": "damageactu_g4b_wrongpre_baseline_semantics_fix_v4",
+  "authoritative_formula": "wrongpre_neural_minus_post = MacroF1(wrongpre_matched, Neural Temporal Utility Router) - MacroF1(wrongpre_matched, POST-only)",
+  "changes_to_feature_schema": false,
+  "changes_to_metric_formulas": false,
+  "changes_to_models": false,
+  "changes_to_pass_criteria": false,
+  "changes_to_population_schema": false,
+  "changes_to_predictions": false,
+  "changes_to_tolerances": false,
+  "failure_cause": "After exact route-metric parity had already passed, the wrapper computed the headline wrong-PRE neural gain using the pooled clean POST Macro-F1 as baseline. The frozen Phase7D-D definition instead subtracts POST Macro-F1 from the same wrongpre_matched population.",
+  "locked_date": "2026-09-24",
+  "observed_v3_state": {
+    "all_10_clean_canonical_route_metrics": "PASS",
+    "all_10_valid_and_wrongpre_matched_canonical_route_metrics": "PASS",
+    "exact_canonical_metric_table_schema": "PASS",
+    "frozen_input_identity": "PASS",
+    "frozen_router_loading_without_fit": "PASS",
+    "wrongpre_target_donor_same_scene_safety": "PASS"
+  },
+  "post_test_tuning": false,
+  "prohibitions": [
+    "Do not modify canonical result tables.",
+    "Do not refit or retrain any router or expert.",
+    "Do not change alpha=0.45.",
+    "Do not alter the 26-feature schema.",
+    "Do not change any numerical tolerance.",
+    "Do not alter any precommitted criterion.",
+    "Do not convert clean-effectiveness FAIL into PASS."
+  ],
+  "repair_scope": "Change only the wrapper's headline wrong-PRE gain baseline from clean_pooled POST to wrongpre_matched POST. Add a consistency assertion that matched-valid POST and wrong-PRE-matched POST metrics are identical, since the intervention changes only the paired/PRE-dependent branch.",
+  "required_v3_schema_lock_commit": "11d52fc",
+  "scientific_changes": false,
+  "scientific_protocol_sha256": "3e99481439c22091e45f3f6c48c88ea7b6bef3736207de53812fdf42755e2e66",
+  "stage": "G4B_deterministic_router_intervention_parity",
+  "v2_runtime_fix_sha256": "0c66d95faadf85c990f2e771ac8c9697a7fb6e97edac7482639ad5a001eaf4c1",
+  "v3_exact_schema_sha256": "29ef640fb951b558f6e573b7cbd8bfb52ee68a0e61579dc8db47dcf51dcc415e",
+  "v3_runner_sha256": "c3425bf723df41da68410608d756720c036d3781564d2763e6f1c2db65e0ab9f"
+}
