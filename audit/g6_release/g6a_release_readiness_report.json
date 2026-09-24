@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "README.md"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "REPRODUCIBILITY.md"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "PAPER_RESULTS.md"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "CITATION.cff"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "LICENSE"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "DATA_LICENSE.md"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "CHANGELOG.md"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "Makefile"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "pyproject.toml"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "release/README.md"
+    },
+    {
+      "check": "required_document",
+      "pass": true,
+      "path": "release/external_assets_manifest.json"
+    },
+    {
+      "check": "core_report_sha256",
+      "pass": true,
+      "value": "8f586c2ae4ba5769c330355e287f75d4e31f82e998612b6bbd7b471f30b40eb5"
+    },
+    {
+      "check": "bootstrap_report_sha256",
+      "pass": true,
+      "value": "e39a941bdd6c7417d4bf9056c1c4d6df5654bba21190016b0085d8fcd9fbb1ba"
+    }
+  ],
+  "external_asset_count": 12,
+  "external_assets_accidentally_tracked": [],
+  "external_assets_root": "C:\\DamageACT-U\\DamageACTU_External_Assets_v1",
+  "g5c_git_designated_missing_from_tracking": [],
+  "head": "76975097c1104ce5e79c3aa0e2bc91ce15a3bb7f",
+  "human_metadata_placeholder_hits": [],
+  "next_gate": "Resolve only listed blockers/placeholders; then fresh-clone final audit and annotated paper-v1.0.0 tag.",
+  "paper_tag_exists_before_closeout": false,
+  "protocol_sha256": "31b1bc5c69819a9ca0ba7a5c082cc34a68083d8909e80302e9626f6e74613d12",
+  "required_g5_commit": "8ef6e7f",
+  "science_runs": [
+    {
+      "command": [
+        "C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\.venv312\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "label": "pytest",
+      "output_tail": "...........                                                              [100%]\n11 passed in 26.08s\n",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\.venv312\\Scripts\\python.exe",
+        "scripts/verify_restored_evidence_v2.py"
+      ],
+      "label": "canonical evidence audit",
+      "output_tail": "PASS: Phase7C total patch count | 11034\nPASS: Phase7C role counts | {'train': 8202, 'test': 1920, 'val': 912}\nPASS: Phase7C pair_key unique\nPASS: Phase7C (event,patch_id) unique\nPASS: Phase7C development event set exact\nPASS: Phase7C held-out event set exact\nPASS: No event leakage development vs TEST\nPASS: Phase7D-A train rows | 265273\nPASS: Phase7D-A validation rows | 30735\nPASS: Train building IDs unique\nPASS: Validation building IDs unique\nPASS: No train/val building overlap\nPASS: No train/val scene overlap\nPASS: Train event set exact\nPASS: Validation event set exact\nPASS: Event-train class counts exact | {0: 212466, 1: 15518, 2: 19528, 3: 17761}\nPASS: Validation wrong-PRE donor rows | 30698\nPASS: Wrong-PRE targets unique\nPASS: No self donors\nPASS: All wrong-PRE IDs exist in validation manifest\nPASS: All wrong-PRE donors same-scene\nPASS: Wrong-PRE validation coverage | 0.9987961607288108\nPASS: Phase7D-B status\nPASS: Phase7D-B expert seed is 42\nPASS: Phase7D-B completed 8 epochs\nPASS: Phase7D-B TEST remained sealed\nPASS: Phase7D-B did not train router\nPASS: Both expert best epochs are 8\nPASS: Phase7D-C final freeze status\nPASS: Phase7D-C expert seed is 42\nPASS: Random-seed robustness claim forbidden\nPASS: Phase7D-C TEST remained sealed\nPASS: Frozen neural router epoch is 1\nPASS: Frozen static alpha is 0.45\nPASS: Final static-alpha artifact equals 0.45\nPASS: Final TEST status\nPASS: Final TEST protocol SHA\nPASS: Post-test tuning forbidden\nPASS: Final evidence is single-initialization only\nPASS: Final TEST patch count | 1920\nPASS: Final TEST building count | 115349\nPASS: Final TEST event set exact\nPASS: Pre-specified clean effectiveness criterion failed\nPASS: Class-safety criterion passed\nPASS: Wrong-PRE safety criterion passed\nPASS: Gate-suppression criterion passed\nPASS: Utility-generalization criterion passed\nPASS: All-precommitted-criteria flag remains FALSE\nPASS: Final POST clean Macro-F1 | 0.4565629213\nPASS: Final neural clean Macro-F1 | 0.4596737025\nPASS: Primary neural-minus-POST gain agrees with results index | 0.0031107813\nPASS: Utility population size\nPASS: Correctness-discordant utility cases\nPASS: Final utility AUROC | 0.772838348490\nPASS: Final gate-deltaCE Spearman | 0.103607093954\n\nCANONICAL EVIDENCE AUDIT: PASS\nThe restored Phase7C-7D evidence is internally consistent with the frozen paper record.\n",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\.venv312\\Scripts\\python.exe",
+        "scripts/reproduce_results_v2_core.py"
+      ],
+      "label": "deterministic core",
+      "output_tail": "DamageACT-U statistical reproduction \u2014 deterministic core\nPython: 3.12.10\nscikit-learn: 1.6.1\ntorch: 2.10.0+cpu\n\nCORE REPRODUCTION PASS\nPOST clean Macro-F1     : 0.456562921272\nNeural clean Macro-F1   : 0.459673702532\nClean gain              : +0.003110781260\nNeural wrong-PRE F1     : 0.453240019462\nWrong-PRE gain vs POST  : -0.003070980525\nUtility AUROC           : 0.772838348490\nUtility AUPRC           : 0.719635385987\nGate-deltaCE Spearman   : 0.103607093389\nValid gate mean matched : 0.175213195858\nWrong gate mean matched : 0.165126243399\nALL_PRECOMMITTED_CRITERIA_PASS preserved: False\nREPORT: C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\results\\reproduction_core_v2.json\n",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\.venv312\\Scripts\\python.exe",
+        "scripts/reproduce_results_v2_bootstrap.py"
+      ],
+      "label": "bootstrap reproduction",
+      "output_tail": "DamageACT-U statistical reproduction \u2014 bootstrap layer\nPython: 3.12.10\nscikit-learn: 1.6.1\ntorch: 2.10.0+cpu\n\n[1/4] Re-running deterministic core parity gate...\nDamageACT-U statistical reproduction \u2014 deterministic core\nPython: 3.12.10\nscikit-learn: 1.6.1\ntorch: 2.10.0+cpu\n\nCORE REPRODUCTION PASS\nPOST clean Macro-F1     : 0.456562921272\nNeural clean Macro-F1   : 0.459673702532\nClean gain              : +0.003110781260\nNeural wrong-PRE F1     : 0.453240019462\nWrong-PRE gain vs POST  : -0.003070980525\nUtility AUROC           : 0.772838348490\nUtility AUPRC           : 0.719635385987\nGate-deltaCE Spearman   : 0.103607093389\nValid gate mean matched : 0.175213195858\nWrong gate mean matched : 0.165126243399\nALL_PRECOMMITTED_CRITERIA_PASS preserved: False\nREPORT: C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\results\\reproduction_core_v2.json\n\n[2/4] Reconstructing frozen TEST methods...\n[3/4] Reproducing 2,000-replicate clean/wrong-PRE scene bootstraps...\n[4/4] Reproducing 1,000-replicate temporal-utility scene bootstrap...\n\nFULL BOOTSTRAP REPRODUCTION PASS\nClean neural-POST 95% CI : [-0.000611909452, 0.007171176847]\nWrong neural-POST 95% CI : [-0.006597738161, 0.000701304682]\nUtility AUROC 95% CI      : [0.745558470519, 0.796601864796]\nUtility Spearman 95% CI   : [0.058445288351, 0.149023936958]\nCriteria:\n  clean effectiveness   : FAIL\n  class safety          : PASS\n  wrong-PRE safety      : PASS\n  gate suppression      : PASS\n  utility generalization: PASS\nALL_PRECOMMITTED_CRITERIA_PASS: False\nREPORT: C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\results\\reproduction_bootstrap_v2.json\nBOOTSTRAP TABLE: C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\results\\reproduction_scene_bootstrap_v2.csv\nUTILITY BOOTSTRAP: C:\\DamageACT-U\\DamageACT-U_Reproducibility_RC1\\results\\reproduction_utility_bootstrap_v2.json\n",
+      "returncode": 0
+    }
+  ],
+  "scientific_conclusion_guardrails": {
+    "all_precommitted_criteria_pass": false,
+    "final_event_track_seed": 42,
+    "training_from_scratch_reproduction_claimed": false
+  },
+  "stage": "G6A_final_release_readiness_preflight",
+  "status": "PASS",
+  "technical_blockers": [],
+  "tracked_dist_files": [],
+  "tracked_file_count": 222,
+  "tracked_files_ge_100_mib": [],
+  "warnings": []
+}
