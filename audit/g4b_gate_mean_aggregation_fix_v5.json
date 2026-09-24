@@ -1,0 +1,46 @@
+{
+  "addendum_id": "damageactu_g4b_gate_mean_aggregation_fidelity_fix_v5",
+  "changes_to_feature_schema": false,
+  "changes_to_gate_values": false,
+  "changes_to_metric_formulas": false,
+  "changes_to_models": false,
+  "changes_to_pass_criteria": false,
+  "changes_to_population_schema": false,
+  "changes_to_predictions": false,
+  "changes_to_tolerances": false,
+  "diagnosis": "The neural gate array is produced by a float32 PyTorch network. The v4 wrapper used np.mean directly on that float32 ndarray, so NumPy accumulated and returned the mean in float32. The frozen canonical headline is a higher-precision aggregate of those same gate values. This can create a few-e-9 discrepancy while leaving every per-building routed prediction unchanged. The canonical route metrics already matched.",
+  "locked_date": "2026-09-24",
+  "observed_v4_state": {
+    "all_10_clean_canonical_route_metrics": "PASS",
+    "all_10_valid_and_wrongpre_matched_canonical_route_metrics": "PASS",
+    "exact_canonical_metric_table_schema": "PASS",
+    "failure_point": "valid matched neural gate mean comparison",
+    "frozen_input_identity": "PASS",
+    "frozen_router_loading_without_fit": "PASS",
+    "wrongpre_headline_baseline_semantics": "PASS",
+    "wrongpre_target_donor_same_scene_safety": "PASS"
+  },
+  "post_test_tuning": false,
+  "prohibitions": [
+    "Do not modify canonical result tables.",
+    "Do not modify router checkpoints or expert prediction tables.",
+    "Do not refit or retrain any model.",
+    "Do not change alpha=0.45.",
+    "Do not alter the 26-feature schema.",
+    "Do not change any frozen tolerance.",
+    "Do not alter any precommitted criterion.",
+    "Do not convert clean-effectiveness FAIL into PASS."
+  ],
+  "repair_scope": "Do not change any gate value. Convert the already-produced float32 gate vector to float64 only for aggregate mean computation, then compare the float64 aggregate to the frozen canonical headline using the original unchanged HEADLINE_ATOL=1e-9. Record both native-float32 and float64-accumulated means for audit.",
+  "required_v4_commit": "104b655",
+  "scientific_changes": false,
+  "scientific_protocol_sha256": "3e99481439c22091e45f3f6c48c88ea7b6bef3736207de53812fdf42755e2e66",
+  "stage": "G4B_deterministic_router_intervention_parity",
+  "unchanged_tolerances": {
+    "canonical_metric_absolute": 1e-10,
+    "headline_stat_absolute": 1e-09,
+    "utility_spearman_absolute": 1e-08
+  },
+  "v4_baseline_fix_sha256": "8f87d36b0d08112cd1ebd70b263b443c1c9dcd28debb9a22f56fe842c230b87e",
+  "v4_runner_sha256": "1916904edccaa194fd1e413c3a409cf538fd7beee7c0d58f0c6f93a0a9a192c6"
+}
