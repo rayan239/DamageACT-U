@@ -1,0 +1,81 @@
+population,method,class_id,f1
+clean_all,POST-only,0,0.9437433773239572
+clean_all,POST-only,1,0.4803767660910518
+clean_all,POST-only,2,0.6985105290190036
+clean_all,POST-only,3,0.8341855368882396
+clean_all,Siamese,0,0.9466435519599345
+clean_all,Siamese,1,0.4989561586638831
+clean_all,Siamese,2,0.653556969346443
+clean_all,Siamese,3,0.838140481845945
+clean_all,Equal 0.5 logit blend,0,0.9514218577662686
+clean_all,Equal 0.5 logit blend,1,0.5142549757934374
+clean_all,Equal 0.5 logit blend,2,0.6985008328706275
+clean_all,Equal 0.5 logit blend,3,0.8478031634446397
+clean_all,Static alpha blend (a=0.45),0,0.9512803299127266
+clean_all,Static alpha blend (a=0.45),1,0.5121293800539084
+clean_all,Static alpha blend (a=0.45),2,0.6979569298729983
+clean_all,Static alpha blend (a=0.45),3,0.8470754052149401
+clean_all,Max-confidence selector,0,0.9509278744977999
+clean_all,Max-confidence selector,1,0.5173184357541899
+clean_all,Max-confidence selector,2,0.6974930362116991
+clean_all,Max-confidence selector,3,0.8439790575916231
+clean_all,Min-entropy selector,0,0.9506332138590203
+clean_all,Min-entropy selector,1,0.5130237825594564
+clean_all,Min-entropy selector,2,0.6955074875207987
+clean_all,Min-entropy selector,3,0.8428770949720671
+clean_all,Logistic soft gate,0,0.9509214169769884
+clean_all,Logistic soft gate,1,0.5059422750424448
+clean_all,Logistic soft gate,2,0.7019650655021834
+clean_all,Logistic soft gate,3,0.845360824742268
+clean_all,HGB hard router,0,0.951444317749905
+clean_all,HGB hard router,1,0.5032258064516129
+clean_all,HGB hard router,2,0.7035830618892508
+clean_all,HGB hard router,3,0.8432862830256967
+clean_all,Oracle expert selector,0,0.9643557724510788
+clean_all,Oracle expert selector,1,0.6238938053097345
+clean_all,Oracle expert selector,2,0.7627302275189599
+clean_all,Oracle expert selector,3,0.8919015340706385
+clean_all,Neural safe router,0,0.9513663290655455
+clean_all,Neural safe router,1,0.5084931506849315
+clean_all,Neural safe router,2,0.7022318998366902
+clean_all,Neural safe router,3,0.8458755426917511
+wrong_matched,POST-only,0,0.9436728395061729
+wrong_matched,POST-only,1,0.4808800419067575
+wrong_matched,POST-only,2,0.6978898610396295
+wrong_matched,POST-only,3,0.8344322344322345
+wrong_matched,Siamese,0,0.9269615820880801
+wrong_matched,Siamese,1,0.4795613160518445
+wrong_matched,Siamese,2,0.6244343891402715
+wrong_matched,Siamese,3,0.7578818487909397
+wrong_matched,Equal 0.5 logit blend,0,0.9448048804105742
+wrong_matched,Equal 0.5 logit blend,1,0.5026288117770767
+wrong_matched,Equal 0.5 logit blend,2,0.6813428728673638
+wrong_matched,Equal 0.5 logit blend,3,0.8210526315789474
+wrong_matched,Static alpha blend (a=0.45),0,0.9458309150706132
+wrong_matched,Static alpha blend (a=0.45),1,0.5005279831045406
+wrong_matched,Static alpha blend (a=0.45),2,0.6871232876712329
+wrong_matched,Static alpha blend (a=0.45),3,0.827232295586726
+wrong_matched,Max-confidence selector,0,0.9451175363228267
+wrong_matched,Max-confidence selector,1,0.510148107515085
+wrong_matched,Max-confidence selector,2,0.6882902693787796
+wrong_matched,Max-confidence selector,3,0.8191956742142615
+wrong_matched,Min-entropy selector,0,0.946130866339019
+wrong_matched,Min-entropy selector,1,0.5183946488294314
+wrong_matched,Min-entropy selector,2,0.6924778761061947
+wrong_matched,Min-entropy selector,3,0.8156650911546253
+wrong_matched,Logistic soft gate,0,0.946770622774088
+wrong_matched,Logistic soft gate,1,0.5016648168701443
+wrong_matched,Logistic soft gate,2,0.6902844873859366
+wrong_matched,Logistic soft gate,3,0.8264347826086956
+wrong_matched,HGB hard router,0,0.9478772794715934
+wrong_matched,HGB hard router,1,0.4965116279069767
+wrong_matched,HGB hard router,2,0.6868686868686869
+wrong_matched,HGB hard router,3,0.8264872521246459
+wrong_matched,Oracle expert selector,0,0.9632299927901946
+wrong_matched,Oracle expert selector,1,0.624105668684645
+wrong_matched,Oracle expert selector,2,0.7629748528624933
+wrong_matched,Oracle expert selector,3,0.8899893880438627
+wrong_matched,Neural safe router,0,0.9483396607237253
+wrong_matched,Neural safe router,1,0.4989177489177489
+wrong_matched,Neural safe router,2,0.6950431034482759
+wrong_matched,Neural safe router,3,0.835650623885918

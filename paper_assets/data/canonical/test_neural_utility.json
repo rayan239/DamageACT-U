@@ -1,0 +1,27 @@
+{
+  "n_clean_test": 115349,
+  "n_correctness_discordant": 14340,
+  "auroc": 0.77283834848973,
+  "auprc": 0.7196353859871121,
+  "spearman_gate_deltaCE": 0.10360709395401074,
+  "auroc_bootstrap": {
+    "mean": 0.7727103187915206,
+    "ci95_low": 0.7455584705189203,
+    "ci95_high": 0.79660186479569,
+    "valid_reps": 1000
+  },
+  "auprc_bootstrap": {
+    "mean": 0.7198523053335188,
+    "ci95_low": 0.6765716286292709,
+    "ci95_high": 0.7626229220146328,
+    "valid_reps": 1000
+  },
+  "spearman_bootstrap": {
+    "mean": 0.10344963234339567,
+    "ci95_low": 0.058445288060467795,
+    "ci95_high": 0.14902393795250468,
+    "valid_reps": 1000
+  },
+  "valid_gate_mean_matched": 0.17521321773529053,
+  "wrong_gate_mean_matched": 0.165126234292984
+}

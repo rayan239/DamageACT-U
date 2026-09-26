@@ -1,0 +1,4 @@
+Role,Event scope,Patches,Buildings
+Development train,13-event development pool,8202,265273
+Development validation,13-event development pool,912,30735
+Final TEST,6 completely unseen events,1920,115349

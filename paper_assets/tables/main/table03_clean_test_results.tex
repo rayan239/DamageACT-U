@@ -1,0 +1,16 @@
+\begin{tabular}{lrrr}
+\toprule
+Method & Macro-F1 & Accuracy & Ordinal MAE \\
+\midrule
+POST-only & 0.45656 & 0.71644 & 0.42829 \\
+Siamese & 0.44285 & 0.69350 & 0.50145 \\
+Equal 0.5 logit blend & 0.45959 & 0.73099 & 0.40466 \\
+Static alpha blend & 0.46022 & 0.73133 & 0.40354 \\
+Max-confidence selector & 0.45531 & 0.73031 & 0.40878 \\
+Min-entropy selector & 0.45400 & 0.72933 & 0.41087 \\
+Logistic soft gate & 0.45769 & 0.73348 & 0.39993 \\
+HGB hard router & 0.45265 & 0.73031 & 0.40724 \\
+Neural Temporal Utility Router & 0.45967 & 0.73383 & 0.39656 \\
+Oracle expert selector & 0.53179 & 0.76713 & 0.33337 \\
+\bottomrule
+\end{tabular}

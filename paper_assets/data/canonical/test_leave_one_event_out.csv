@@ -1,0 +1,61 @@
+omitted_event,method,n,macro_f1
+guatemala-volcano,POST-only,114536,0.4564986387795458
+guatemala-volcano,Siamese,114536,0.4431065980933618
+guatemala-volcano,Equal 0.5 logit blend,114536,0.4596437203094093
+guatemala-volcano,Static alpha blend,114536,0.4602444975884984
+guatemala-volcano,Max-confidence selector,114536,0.4553525289600497
+guatemala-volcano,Min-entropy selector,114536,0.4540210774605959
+guatemala-volcano,Logistic soft gate,114536,0.4577373988924485
+guatemala-volcano,HGB hard router,114536,0.4526895976442457
+guatemala-volcano,Neural Temporal Utility Router,114536,0.4597218999098184
+guatemala-volcano,Oracle expert selector,114536,0.531867241256888
+hurricane-matthew,POST-only,92719,0.52893895341912
+hurricane-matthew,Siamese,92719,0.5170950637188869
+hurricane-matthew,Equal 0.5 logit blend,92719,0.5431367655284142
+hurricane-matthew,Static alpha blend,92719,0.5432990973638485
+hurricane-matthew,Max-confidence selector,92719,0.5374483443304789
+hurricane-matthew,Min-entropy selector,92719,0.5352003630840954
+hurricane-matthew,Logistic soft gate,92719,0.541701869655607
+hurricane-matthew,HGB hard router,92719,0.5334508014545418
+hurricane-matthew,Neural Temporal Utility Router,92719,0.5419470058246062
+hurricane-matthew,Oracle expert selector,92719,0.6218326435776457
+nepal-flooding,POST-only,73767,0.4647073760325362
+nepal-flooding,Siamese,73767,0.4596233089021897
+nepal-flooding,Equal 0.5 logit blend,73767,0.4721305955089494
+nepal-flooding,Static alpha blend,73767,0.4725989484839076
+nepal-flooding,Max-confidence selector,73767,0.4691948446001127
+nepal-flooding,Min-entropy selector,73767,0.4679713048321673
+nepal-flooding,Logistic soft gate,73767,0.471084879034598
+nepal-flooding,HGB hard router,73767,0.4652718482364751
+nepal-flooding,Neural Temporal Utility Router,73767,0.4714563379966456
+nepal-flooding,Oracle expert selector,73767,0.5293005046818507
+santa-rosa-wildfire,POST-only,93480,0.4124524147701778
+santa-rosa-wildfire,Siamese,93480,0.3886227375163123
+santa-rosa-wildfire,Equal 0.5 logit blend,93480,0.4119885904451371
+santa-rosa-wildfire,Static alpha blend,93480,0.4131570609297549
+santa-rosa-wildfire,Max-confidence selector,93480,0.4065302479448776
+santa-rosa-wildfire,Min-entropy selector,93480,0.4051901398710713
+santa-rosa-wildfire,Logistic soft gate,93480,0.4099901936541269
+santa-rosa-wildfire,HGB hard router,93480,0.4027513149387377
+santa-rosa-wildfire,Neural Temporal Utility Router,93480,0.4134885197916804
+santa-rosa-wildfire,Oracle expert selector,93480,0.4906456654771025
+sunda-tsunami,POST-only,100992,0.4550457704266014
+sunda-tsunami,Siamese,100992,0.4438238324868701
+sunda-tsunami,Equal 0.5 logit blend,100992,0.4565144647400578
+sunda-tsunami,Static alpha blend,100992,0.4572310017151879
+sunda-tsunami,Max-confidence selector,100992,0.4529816534783147
+sunda-tsunami,Min-entropy selector,100992,0.4516269375252275
+sunda-tsunami,Logistic soft gate,100992,0.4544280852494631
+sunda-tsunami,HGB hard router,100992,0.4505106039797126
+sunda-tsunami,Neural Temporal Utility Router,100992,0.4562878187606505
+sunda-tsunami,Oracle expert selector,100992,0.5283091451271822
+tuscaloosa-tornado,POST-only,101251,0.4228653502275632
+tuscaloosa-tornado,Siamese,101251,0.4045738821920087
+tuscaloosa-tornado,Equal 0.5 logit blend,101251,0.4201487490805988
+tuscaloosa-tornado,Static alpha blend,101251,0.4208314367007917
+tuscaloosa-tornado,Max-confidence selector,101251,0.4162400991512247
+tuscaloosa-tornado,Min-entropy selector,101251,0.4156689554791151
+tuscaloosa-tornado,Logistic soft gate,101251,0.4184221515281116
+tuscaloosa-tornado,HGB hard router,101251,0.415327832905798
+tuscaloosa-tornado,Neural Temporal Utility Router,101251,0.4214581142052442
+tuscaloosa-tornado,Oracle expert selector,101251,0.4931253340013543

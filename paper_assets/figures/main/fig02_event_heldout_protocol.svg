@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="670" viewBox="0 0 1400 670">
+<rect width="100%" height="100%" fill="white"/>
+<text x="700" y="38" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#111827">Final event-held-out experimental protocol</text>
+<rect x="40" y="80" width="220" height="90" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+<text x="150.0" y="115" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">19 disasters</text>
+<text x="150.0" y="145" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#111827">11,034 patches</text>
+<rect x="390" y="80" width="270" height="90" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="525.0" y="115" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">13 development events</text>
+<text x="525.0" y="145" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#111827">9,114 patches</text>
+<rect x="1000" y="80" width="300" height="90" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="1150.0" y="115" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">6 held-out TEST events</text>
+<text x="1150.0" y="145" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#111827">1,920 patches</text>
+<line x1="260" y1="125" x2="390" y2="125" stroke="#2563eb" stroke-width="2"/><polygon points="390,125 382.3,129.7 382.3,120.3" fill="#2563eb"/>
+<line x1="660" y1="125" x2="1000" y2="125" stroke="#ea580c" stroke-width="2"/><polygon points="1000,125 992.3,129.7 992.3,120.3" fill="#ea580c"/>
+<text x="830" y="110" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#111827">never used for selection</text>
+<rect x="350" y="250" width="230" height="100" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="465" y="285" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">Train</text>
+<text x="465" y="315" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#111827">8,202 patches</text>
+<text x="465" y="338" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#111827">265,273 buildings</text>
+<rect x="620" y="250" width="230" height="100" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="735" y="285" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">Validation</text>
+<text x="735" y="315" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#111827">912 patches</text>
+<text x="735" y="338" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#111827">30,735 buildings</text>
+<line x1="525" y1="170" x2="465" y2="250" stroke="#2563eb" stroke-width="2"/><polygon points="465,250 465.8,241.0 473.4,246.7" fill="#2563eb"/>
+<line x1="525" y1="170" x2="735" y2="250" stroke="#2563eb" stroke-width="2"/><polygon points="735,250 726.2,251.7 729.5,242.9" fill="#2563eb"/>
+<rect x="500" y="430" width="230" height="95" rx="10" fill="#eefce8" stroke="#16a34a" stroke-width="2"/>
+<text x="615" y="465" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">Router-select</text>
+<text x="615" y="495" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#111827">scene-disjoint</text>
+<rect x="770" y="430" width="230" height="95" rx="10" fill="#eefce8" stroke="#16a34a" stroke-width="2"/>
+<text x="885" y="465" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">Router-diagnostic</text>
+<text x="885" y="495" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#111827">scene-disjoint</text>
+<line x1="735" y1="350" x2="615" y2="430" stroke="#16a34a" stroke-width="2"/><polygon points="615,430 618.8,421.8 624.0,429.7" fill="#16a34a"/>
+<line x1="735" y1="350" x2="885" y2="430" stroke="#16a34a" stroke-width="2"/><polygon points="885,430 876.0,430.5 880.4,422.2" fill="#16a34a"/>
+<rect x="1030" y="250" width="250" height="110" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="1155" y="285" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">Final sealed TEST</text>
+<text x="1155" y="315" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#111827">115,349 buildings</text>
+<text x="1155" y="340" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#111827">opened after all choices frozen</text>
+<line x1="1150" y1="170" x2="1155" y2="250" stroke="#ea580c" stroke-width="2"/><polygon points="1155,250 1149.8,242.6 1159.2,242.0" fill="#ea580c"/>
+<rect x="1030" y="440" width="250" height="120" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="1155" y="475" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#111827">One-shot evaluation</text>
+<text x="1155" y="505" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#111827">2,000 performance bootstraps</text>
+<text x="1155" y="528" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#111827">1,000 utility bootstraps</text>
+<text x="1155" y="550" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#111827">NO post-TEST tuning</text>
+<line x1="1155" y1="360" x2="1155" y2="440" stroke="#ea580c" stroke-width="2"/><polygon points="1155,440 1150.3,432.3 1159.7,432.3" fill="#ea580c"/>
+<text x="700" y="625" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#111827">Integrity locks: 0 development↔TEST event leakage • 0 train↔validation building overlap • 0 train↔validation scene overlap</text>
+</svg>

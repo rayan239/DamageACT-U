@@ -1,0 +1,11 @@
+\begin{tabular}{llll}
+\toprule
+Loss term & Executed definition & Weight & Purpose \\
+\midrule
+Clean routed classification & Cross-entropy on POST-anchored routed logits & 1.00 & Maintain damage classification performance \\
+Temporal utility & Positive-weighted BCE on correctness-discordant valid cases & 0.50 & Raise gate when Pair is the correct expert relative to POST \\
+Wrong-PRE gate & BCEWithLogits(g\_wrong, 0) & 0.50 & Suppress temporal influence under controlled wrong correspondence \\
+Wrong-PRE distribution anchor & KL(p\_POST || p\_routed\_wrong) & 0.50 & Keep corrupted routed distribution near POST \\
+Sparsity & Mean valid gate u\_valid & 0.01 & Discourage unnecessary temporal influence \\
+\bottomrule
+\end{tabular}

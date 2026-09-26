@@ -1,0 +1,8 @@
+Criterion,Precommitted rule,Observed,Decision
+Clean effectiveness,gain ≥ +0.010 and bootstrap lower95 > 0,"+0.003111; CI [−0.000612, +0.007171]",FAIL
+Class safety,worst neural−POST class F1 ≥ −0.020,−0.006047,PASS
+Wrong-PRE safety,gain ≥ −0.005; lower95 ≥ −0.010; coverage ≥ 0.95,−0.003071; lower95 −0.006598; coverage 0.999306,PASS
+Gate suppression,mean wrong-PRE gate < mean valid-PRE gate,0.165126 < 0.175213,PASS
+Utility AUROC,bootstrap lower95 > 0.5,0.772838; lower95 0.745558,PASS
+Utility Spearman,bootstrap lower95 > 0,0.103607; lower95 0.058445,PASS
+ALL PRECOMMITTED CRITERIA,all criteria must pass,False,FAIL

@@ -1,0 +1,5 @@
+Component,Unique trainable parameters,Encoder evaluations per building,Head/router evaluations,Interpretation
+POST-only expert,"11,965,508",1 ResNet-18 encoder evaluation,1,Aftermath-only expert
+Siamese expert,"11,965,508",2 evaluations of one shared ResNet-18 encoder,1,PRE and POST use tied weights inside this expert
+Neural router,"1,409",No image encoder,1 small MLP,Uses 26 expert-output diagnostics
+Full DamageACT-U inference,"23,932,425 unique parameters",3 ResNet-18 encoder evaluations total,2 expert heads + router,POST is encoded by both separately trained experts

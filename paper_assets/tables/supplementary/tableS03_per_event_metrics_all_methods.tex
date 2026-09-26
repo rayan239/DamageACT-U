@@ -1,0 +1,66 @@
+\begin{tabular}{llrrrr}
+\toprule
+event & method & n & macro\_f1\_fixed4 & accuracy & ordinal\_mae \\
+\midrule
+guatemala-volcano & POST-only & 813 & 0.40342 & 0.89053 & 0.18819 \\
+guatemala-volcano & Siamese & 813 & 0.30251 & 0.79336 & 0.36654 \\
+guatemala-volcano & Equal 0.5 logit blend & 813 & 0.36656 & 0.86593 & 0.25215 \\
+guatemala-volcano & Static alpha blend & 813 & 0.38028 & 0.87454 & 0.23862 \\
+guatemala-volcano & Max-confidence selector & 813 & 0.35912 & 0.87454 & 0.23370 \\
+guatemala-volcano & Min-entropy selector & 813 & 0.36573 & 0.87577 & 0.23001 \\
+guatemala-volcano & Logistic soft gate & 813 & 0.35864 & 0.87700 & 0.23370 \\
+guatemala-volcano & HGB hard router & 813 & 0.35515 & 0.87700 & 0.23616 \\
+guatemala-volcano & Neural Temporal Utility Router & 813 & 0.36076 & 0.88069 & 0.22632 \\
+guatemala-volcano & Oracle expert selector & 813 & 0.43846 & 0.90160 & 0.16728 \\
+hurricane-matthew & POST-only & 22630 & 0.26250 & 0.29735 & 0.94622 \\
+hurricane-matthew & Siamese & 22630 & 0.23795 & 0.26513 & 1.05652 \\
+hurricane-matthew & Equal 0.5 logit blend & 22630 & 0.25250 & 0.28917 & 0.96288 \\
+hurricane-matthew & Static alpha blend & 22630 & 0.25390 & 0.29072 & 0.95802 \\
+hurricane-matthew & Max-confidence selector & 22630 & 0.25155 & 0.29196 & 0.95926 \\
+hurricane-matthew & Min-entropy selector & 22630 & 0.25165 & 0.29222 & 0.96107 \\
+hurricane-matthew & Logistic soft gate & 22630 & 0.25103 & 0.28926 & 0.95930 \\
+hurricane-matthew & HGB hard router & 22630 & 0.24815 & 0.28100 & 0.97141 \\
+hurricane-matthew & Neural Temporal Utility Router & 22630 & 0.25418 & 0.29054 & 0.95228 \\
+hurricane-matthew & Oracle expert selector & 22630 & 0.31651 & 0.34865 & 0.84755 \\
+nepal-flooding & POST-only & 41582 & 0.30379 & 0.71716 & 0.44692 \\
+nepal-flooding & Siamese & 41582 & 0.28971 & 0.67301 & 0.55442 \\
+nepal-flooding & Equal 0.5 logit blend & 41582 & 0.29613 & 0.72767 & 0.42942 \\
+nepal-flooding & Static alpha blend & 41582 & 0.29669 & 0.72916 & 0.42627 \\
+nepal-flooding & Max-confidence selector & 41582 & 0.28943 & 0.72368 & 0.44161 \\
+nepal-flooding & Min-entropy selector & 41582 & 0.28851 & 0.72231 & 0.44435 \\
+nepal-flooding & Logistic soft gate & 41582 & 0.29380 & 0.73075 & 0.42506 \\
+nepal-flooding & HGB hard router & 41582 & 0.28959 & 0.73157 & 0.42850 \\
+nepal-flooding & Neural Temporal Utility Router & 41582 & 0.29765 & 0.73323 & 0.41778 \\
+nepal-flooding & Oracle expert selector & 41582 & 0.39226 & 0.76422 & 0.35893 \\
+santa-rosa-wildfire & POST-only & 21869 & 0.47493 & 0.91047 & 0.19864 \\
+santa-rosa-wildfire & Siamese & 21869 & 0.47548 & 0.92272 & 0.19155 \\
+santa-rosa-wildfire & Equal 0.5 logit blend & 21869 & 0.48555 & 0.94056 & 0.14614 \\
+santa-rosa-wildfire & Static alpha blend & 21869 & 0.48442 & 0.93914 & 0.14907 \\
+santa-rosa-wildfire & Max-confidence selector & 21869 & 0.48620 & 0.94357 & 0.13860 \\
+santa-rosa-wildfire & Min-entropy selector & 21869 & 0.48527 & 0.94252 & 0.14052 \\
+santa-rosa-wildfire & Logistic soft gate & 21869 & 0.48885 & 0.94453 & 0.13805 \\
+santa-rosa-wildfire & HGB hard router & 21869 & 0.48298 & 0.94408 & 0.13544 \\
+santa-rosa-wildfire & Neural Temporal Utility Router & 21869 & 0.48888 & 0.94174 & 0.14253 \\
+santa-rosa-wildfire & Oracle expert selector & 21869 & 0.52361 & 0.96406 & 0.08446 \\
+sunda-tsunami & POST-only & 14357 & 0.30881 & 0.91084 & 0.18618 \\
+sunda-tsunami & Siamese & 14357 & 0.27181 & 0.89441 & 0.28356 \\
+sunda-tsunami & Equal 0.5 logit blend & 14357 & 0.32572 & 0.94699 & 0.12377 \\
+sunda-tsunami & Static alpha blend & 14357 & 0.32605 & 0.94490 & 0.12684 \\
+sunda-tsunami & Max-confidence selector & 14357 & 0.30746 & 0.94309 & 0.13826 \\
+sunda-tsunami & Min-entropy selector & 14357 & 0.30941 & 0.94163 & 0.13972 \\
+sunda-tsunami & Logistic soft gate & 14357 & 0.32596 & 0.95159 & 0.11548 \\
+sunda-tsunami & HGB hard router & 14357 & 0.30685 & 0.94337 & 0.13930 \\
+sunda-tsunami & Neural Temporal Utility Router & 14357 & 0.32964 & 0.95083 & 0.11305 \\
+sunda-tsunami & Oracle expert selector & 14357 & 0.38832 & 0.96817 & 0.07320 \\
+tuscaloosa-tornado & POST-only & 14098 & 0.69802 & 0.87807 & 0.15860 \\
+tuscaloosa-tornado & Siamese & 14098 & 0.68522 & 0.87566 & 0.16463 \\
+tuscaloosa-tornado & Equal 0.5 logit blend & 14098 & 0.71912 & 0.89715 & 0.13144 \\
+tuscaloosa-tornado & Static alpha blend & 14098 & 0.72192 & 0.89686 & 0.13250 \\
+tuscaloosa-tornado & Max-confidence selector & 14098 & 0.71252 & 0.89765 & 0.13300 \\
+tuscaloosa-tornado & Min-entropy selector & 14098 & 0.70603 & 0.89637 & 0.13484 \\
+tuscaloosa-tornado & Logistic soft gate & 14098 & 0.72088 & 0.89679 & 0.13342 \\
+tuscaloosa-tornado & HGB hard router & 14098 & 0.70976 & 0.89084 & 0.14328 \\
+tuscaloosa-tornado & Neural Temporal Utility Router & 14098 & 0.71974 & 0.89516 & 0.13456 \\
+tuscaloosa-tornado & Oracle expert selector & 14098 & 0.78570 & 0.92949 & 0.09328 \\
+\bottomrule
+\end{tabular}

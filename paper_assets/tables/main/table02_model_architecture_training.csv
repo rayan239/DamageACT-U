@@ -1,0 +1,18 @@
+Component,Stage,Frozen specification
+Expert input,PRE/POST crops,"192×192, ImageNet-normalized"
+Encoder,ResNet-18,ImageNet pretrained; 512-D output
+POST representation,Fusion,"[z_post, z_post, z_post] → 1536"
+Siamese representation,Fusion,"[z_pre, z_post, |z_post−z_pre|] → 1536"
+Expert head,MLP,1536→512→4; ReLU; dropout 0.30
+Expert parameters,Trainable,"11,965,508 per expert"
+Expert training,Optimizer,AdamW; lr 1e−4; weight decay 1e−4
+Expert training,Schedule,8 epochs; batch 64; eval batch 96; AMP
+Final expert seed,Initialization,42 only
+Router inputs,Features,26 output-only diagnostics
+Router normalization,Frozen,z-score using frozen mean/std
+Neural router,MLP,26→32→16→1; ReLU; dropout 0.10; sigmoid gate
+Router parameters,Trainable,"1,409"
+Router training,Optimizer,AdamW; lr 1e−3; weight decay 1e−4; batch 256
+Selected neural epoch,Development selection,1
+Static control,Blend,α=0.45
+Routing rule,Logit interpolation,L = L_post + u(L_pair−L_post)

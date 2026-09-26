@@ -1,0 +1,36 @@
+\begin{tabular}{llrrrr}
+\toprule
+population & method & n & macro\_f1 & accuracy & ordinal\_mae \\
+\midrule
+clean\_pooled & POST-only & 115349 & 0.45656 & 0.71644 & 0.42829 \\
+clean\_pooled & Siamese & 115349 & 0.44285 & 0.69350 & 0.50145 \\
+clean\_pooled & Equal 0.5 logit blend & 115349 & 0.45959 & 0.73099 & 0.40466 \\
+clean\_pooled & Static alpha blend & 115349 & 0.46022 & 0.73133 & 0.40354 \\
+clean\_pooled & Max-confidence selector & 115349 & 0.45531 & 0.73031 & 0.40878 \\
+clean\_pooled & Min-entropy selector & 115349 & 0.45400 & 0.72933 & 0.41087 \\
+clean\_pooled & Logistic soft gate & 115349 & 0.45769 & 0.73348 & 0.39993 \\
+clean\_pooled & HGB hard router & 115349 & 0.45265 & 0.73031 & 0.40724 \\
+clean\_pooled & Neural Temporal Utility Router & 115349 & 0.45967 & 0.73383 & 0.39656 \\
+clean\_pooled & Oracle expert selector & 115349 & 0.53179 & 0.76713 & 0.33337 \\
+valid\_matched & POST-only & 115269 & 0.45631 & 0.71653 & 0.42805 \\
+valid\_matched & Siamese & 115269 & 0.44272 & 0.69361 & 0.50121 \\
+valid\_matched & Equal 0.5 logit blend & 115269 & 0.45941 & 0.73109 & 0.40440 \\
+valid\_matched & Static alpha blend & 115269 & 0.46005 & 0.73144 & 0.40326 \\
+valid\_matched & Max-confidence selector & 115269 & 0.45514 & 0.73042 & 0.40847 \\
+valid\_matched & Min-entropy selector & 115269 & 0.45385 & 0.72946 & 0.41055 \\
+valid\_matched & Logistic soft gate & 115269 & 0.45751 & 0.73359 & 0.39965 \\
+valid\_matched & HGB hard router & 115269 & 0.45249 & 0.73043 & 0.40695 \\
+valid\_matched & Neural Temporal Utility Router & 115269 & 0.45952 & 0.73394 & 0.39626 \\
+valid\_matched & Oracle expert selector & 115269 & 0.53149 & 0.76721 & 0.33318 \\
+wrongpre\_matched & POST-only & 115269 & 0.45631 & 0.71653 & 0.42805 \\
+wrongpre\_matched & Siamese & 115269 & 0.41527 & 0.64772 & 0.62629 \\
+wrongpre\_matched & Equal 0.5 logit blend & 115269 & 0.45068 & 0.72021 & 0.43529 \\
+wrongpre\_matched & Static alpha blend & 115269 & 0.45173 & 0.72191 & 0.42978 \\
+wrongpre\_matched & Max-confidence selector & 115269 & 0.44564 & 0.71861 & 0.44368 \\
+wrongpre\_matched & Min-entropy selector & 115269 & 0.44510 & 0.71835 & 0.44368 \\
+wrongpre\_matched & Logistic soft gate & 115269 & 0.44945 & 0.72371 & 0.42756 \\
+wrongpre\_matched & HGB hard router & 115269 & 0.44258 & 0.71912 & 0.44136 \\
+wrongpre\_matched & Neural Temporal Utility Router & 115269 & 0.45324 & 0.72700 & 0.41525 \\
+wrongpre\_matched & Oracle expert selector & 115269 & 0.53584 & 0.76454 & 0.34137 \\
+\bottomrule
+\end{tabular}

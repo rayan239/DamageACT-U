@@ -1,0 +1,2 @@
+targets_with_donor,test_buildings,coverage,preferred_iou_le_0_01_fraction,median_crop_iou,max_crop_iou,median_log_area_diff,p95_log_area_diff
+115269,115349,0.9993064525916999,0.9992452437342217,0.0,0.8285714285714286,0.0072993024816065,0.15963912723341375
