@@ -21,6 +21,9 @@ test population, or precommitted decision was changed.
 - Gate–ΔCE Spearman reconstructed from per-building predictions.
 - Frozen clean-effectiveness decision remains FAIL.
 - `ALL_PRECOMMITTED_CRITERIA_PASS` remains False.
+- Clean performance bootstrap: 2,000 scene replicates, seed 20260917.
+- Wrong-PRE performance bootstrap: 2,000 scene replicates, seed 20260918.
+- Temporal-utility bootstrap: 1,000 scene replicates, seed 20260917.
 
 ## Editorial QA choices
 
@@ -35,8 +38,9 @@ test population, or precommitted decision was changed.
   mismatch prevalence estimate.
 - Historical Phase 1–6 results are excluded from the primary final-TEST
   evidence.
-- Qualitative xBD images are intentionally not hand-picked. If added later,
-  their selection rule must be frozen before viewing candidates.
+- Conceptual protocol/intervention diagrams are vector-only; they do not use synthetic satellite thumbnails that could be mistaken for experimental xBD samples.
+- Quantitative paper graphics must be rendered deterministically from frozen evidence or saved deterministic curve coordinates; generative image editing is not an acceptable source for quantitative geometry.
+- Qualitative xBD images are intentionally not hand-picked. If added later, their selection rule must be frozen before viewing candidates and their provenance/redistribution status must be explicit.
 
 ## Remaining non-scientific item
 
@@ -50,3 +54,7 @@ The package now also documents the exact router-training loss and the deployed
 compute structure. It does not report measured latency/FLOPs because those were
 not frozen experimental endpoints. A qualitative image panel is optional and
 has a predefined selection protocol to prevent post-hoc cherry-picking.
+
+## Reviewer-facing uncertainty scope
+
+Scene-bootstrap intervals quantify sampling uncertainty conditional on the six held-out TEST disasters. They must not be presented as confidence intervals over the population of all future disasters. Event-level and leave-one-event-out analyses remain important complementary evidence for heterogeneity.
