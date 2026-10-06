@@ -4,7 +4,7 @@ Learning when to trust PRE-disaster imagery for reliable building-damage assessm
 
 ## Project status
 
-The **research code, frozen artifacts, audit trail, and final event-held-out results are complete**. The manuscript has **not yet been written**, so author/citation metadata is intentionally deferred rather than guessed.
+The **research code, frozen artifacts, audit trail, and final event-held-out results are complete**. A full manuscript draft now exists and is under internal review. Scientific results and the frozen `paper-v1.0.0` release remain unchanged; post-tag edits are documentation, manuscript, and figure-provenance hygiene only. Author/citation metadata remains deferred until authorship and affiliations are finalized rather than guessed.
 
 Frozen tested release:
 
@@ -36,7 +36,7 @@ G3/G4 parity checks + deterministic/statistical reproduction
 The implementation-level methodology is documented in:
 
 - `docs/METHODOLOGY_FROM_CODE.md` — exact method reconstructed from the frozen code/configs.
-- `docs/PAPER_WRITING_MAP.md` — future manuscript Methods/Experiments section mapped to code and evidence.
+- `docs/PAPER_WRITING_MAP.md` — manuscript-revision map tying Methods/Experiments wording to frozen code and evidence.
 - `docs/FINAL_CLAIM_EVIDENCE.md` — final claim boundaries.
 - `PAPER_RESULTS.md` — frozen numerical interpretation.
 - `docs/RELEASE_REPRODUCIBILITY.md` — public reproduction route.
