@@ -18,15 +18,21 @@
 ## Documentation complete for methodology
 
 - [x] Implementation-grounded methodology specification.
-- [x] Future manuscript Methods/Experiments map.
+- [x] Manuscript Methods/Experiments revision map tied to frozen evidence.
 - [x] Final claim/evidence map.
 - [x] Release reproducibility guide.
 - [x] Explicit citation-metadata status.
 - [x] Explicit external-asset redistribution hold.
 
+## Manuscript status
+
+- [x] Full manuscript draft exists and has undergone internal scientific/reproducibility review.
+- [x] Quantitative figure provenance reviewed; manuscript-facing replacements are deterministic/data-derived.
+- [x] Event-held-out protocol diagram corrected to show a true 13-development / 6-TEST branch.
+
 ## Intentionally pending
 
-- [ ] Final manuscript title.
+- [ ] Final venue-locked manuscript title/formatting.
 - [ ] Final authors and affiliations.
 - [ ] ORCIDs where applicable.
 - [ ] Final `CITATION.cff`.
