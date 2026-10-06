@@ -1,12 +1,14 @@
-# Future paper-writing map
+# Manuscript revision and evidence map
 
-The manuscript has not yet been written. This file maps a future paper to the **already frozen implementation and evidence** so that Methods/Experiments can be drafted without changing the experiment after seeing TEST.
+A full manuscript draft now exists. This file maps manuscript wording to the **already frozen implementation and evidence** so revisions cannot silently change the experiment after TEST was opened.
 
-## Recommended Methods structure
+The scientific snapshot remains `paper-v1.0.0`. Nothing in this document changes a model, split, checkpoint, router, threshold, intervention, metric, or reported result.
+
+## Methods wording locks
 
 ### 3.1 Problem formulation
 
-Define building-level four-class damage classification from PRE/POST imagery and introduce a POST-only expert, paired expert, and a gate `u`.
+Define building-level four-class damage classification from PRE/POST imagery and introduce a POST-only expert, paired expert, and gate `u`.
 
 Use the routing equation:
 
@@ -18,7 +20,9 @@ Source: `src/damageactu/routing/blending.py`.
 
 ### 3.2 Event-held-out study design
 
-Describe 13 development disasters, 6 held-out disasters, seed-321 event-stratified 90/10 development split, and the sealed TEST policy.
+State explicitly that the final event assignment follows the Hafner/DisasterAdaptiveNet event protocol verified in Phase 7C: 13 development disasters and 6 completely held-out TEST disasters. Within the development events, the patch split is event-stratified 90/10 with seed 321.
+
+Do not draw the six TEST events as if they are downstream of the 13 development events. They are parallel branches of the 19-event assignment.
 
 Sources:
 
@@ -46,7 +50,7 @@ Siamese representation:
 
 `[z_pre, z_post, |z_post-z_pre|]`
 
-Both use the same 1536->512->4 head with ReLU and dropout 0.30.
+Both use the same 1536->512->4 head with ReLU and dropout 0.30. Describe this as matching trainable architecture/head parameterization, not as matching inference compute.
 
 Sources:
 
@@ -57,6 +61,14 @@ Sources:
 
 Describe the 26 inference-time features, correctness-discordant utility target, logistic/HGB controls, and neural 26->32->16->1 gate.
 
+Router-development wording must preserve the actual data roles:
+
+- router-selection and router-diagnostic scenes are disjoint;
+- diagnostic scenes are opened once after selection;
+- diagnostic results do not alter selected hyperparameters;
+- static alpha = 0.45 is selected on router-selection data;
+- the neural router's selected epoch is 1 under the frozen selection rule.
+
 Sources:
 
 - `src/damageactu/routing/features.py`
@@ -66,7 +78,9 @@ Sources:
 
 ### 3.6 Wrong-PRE intervention
 
-Describe same-scene non-self donor construction, low crop-overlap preference, footprint-size matching, and that the intervention is a stress test of correspondence dependence rather than an estimate of deployment error prevalence.
+Describe same-scene non-self donor construction, low crop-overlap preference, and footprint-size matching. The target POST crop and target label remain unchanged. Damage labels are not used to choose the donor.
+
+The intervention is a controlled stress test of correspondence dependence, not an estimate of deployment mismatch prevalence.
 
 Sources:
 
@@ -76,55 +90,81 @@ Sources:
 
 ### 3.7 Evaluation and statistics
 
-Primary metric: four-class Macro-F1.
+Primary metric: fixed four-class Macro-F1.
 
 Secondary/descriptive metrics: accuracy, ordinal MAE, per-class F1, per-event Macro-F1.
 
 Uncertainty: paired scene bootstrap.
 
+Frozen bootstrap seeds:
+
+- clean performance differences: **20260917**
+- wrong-PRE performance differences: **20260918**
+- temporal-utility statistics: **20260917**
+
+Replicate counts:
+
+- clean performance: 2,000
+- wrong-PRE performance: 2,000
+- temporal-utility statistics: 1,000
+
 Temporal-utility statistics: discordant AUROC/AUPRC and gate-vs-deltaCE Spearman.
+
+Inferential scope must be stated narrowly: scene-bootstrap intervals quantify sampling uncertainty **conditional on the six held-out disasters**. They are not confidence intervals over the population of all future disasters.
 
 Sources:
 
 - `src/damageactu/evaluation/metrics.py`
-- `utility.py`
-- `bootstrap.py`
-- `event_analysis.py`
+- `src/damageactu/evaluation/utility.py`
+- `src/damageactu/evaluation/bootstrap.py`
+- `src/damageactu/evaluation/event_analysis.py`
+- `scripts/reproduce_results_v2_bootstrap.py`
 
-### 3.8 Precommitted decision criteria
+### 3.8 Prespecified decision criteria
 
-Copy the thresholds from `configs/protocols/phase7d_d_final_test.json`; do not rewrite them based on the outcome.
+Copy thresholds exactly from `configs/protocols/phase7d_d_final_test.json`; never rewrite them based on the outcome.
 
-## Recommended Experiments structure
-
-1. Data/split integrity.
-2. POST-only vs Siamese expert behavior.
-3. Comparison of all router controls.
-4. Clean held-out event endpoint.
-5. Wrong-PRE correspondence stress test.
-6. Temporal-utility diagnostic.
-7. Per-class/per-event analysis.
-8. Scene-bootstrap uncertainty.
-9. Reproducibility/parity validation.
+The manuscript should call them prespecified study decision margins and should not imply that they are externally validated disaster-response operating tolerances unless separate validation evidence is provided.
 
 ## Results wording lock
 
-The clean neural gain is positive but its 95% scene-bootstrap interval crosses zero and the precommitted +0.01 effectiveness threshold was not met. Therefore the manuscript must **not** describe the neural router as significantly superior on clean TEST.
+The clean neural gain is positive but its 95% paired scene-bootstrap interval crosses zero and the precommitted +0.010 clean-effectiveness requirement was not met. Therefore the manuscript must **not** describe the neural router as significantly or conclusively superior on clean TEST.
 
-The strongest defensible result is that the learned gate carries useful temporal-utility signal and the POST-anchored routing design is substantially less sensitive to deliberately incorrect PRE correspondence than unconditional temporal fusion.
+The unconditional-fusion observation must also remain architecture-specific. Prefer:
 
-## Required limitation paragraph topics
+> For the evaluated Siamese expert, valid PRE pairing did not improve pooled held-out Macro-F1.
 
-The final paper must explicitly disclose:
+Avoid universal claims that correctly paired PRE imagery cannot improve building-damage assessment.
 
-- Seed 42 only for the event-track experts;
+The strongest defensible result is that the learned gate carries useful correctness-relative temporal-utility signal and the POST-anchored routing design is substantially less sensitive to deliberately incorrect PRE correspondence than unconditional Siamese fusion.
+
+## Figure provenance and quantitative-graphics rules
+
+- Quantitative figures must be rendered deterministically from frozen CSV/JSON/prediction evidence or from saved deterministic curve coordinates.
+- Do not use generative image editing to reconstruct ROC, PR, forest, robustness, or event-effect geometry.
+- Conceptual protocol/intervention diagrams should be vector-only unless verified real imagery with explicit provenance and redistribution permission is supplied.
+- Do not imply that decorative or synthetic imagery is an xBD experimental sample.
+- Figure 2 must show the 19 disasters branching independently into 13 development events and 6 held-out TEST events.
+- Leave-one-event-out sensitivity should remain available as supplementary evidence for event heterogeneity.
+
+## Required limitations
+
+The manuscript must explicitly disclose:
+
+- Seed 42 only for the final event-track experts/router;
 - no random-seed robustness claim;
 - no training-from-scratch reproduction claim from G3;
-- clean effectiveness criterion failed;
+- the clean-effectiveness criterion failed;
 - wrong-PRE is a synthetic controlled intervention;
-- results are specific to the frozen xBD split, ResNet-18 experts, crop policy and routing design;
-- no post-TEST tuning was performed.
+- scene-bootstrap uncertainty is conditional on the six held-out disasters;
+- results are specific to the frozen xBD split, ResNet-18 experts, crop policy, and routing design;
+- no post-TEST tuning was performed;
+- static alpha remains a competitive clean-performance baseline.
 
-## Before manuscript submission
+## Before submission
 
-When authorship is known, add final citation metadata on `master` and in the manuscript. Do not rewrite `paper-v1.0.0`; create a later documentation/release tag if needed.
+Human metadata must be supplied rather than inferred: final author list, affiliations, contribution roles, ORCIDs, funding, competing interests, acknowledgments, and corresponding-author details.
+
+The external-asset access/redistribution statement must describe the actual access route available at submission time. Do not promise a future archive that does not yet exist.
+
+Do not rewrite or move `paper-v1.0.0`. If a later manuscript/release tag is needed, create a new tag after review.
